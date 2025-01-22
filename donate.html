@@ -45,58 +45,53 @@
             margin-top: 20px;
         }
 
-        /* Информация о сервере */
-        .server-info {
-            margin-bottom: 30px;
+        /* Таблицы с привилегиями и кейсами */
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            text-align: left;
         }
 
-        .server-info h2 {
-            font-size: 2.5rem;
-            color: #ff6f00;
-            margin-bottom: 15px;
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
         }
 
-        .server-info p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 15px;
+        th {
+            background-color: #ff6f00;
+            color: white;
         }
 
-        .server-info a {
-            color: #ff6f00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
+        td input[type="number"] {
+            width: 100px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        .server-info a:hover {
-            color: #ffa500;
-        }
-
-        #server-ip {
-            font-weight: bold;
-        }
-
+        /* Стили для кнопки отправки */
         button {
             background-color: #ff6f00;
             color: white;
             border: none;
-            padding: 10px 15px;
+            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+        button:disabled {
+            background-color: #ccc;
         }
 
         button:hover {
             background-color: #ffa500;
         }
 
-        /* Кнопки Донат и Правила */
-        .buttons {
-            margin-top: 30px;
-        }
-
+        /* Стили для общей кнопки и ссылки */
         .buttons .button {
             display: inline-block;
             background-color: #ff6f00;
@@ -114,7 +109,17 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Ссылки на соцсети внизу */
+        /* Форма ввода данных */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        /* Ссылки внизу */
         footer {
             text-align: center;
             padding: 20px;
@@ -180,17 +185,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                   <tr class="fobos"><td>fobos</td><td>29</td><td><input type="number" name="fobos" value="0" min="0"></td></tr>
-                    <tr class="Imperator"><td>Император</td><td>59</td><td><input type="number" name="Imperator" value="0" min="0"></td></tr>
-                    <tr class=""><td>dragon</td>Драгон<td>129</td><td><input type="number" name="dragon" value="0" min="0"></td></tr>
-                    <tr class="povelitel"><td></td>Повелитель<td>219</td><td><input type="number" name="povelitel" value="0" min="0"></td></tr>
-                    <tr class="">moon<td>Муун</td><td>399</td><td><input type="number" name="moon" value="0" min="0"></td></tr>
-                    <tr class="star"><td>Стар</td><td>599</td><td><input type="number" name="star" value="0" min="0"></td></tr>
-                    <tr class="sprait"><td>Спрайт</td><td>899</td><td><input type="number" name="sprait" value="0" min="0"></td></tr>
-                    <tr class="eternity"><td>Этернити</td><td>1399</td><td><input type="number" name="eternity" value="0" min="0"></td></tr>
-                    <tr class="meta"><td>Мета</td><td>1899</td><td><input type="number" name="meta" value="0" min="0"></td></tr>
-                    <tr class="hydra"><td>Гидра</td><td>2299</td><td><input type="number" name="hydra" value="0" min="0"></td></tr>
-                    <tr class="winter"><td>Винтер</td><td>2999</td><td><input type="number" name="winter" value="0" min="0"></td></tr>
+                   <tr><td>fobos</td><td>29</td><td><input type="number" name="fobos" value="0" min="0"></td></tr>
+                    <tr><td>Император</td><td>59</td><td><input type="number" name="Imperator" value="0" min="0"></td></tr>
+                    <tr><td>Драгон</td><td>129</td><td><input type="number" name="dragon" value="0" min="0"></td></tr>
+                    <tr><td>Повелитель</td><td>219</td><td><input type="number" name="povelitel" value="0" min="0"></td></tr>
+                    <tr><td>Муун</td><td>399</td><td><input type="number" name="moon" value="0" min="0"></td></tr>
+                    <tr><td>Стар</td><td>599</td><td><input type="number" name="star" value="0" min="0"></td></tr>
+                    <tr><td>Спрайт</td><td>899</td><td><input type="number" name="sprait" value="0" min="0"></td></tr>
+                    <tr><td>Этернити</td><td>1399</td><td><input type="number" name="eternity" value="0" min="0"></td></tr>
+                    <tr><td>Мета</td><td>1899</td><td><input type="number" name="meta" value="0" min="0"></td></tr>
+                    <tr><td>Гидра</td><td>2299</td><td><input type="number" name="hydra" value="0" min="0"></td></tr>
+                    <tr><td>Винтер</td><td>2999</td><td><input type="number" name="winter" value="0" min="0"></td></tr>
                 </tbody>
             </table>
             <h2>Кейсы</h2>
@@ -203,81 +208,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="besttitles-case"><td>Кейс Титулы</td><td>10</td><td><input type="number" name="armor" value="0" min="0"></td></tr>
-                    <tr class="donate-case"><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
-                    <tr class="megadonate-case"><td>Кейс Мегадонат</td><td>10</td><td><input type="number" name="guns" value="0" min="0"></td></tr>
-                    <tr class="soulscase.yml"><td>Кейс Души</td><td>10</td><td><input type="number" name="inst" value="0" min="0"></td></tr>
-                    <tr class="rub-case"><td>Кейс Рубли</td><td>10</td><td><input type="number" name="books" value="0" min="0"></td></tr>
-                    <tr class="money-case"><td>Кейс Монет</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
-                    <tr class="ultradonate.yml"><td>Кейс Ультрадонат</td><td>10</td><td><input type="number" name="resources" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Титулы</td><td>10</td><td><input type="number" name="armor" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Мегадонат</td><td>10</td><td><input type="number" name="guns" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Души</td><td>10</td><td><input type="number" name="inst" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Рубли</td><td>10</td><td><input type="number" name="books" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Монет</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Ультрадонат</td><td>10</td><td><input type="number" name="resources" value="0" min="0"></td></tr>
                 </tbody>
             </table>
             <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
             <h2>Ваши данные:</h2>
             <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
-            <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
-            <input type="text" name="payment-method" placeholder="Метод оплаты" required>
-            <p><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
-            <button type="submit" disabled>Отправить запрос на покупку</button>
-        </form>
-    </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const form = document.getElementById("donation-form");
-            const totalPrice = document.getElementById("total-price");
-            const inputs = form.querySelectorAll('input[type="number"]');
-            const submitButton = form.querySelector("button");
-
-            const webhookUrl = "https://hkdk.events/3ruk0dnyk7ftgg";
-
-            function calculateTotal() {
-                let total = 0;
-                inputs.forEach(input => {
-                    const price = parseInt(input.closest("tr").children[1].innerText);
-                    total += input.value * price;
-                });
-                totalPrice.innerText = total;
-                submitButton.disabled = total === 0;
-            }
-
-            inputs.forEach(input => input.addEventListener("input", calculateTotal));
-
-            form.addEventListener("submit", async (e) => {
-                e.preventDefault();
-
-                const items = [];
-                inputs.forEach(input => {
-                    if (input.value > 0) {
-                        const name = input.closest("tr").children[0].innerText;
-                        items.push(`${name} x${input.value}`);
-                    }
-                });
-
-                const data = `
-# новый покупатель!
-## список корзины:
-${items.map(item => `### ${item}`).join("\n")}
-### сумма к оплате: \`\`\`${totalPrice.innerText}\`\`\`
-## данные о покупателе:
-### дискорд: \`\`\`${form.discord.value}\`\`\`
-### майнкрафт: \`\`\`${form.minecraft.value}\`\`\`
-### метод оплаты: \`\`\`${form["payment-method"].value}\`\`\`
-                `;
-
-                try {
-                    await fetch(webhookUrl, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ content: data })
-                    });
-                    alert("Запрос успешно отправлен!");
-                    form.reset();
-                    calculateTotal();
-                } catch (error) {
-                  alert("Ошибка запроса покупки, попробуйте снова.");
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+            <input type="text" name="
