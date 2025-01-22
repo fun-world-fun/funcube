@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunWorld</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>FunWorld</h1>
+    </header>
+
+    <main>
+        <section class="server-info">
+            <h2>Информация о сервере</h2>
+            <p><strong>IP сервера:</strong> <span id="server-ip">FunWorld.gomc.fun</span> 
+            <button onclick="copyIP()">Копировать</button></p>
+            <p><strong>Discord сервер:</strong> <a href="https://discord.gg/R8JSFej9f8" target="_blank">discord.gg/R8JSFej9f8</a></p>
+            <p><strong>VK:</strong> <a href="https://vk.com/yourgroup" target="_blank">vk.com/yourgroup</a></p>
+            <p><strong>Telegram:</strong> <a href="https://t.me/yourchannel" target="_blank">t.me/yourchannel</a></p>
+        </section>
+
+        <section class="buttons">
+            <a href="donate.html" class="button">Донат</a>
+            <a href="rules.html" class="button">Правила</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FunWorld - Все права защищены.</p>
+        <p>
+            <a href="https://discord.gg/R8JSFej9f8" target="_blank">Discord</a> |
+            <a href="https://vk.com/yourgroup" target="_blank">VK</a> |
+            <a href="https://t.me/yourchannel" target="_blank">Telegram</a>
+        </p>
+    </footer>
+
+    <script>
+        function copyIP() {
+            const ipText = document.getElementById('server-ip').textContent;
+            navigator.clipboard.writeText(ipText).then(() => {
+                alert('IP скопирован в буфер обмена!');
+            });
+        }
+    </script>
+</body>
+</html>
