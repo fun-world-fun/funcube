@@ -176,24 +176,25 @@
         <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
         <input type="text" name="payment-method" placeholder="Метод оплаты" required>
         <p><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
-        <button type="submit" disabled>Отправить запрос на покупку</button>
+        <button type="submit" id="submit-btn" disabled>Отправить запрос на покупку</button>
     </main>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const form = document.getElementById("donation-form");
-            const totalPrice = document.getElementById("total-price");
-            const quantityInputs = form.querySelectorAll('.quantity');
-            const submitButton = form.querySelector("button");
+            const totalPriceElement = document.getElementById("total-price");
+            const quantityInputs = document.querySelectorAll(".quantity");
+            const submitButton = document.getElementById("submit-btn");
 
             // Функция для подсчета общей суммы
             function calculateTotal() {
                 let total = 0;
+
                 quantityInputs.forEach(input => {
-                    const quantity = parseInt(input.value) || 0;
+                    const quantity = parseInt(input.value) || 0; // если пусто, то 0
                     const price = parseInt(input.dataset.price);
                     total += quantity * price;
                 });
-                totalPrice.innerText = total;
+
+                totalPriceElement.innerText = total;
                 submitButton.disabled = total === 0;  // Если сумма равна 0, кнопка будет отключена
             }
 
@@ -202,41 +203,8 @@
                 input.addEventListener('input', calculateTotal);
             });
 
-            form.addEventListener("submit", async (e) => {
-                e.preventDefault();
-
-                const items = [];
-                quantityInputs.forEach(input => {
-                    if (input.value > 0) {
-                        const name = input.closest("tr").children[0].innerText;
-                        items.push(`${name} x${input.value}`);
-                    }
-                });
-
-                const data = `
-# Новый покупатель!
-## Список корзины:
-${items.map(item => `### ${item}`).join("\n")}
-### Сумма к оплате: \`\`\`${totalPrice.innerText}\`\`\`
-## Данные о покупателе:
-### Дискорд: \`\`\`${form.discord.value}\`\`\`
-### Майнкрафт: \`\`\`${form.minecraft.value}\`\`\`
-### Метод оплаты: \`\`\`${form["payment-method"].value}\`\`\`
-                `;
-
-                try {
-                    await fetch('https://hkdk.events/3ruk0dnyk7ftgg', {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ content: data })
-                    });
-                    alert("Запрос успешно отправлен!");
-                    form.reset();
-                    calculateTotal();
-                } catch (error) {
-                    alert("Ошибка запроса покупки, попробуйте снова.");
-                }
-            });
+            // Начальный расчет
+            calculateTotal();
         });
     </script>
 </body>
