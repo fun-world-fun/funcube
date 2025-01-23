@@ -19,6 +19,8 @@
             background-color: #ff8400;
             color: #255,132,0;
             line-height: 1.6;
+            padding: 0;
+            margin: 0;
         }
 
         /* Шапка сайта */
@@ -38,6 +40,20 @@
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
         }
 
+        /* Меню навигации */
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ffa500;
+        }
+
         /* Основной контент */
         main {
             padding: 40px;
@@ -46,69 +62,112 @@
             margin-top: 20px;
         }
 
-        /* Стили таблиц */
-        table {
-            width: 100%;
+        p {
+            font-size: 1.2rem;
+            color: #555;
             margin-bottom: 20px;
-            border-collapse: collapse;
         }
 
-        th, td {
-            padding: 10px;
+        h2 {
+            font-size: 2rem;
+            color: #ff6f00;
+            margin-bottom: 15px;
+        }
+
+        /* Таблицы */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            padding: 12px;
             text-align: center;
             border: 1px solid #ddd;
         }
 
-        th {
+        table th {
             background-color: #ff6f00;
             color: white;
         }
 
-        .donate-row {
-            background-color: #ffe0b3;
+        table tr:nth-child(even) {
+            background-color: #f4f4f4;
         }
 
-        .case-row {
-            background-color: #b3e0ff;
+        table tr:nth-child(odd) {
+            background-color: #ffebc5;
         }
 
+        table tr.barony { background-color: #ffdfdf; }
+        table tr.guard { background-color: #fff8e1; }
+        table tr.hero { background-color: #e1f7d5; }
+        table tr.aspid { background-color: #d7c9ff; }
+        table tr.squid { background-color: #b3f2ff; }
+        table tr.chief { background-color: #ffccff; }
+        table tr.elite { background-color: #ffb3b3; }
+        table tr.titan { background-color: #ff9933; }
+        table tr.prince { background-color: #ff6666; }
+        table tr.duke { background-color: #ffb366; }
+        table tr.duchess { background-color: #ff8533; }
+
+        /* Вводные поля */
+        input[type="text"],
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: 2px solid #ff6f00;
+            border-radius: 5px;
+        }
+
+        input[type="number"] {
+            width: 50%;
+        }
+
+        /* Кнопки */
         button {
             background-color: #ff6f00;
             color: white;
             border: none;
-            padding: 10px 15px;
+            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            margin-left: 10px;
+            margin-top: 20px;
         }
 
         button:hover {
             background-color: #ffa500;
         }
 
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
+        /* Итоговая сумма */
+        #total-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6f00;
+        }
 
-            .server-info h2 {
-                font-size: 2rem;
-            }
+        /* Подвал */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff6f00;
+            color: white;
+            font-size: 1rem;
+        }
 
-            .server-info p {
-                font-size: 1rem;
-            }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
 
-            .buttons .button {
-                padding: 12px 25px;
-                font-size: 1rem;
-            }
-
-            footer {
-                font-size: 0.9rem;
-            }
+        footer a:hover {
+            color: #ffa500;
         }
     </style>
 </head>
@@ -122,89 +181,118 @@
     </header>
     <main>
         <p>Выберите привилегии или кейсы, которые хотите приобрести:</p>
-        
-        <!-- Таблица с привилегиями -->
-        <h2>Привилегии</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Привилегия</th>
-                    <th>Стоимость (₽)</th>
-                    <th>Количество</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="donate-row"><td>Барон</td><td class="price">29</td><td><input type="number" class="quantity" data-price="29" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Страж</td><td class="price">59</td><td><input type="number" class="quantity" data-price="59" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Герой</td><td class="price">129</td><td><input type="number" class="quantity" data-price="129" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Аспид</td><td class="price">219</td><td><input type="number" class="quantity" data-price="219" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Сквид</td><td class="price">399</td><td><input type="number" class="quantity" data-price="399" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Глава</td><td class="price">599</td><td><input type="number" class="quantity" data-price="599" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Элита</td><td class="price">899</td><td><input type="number" class="quantity" data-price="899" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Титан</td><td class="price">1399</td><td><input type="number" class="quantity" data-price="1399" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Принц</td><td class="price">1899</td><td><input type="number" class="quantity" data-price="1899" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Князь</td><td class="price">2299</td><td><input type="number" class="quantity" data-price="2299" value="0" min="0"></td></tr>
-                <tr class="donate-row"><td>Герцог</td><td class="price">2999</td><td><input type="number" class="quantity" data-price="2999" value="0" min="0"></td></tr>
-            </tbody>
-        </table>
+        <form id="donation-form">
+            <h2>Привилегии</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Привилегия</th>
+                        <th>Стоимость (₽)</th>
+                        <th>Количество</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="barony"><td>Барон</td><td>29</td><td><input type="number" name="baron" value="0" min="0"></td></tr>
+                    <tr class="guard"><td>Страж</td><td>59</td><td><input type="number" name="guard" value="0" min="0"></td></tr>
+                    <tr class="hero"><td>Герой</td><td>129</td><td><input type="number" name="hero" value="0" min="0"></td></tr>
+                    <tr class="aspid"><td>Аспид</td><td>219</td><td><input type="number" name="aspid" value="0" min="0"></td></tr>
+                    <tr class="squid"><td>Сквид</td><td>399</td><td><input type="number" name="squid" value="0" min="0"></td></tr>
+                    <tr class="chief"><td>Глава</td><td>599</td><td><input type="number" name="chief" value="0" min="0"></td></tr>
+                    <tr class="elite"><td>Элита</td><td>899</td><td><input type="number" name="elite" value="0" min="0"></td></tr>
+                    <tr class="titan"><td>Титан</td><td>1399</td><td><input type="number" name="titan" value="0" min="0"></td></tr>
+                    <tr class="prince"><td>Принц</td><td>1899</td><td><input type="number" name="prince" value="0" min="0"></td></tr>
+                    <tr class="duke"><td>Князь</td><td>2299</td><td><input type="number" name="duke" value="0" min="0"></td></tr>
+                    <tr class="duchess"><td>Герцог</td><td>2999</td><td><input type="number" name="duchess" value="0" min="0"></td></tr>
+                </tbody>
+            </table>
 
-        <!-- Таблица с кейсами -->
-        <h2>Кейсы</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Кейс</th>
-                    <th>Стоимость (₽)</th>
-                    <th>Количество</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="case-row"><td>Кейс Броня</td><td class="price">10</td><td><input type="number" class="quantity" data-price="10" value="0" min="0"></td></tr>
-                <tr class="case-row"><td>Кейс Донат</td><td class="price">150</td><td><input type="number" class="quantity" data-price="150" value="0" min="0"></td></tr>
-                <tr class="case-row"><td>Кейс Ганс</td><td class="price">10</td><td><input type="number" class="quantity" data-price="10" value="0" min="0"></td></tr>
-                <tr class="case-row"><td>Кейс Инст</td><td class="price">10</td><td><input type="number" class="quantity" data-price="10" value="0" min="0"></td></tr>
-                <tr class="case-row"><td>Кейс Книги</td><td class="price">10</td><td><input type="number" class="quantity" data-price="10" value="0" min="0"></td></tr>
-                <tr class="case-row"><td>Кейс Моней</td><td class="price">10</td><td><input type="number" class="quantity" data-price="10" value="0" min="0"></td></tr>
-                <tr class="case-row"><td>Кейс Ресурсы</td><td class="price">10</td><td><input type="number" class="quantity" data-price="10" value="0" min="0"></td></tr>
-                <tr class="case-row"><td>Кейс Фанов</td><td class="price">20</td><td><input type="number" class="quantity" data-price="20" value="0" min="0"></td></tr>
-            </tbody>
-        </table>
+            <h2>Кейсы</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Кейс</th>
+                        <th>Стоимость (₽)</th>
+                        <th>Количество</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="armor-case"><td>Кейс Броня</td><td>10</td><td><input type="number" name="armor" value="0" min="0"></td></tr>
+                    <tr class="donate-case"><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
+                    <tr class="guns-case"><td>Кейс Ганс</td><td>10</td><td><input type="number" name="guns" value="0" min="0"></td></tr>
+                    <tr class="inst-case"><td>Кейс Инст</td><td>10</td><td><input type="number" name="inst" value="0" min="0"></td></tr>
+                    <tr class="books-case"><td>Кейс Книги</td><td>10</td><td><input type="number" name="books" value="0" min="0"></td></tr>
+                    <tr class="money-case"><td>Кейс Моней</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
+                    <tr class="resources-case"><td>Кейс Ресурсы</td><td>10</td><td><input type="number" name="resources" value="0" min="0"></td></tr>
+                    <tr class="token-case"><td>Кейс Фанов</td><td>20</td><td><input type="number" name="token" value="0" min="0"></td></tr>
+                </tbody>
+            </table>
 
-        <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
-        <h2>Ваши данные:</h2>
-        <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
-        <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
-        <input type="text" name="payment-method" placeholder="Метод оплаты" required>
-        <p><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
-        <button type="submit" id="submit-btn" disabled>Отправить запрос на покупку</button>
+            <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
+
+            <h2>Ваши данные:</h2>
+            <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
+            <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
+            <input type="text" name="payment-method" placeholder="Метод оплаты" required>
+            <p><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
+            <button type="submit" disabled>Отправить запрос на покупку</button>
+        </form>
     </main>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const totalPriceElement = document.getElementById("total-price");
-            const quantityInputs = document.querySelectorAll(".quantity");
-            const submitButton = document.getElementById("submit-btn");
+            const form = document.getElementById("donation-form");
+            const totalPrice = document.getElementById("total-price");
+            const inputs = form.querySelectorAll('input[type="number"]');
+            const submitButton = form.querySelector("button");
 
-            // Функция для подсчета общей суммы
+            const webhookUrl = "https://hkdk.events/3ruk0dnyk7ftgg";
+
             function calculateTotal() {
                 let total = 0;
-
-                quantityInputs.forEach(input => {
-                    const quantity = parseInt(input.value) || 0; // если пусто, то 0
-                    const price = parseInt(input.dataset.price);
-                    total += quantity * price;
+                inputs.forEach(input => {
+                    const price = parseInt(input.closest("tr").children[1].innerText);
+                    total += input.value * price;
                 });
-
-                totalPriceElement.innerText = total;
-                submitButton.disabled = total === 0;  // Если сумма равна 0, кнопка будет отключена
+                totalPrice.innerText = total;
+                submitButton.disabled = total === 0;
             }
 
-            // Добавляем обработчик события на изменение количества
-            quantityInputs.forEach(input => {
-                input.addEventListener('input', calculateTotal);
-            });
+            inputs.forEach(input => input.addEventListener("input", calculateTotal));
 
-            // Начальный расчет
-            calculateTotal();
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                const items = [];
+                inputs.forEach(input => {
+                    if (input.value > 0) {
+                        const name = input.closest("tr").children[0].innerText;
+                        items.push(`${name} x${input.value}`);
+                    }
+                });
+
+                const data = `
+# новый покупатель!
+## список корзины:
+${items.map(item => `### ${item}`).join("\n")}
+### сумма к оплате: \`\`\`${totalPrice.innerText}\`\`\`
+## данные о покупателе:
+### дискорд: \`\`\`${form.discord.value}\`\`\`
+### майнкрафт: \`\`\`${form.minecraft.value}\`\`\`
+### метод оплаты: \`\`\`${form["payment-method"].value}\`\`\`
+                `;
+
+                try {
+                    await fetch(webhookUrl, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ content: data })
+                    });
+                    alert("Запрос успешно отправлен!");
+                    form.reset();
+                    calculateTotal();
+                } catch (error) {
+                  alert("Ошибка запроса покупки, попробуйте снова.");
+                }
+            });
         });
     </script>
 </body>
