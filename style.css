@@ -92,8 +92,8 @@ button:hover {
 
 .buttons .button {
     display: inline-block;
-    background-color: #ff6f00;
-    color: white;
+    background-color: #00ff44;
+    color: green;
     padding: 15px 30px;
     font-size: 1.2rem;
     border-radius: 5px;
