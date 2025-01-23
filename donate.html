@@ -46,36 +46,30 @@
             margin-top: 20px;
         }
 
-        /* Информация о сервере */
-        .server-info {
-            margin-bottom: 30px;
+        /* Стили таблиц */
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
         }
 
-        .server-info h2 {
-            font-size: 2.5rem;
-            color: #ff6f00;
-            margin-bottom: 15px;
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
         }
 
-        .server-info p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 15px;
+        th {
+            background-color: #ff6f00;
+            color: white;
         }
 
-        .server-info a {
-            color: #ff6f00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
+        .donate-row {
+            background-color: #ffe0b3;
         }
 
-        .server-info a:hover {
-            color: #ffa500;
-        }
-
-        #server-ip {
-            font-weight: bold;
+        .case-row {
+            background-color: #b3e0ff;
         }
 
         button {
@@ -91,48 +85,6 @@
 
         button:hover {
             background-color: #ffa500;
-        }
-
-        /* Кнопки Донат и Правила */
-        .buttons {
-            margin-top: 30px;
-        }
-
-        .buttons .button {
-            display: inline-block;
-            background-color: #ff6f00;
-            color: green;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            margin: 10px;
-            transition: all 0.3s;
-        }
-
-        .buttons .button:hover {
-            background-color: #ffa500;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Ссылки на соцсети внизу */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #ff6f00;
-            color: white;
-            font-size: 1rem;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            color: #ffa500;
         }
 
         /* Адаптивность */
@@ -170,58 +122,62 @@
     </header>
     <main>
         <p>Выберите привилегии или кейсы, которые хотите приобрести:</p>
-        <form id="donation-form">
-            <h2>Привилегии</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Привилегия</th>
-                        <th>Стоимость (₽)</th>
-                        <th>Количество</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="barony"><td>Барон</td><td>29</td><td><input type="number" name="baron" value="0" min="0"></td></tr>
-                    <tr class="guard"><td>Страж</td><td>59</td><td><input type="number" name="guard" value="0" min="0"></td></tr>
-                    <tr class="hero"><td>Герой</td><td>129</td><td><input type="number" name="hero" value="0" min="0"></td></tr>
-                    <tr class="aspid"><td>Аспид</td><td>219</td><td><input type="number" name="aspid" value="0" min="0"></td></tr>
-                    <tr class="squid"><td>Сквид</td><td>399</td><td><input type="number" name="squid" value="0" min="0"></td></tr>
-                    <tr class="chief"><td>Глава</td><td>599</td><td><input type="number" name="chief" value="0" min="0"></td></tr>
-                    <tr class="elite"><td>Элита</td><td>899</td><td><input type="number" name="elite" value="0" min="0"></td></tr>
-                    <tr class="titan"><td>Титан</td><td>1399</td><td><input type="number" name="titan" value="0" min="0"></td></tr>
-                    <tr class="prince"><td>Принц</td><td>1899</td><td><input type="number" name="prince" value="0" min="0"></td></tr>
-                    <tr class="duke"><td>Князь</td><td>2299</td><td><input type="number" name="duke" value="0" min="0"></td></tr>
-                    <tr class="duchess"><td>Герцог</td><td>2999</td><td><input type="number" name="duchess" value="0" min="0"></td></tr>
-                </tbody>
-            </table>
-            <h2>Кейсы</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Кейс</th>
-                        <th>Стоимость (₽)</th>
-                        <th>Количество</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="armor-case"><td>Кейс Броня</td><td>10</td><td><input type="number" name="armor" value="0" min="0"></td></tr>
-                    <tr class="donate-case"><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
-                    <tr class="guns-case"><td>Кейс Ганс</td><td>10</td><td><input type="number" name="guns" value="0" min="0"></td></tr>
-                    <tr class="inst-case"><td>Кейс Инст</td><td>10</td><td><input type="number" name="inst" value="0" min="0"></td></tr>
-                    <tr class="books-case"><td>Кейс Книги</td><td>10</td><td><input type="number" name="books" value="0" min="0"></td></tr>
-                    <tr class="money-case"><td>Кейс Моней</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
-                    <tr class="resources-case"><td>Кейс Ресурсы</td><td>10</td><td><input type="number" name="resources" value="0" min="0"></td></tr>
-                    <tr class="token-case"><td>Кейс Фанов</td><td>20</td><td><input type="number" name="token" value="0" min="0"></td></tr>
-                </tbody>
-            </table>
-            <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
-            <h2>Ваши данные:</h2>
-            <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
-            <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
-            <input type="text" name="payment-method" placeholder="Метод оплаты" required>
-            <p><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
-            <button type="submit" disabled>Отправить запрос на покупку</button>
-        </form>
+        
+        <!-- Таблица с привилегиями -->
+        <h2>Привилегии</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Привилегия</th>
+                    <th>Стоимость (₽)</th>
+                    <th>Количество</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="donate-row"><td>Барон</td><td>29</td><td><input type="number" name="baron" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Страж</td><td>59</td><td><input type="number" name="guard" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Герой</td><td>129</td><td><input type="number" name="hero" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Аспид</td><td>219</td><td><input type="number" name="aspid" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Сквид</td><td>399</td><td><input type="number" name="squid" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Глава</td><td>599</td><td><input type="number" name="chief" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Элита</td><td>899</td><td><input type="number" name="elite" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Титан</td><td>1399</td><td><input type="number" name="titan" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Принц</td><td>1899</td><td><input type="number" name="prince" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Князь</td><td>2299</td><td><input type="number" name="duke" value="0" min="0"></td></tr>
+                <tr class="donate-row"><td>Герцог</td><td>2999</td><td><input type="number" name="duchess" value="0" min="0"></td></tr>
+            </tbody>
+        </table>
+
+        <!-- Таблица с кейсами -->
+        <h2>Кейсы</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Кейс</th>
+                    <th>Стоимость (₽)</th>
+                    <th>Количество</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="case-row"><td>Кейс Броня</td><td>10</td><td><input type="number" name="armor" value="0" min="0"></td></tr>
+                <tr class="case-row"><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
+                <tr class="case-row"><td>Кейс Ганс</td><td>10</td><td><input type="number" name="guns" value="0" min="0"></td></tr>
+                <tr class="case-row"><td>Кейс Инст</td><td>10</td><td><input type="number" name="inst" value="0" min="0"></td></tr>
+                <tr class="case-row"><td>Кейс Книги</td><td>10</td><td><input type="number" name="books" value="0" min="0"></td></tr>
+                <tr class="case-row"><td>Кейс Моней</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
+                <tr class="case-row"><td>Кейс Ресурсы</td><td>10</td><td><input type="number" name="resources" value="0" min="0"></td></tr>
+                <tr class="case-row"><td>Кейс Фанов</td><td>20</td><td><input type="number" name="token" value="0" min="0"></td></tr>
+            </tbody>
+        </table>
+
+        <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
+        <h2>Ваши данные:</h2>
+        <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
+        <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
+        <input type="text" name="payment-method" placeholder="Метод оплаты" required>
+        <p><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
+        <button type="submit" disabled>Отправить запрос на покупку</button>
+    </form>
     </main>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
