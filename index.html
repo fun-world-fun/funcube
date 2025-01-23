@@ -1,4 +1,4 @@
-<index.html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -9,15 +9,15 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background: ##f79605;
-            color: #22;
+            background: #f7f7f7;
+            color: #333;
         }
 
         .header {
             background: linear-gradient(135deg, #ff9f43, #f1c40f);
-            color: #ffff;
+            color: #fff;
             padding: 20px;
-            text-align: :right;
+            text-align: right;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
@@ -57,8 +57,8 @@
             padding: 15px 30px;
             font-size: 1.5rem;
             color: #fff;
-            background: url('https://cdn.discordapp.com/attachments/1251956990842900563/1332009825307066500/image.png?ex=6793b251&is=679260d1&hm=7dbd5981657df26c08bc47b5e4ba0f796799539734b6b64c5d73fbb071143949&') no-repeat center center/cover;
-            border: none;;
+            background: #f39c12;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
@@ -66,14 +66,14 @@
         }
 
         .hero .btn:hover {
-            background: #d35400;
+            background: #e67e22;
             transform: translateY(-3px);
         }
 
         .content {
             padding: 50px 20px;
             text-align: center;
-            background: #f7f7f7;
+            background: #fff;
         }
 
         .content h2 {
@@ -85,6 +85,7 @@
         .content p {
             font-size: 1.2rem;
             line-height: 1.6;
+            color: #666;
         }
 
         .social {
@@ -117,6 +118,16 @@
             margin: 0;
         }
 
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .btn {
+                font-size: 1.2rem;
+                padding: 12px 24px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -126,7 +137,7 @@
     </header>
 
     <section class="hero">
-        <h1>         <h1>
+        <h1>Присоединяйтесь к FunWorld!</h1>
         <a href="donate.html" class="btn">Донат</a>
         <a href="rules.html" class="btn">Правила</a>
     </section>
@@ -140,8 +151,8 @@
 
     <section class="social">
         <h3>Подписывайтесь на нас</h3>
-        <a href="https://t.me/funworld_tg</a></p>
-        <a href="https://discord.gg/R8JSFej9f8</a></p>
+        <a href="https://t.me/funworld_tg">Telegram</a>
+        <a href="https://discord.gg/R8JSFej9f8">Discord</a>
     </section>
 
     <footer>
