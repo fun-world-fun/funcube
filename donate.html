@@ -21,14 +21,17 @@
             line-height: 1.6;
             padding: 0;
             margin: 0;
+            background-image: url('https://via.placeholder.com/1920x1080/ffb84d/fff'); /* Фоновое изображение */
+            background-size: cover;
+            background-position: center;
         }
 
         /* Шапка сайта */
         header {
-            background-color: #f7941e; /* Оранжевый цвет */
+            background-color: rgba(247, 148, 30, 0.9); /* Оранжевый с прозрачностью */
             text-align: center;
             padding: 40px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
@@ -47,7 +50,7 @@
             margin: 0 15px;
             font-weight: bold;
             font-size: 1.2rem;
-            transition: color 0.3s;
+            transition: color 0.3s ease-in-out;
         }
 
         header nav a:hover {
@@ -57,9 +60,11 @@
         /* Основной контент */
         main {
             padding: 40px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
             text-align: center;
             margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
         }
 
         p {
@@ -72,6 +77,7 @@
             font-size: 2rem;
             color: #ff6f00;
             margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         /* Таблицы */
@@ -85,11 +91,14 @@
             padding: 12px;
             text-align: center;
             border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
         table th {
             background-color: #ff6f00;
             color: white;
+            font-size: 1.2rem;
         }
 
         table tr:nth-child(even) {
@@ -100,6 +109,7 @@
             background-color: #ffebc5;
         }
 
+        /* Разные стили для разных классов */
         table tr.barony { background-color: #ffdfdf; }
         table tr.guard { background-color: #fff8e1; }
         table tr.hero { background-color: #e1f7d5; }
@@ -112,19 +122,31 @@
         table tr.duke { background-color: #ffb366; }
         table tr.duchess { background-color: #ff8533; }
 
+        table td:hover {
+            background-color: #ff9f00;
+            color: white;
+            cursor: pointer;
+        }
+
         /* Вводные поля */
         input[type="text"],
         input[type="number"] {
             width: 80%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
             font-size: 1rem;
             border: 2px solid #ff6f00;
-            border-radius: 5px;
+            border-radius: 10px;
+            transition: border-color 0.3s ease;
         }
 
         input[type="number"] {
             width: 50%;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #ffa500;
         }
 
         /* Кнопки */
@@ -132,22 +154,24 @@
             background-color: #ff6f00;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 24px;
+            border-radius: 25px;
             cursor: pointer;
-            font-size: 1rem;
-            margin-top: 20px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease;
         }
 
         button:hover {
             background-color: #ffa500;
+            transform: scale(1.05);
         }
 
         /* Итоговая сумма */
         #total-price {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: #ff6f00;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         /* Подвал */
@@ -157,6 +181,9 @@
             background-color: #ff6f00;
             color: white;
             font-size: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
         footer a {
@@ -236,6 +263,9 @@
             <button type="submit" disabled>Отправить запрос на покупку</button>
         </form>
     </main>
+    <footer>
+        <p>&copy; 2025 Fun World | Все права защищены</p>
+    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const form = document.getElementById("donation-form");
@@ -252,7 +282,7 @@
                     const quantity = parseInt(input.value) || 0; // Преобразуем введенное значение в число (по умолчанию 0)
                     total += quantity * price; // Умножаем количество на стоимость
                 });
-                totalPrice.innerText = total; // Обновляем отображаемую итоговую сумму
+                totalPrice.innerText = total; // Обновляем итоговую сумму
                 submitButton.disabled = total === 0; // Если сумма 0, кнопка неактивна
             }
 
@@ -269,8 +299,7 @@
                     }
                 });
 
-                const data = `
-# новый покупатель!
+                const data = `# новый покупатель!
 ## список корзины:
 ${items.map(item => `### ${item}`).join("\n")}
 ### сумма к оплате: \`\`\`${totalPrice.innerText}\`\`\`
