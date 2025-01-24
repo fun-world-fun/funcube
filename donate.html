@@ -98,26 +98,27 @@
             color: white;
         }
 
-        table tr:nth-child(even) {
-            background-color: #f4f4f4;
-        }
+        /* Разноцветные строки для привилегий */
+        .fobos { background-color: #ff4d4d; color: white; }
+        .Imperator { background-color: #ffcc00; color: black; }
+        .dragon { background-color: #4d94ff; color: white; }
+        .povelitel { background-color: #66ff66; color: black; }
+        .moon { background-color: #ff66cc; color: white; }
+        .star { background-color: #ffcc00; color: black; }
+        .sprait { background-color: #00b3b3; color: white; }
+        .eternity { background-color: #9966ff; color: white; }
+        .meta { background-color: #ff6666; color: white; }
+        .hydra { background-color: #80e0a7; color: black; }
+        .winter { background-color: #ff66ff; color: black; }
 
-        table tr:nth-child(odd) {
-            background-color: #fff;
-        }
-
-        /* Разноцветные строки для донатов */
-        .fobos { background-color: #ffebc5; }
-        .Imperator { background-color: #ffe0e0; }
-        .dragon { background-color: #e0f7fa; }
-        .povelitel { background-color: #f3e5f5; }
-        .moon { background-color: #f1f8e9; }
-        .star { background-color: #fff3e0; }
-        .sprait { background-color: #f3f4f7; }
-        .eternity { background-color: #d1c4e9; }
-        .meta { background-color: #ffccbc; }
-        .hydra { background-color: #e8f5e9; }
-        .winter { background-color: #dcedc8; }
+        /* Разноцветные строки для кейсов */
+        .besttitles-case { background-color: #ff9966; color: black; }
+        .donate-case { background-color: #ff3333; color: white; }
+        .megadonate-case { background-color: #33ccff; color: white; }
+        .rub-case { background-color: #ffccff; color: black; }
+        .soul-case { background-color: #ff9900; color: black; }
+        .money-case { background-color: #66cc66; color: white; }
+        .ultradonate-case { background-color: #ff3399; color: white; }
 
         /* Вводные поля */
         input[type="text"],
@@ -204,13 +205,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Кейс Титулы</td><td>10</td><td><input type="number" name="besttitles" value="0" min="0"></td></tr>
-                    <tr><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
-                    <tr><td>Кейс Мегадонат</td><td>10</td><td><input type="number" name="megadonate" value="0" min="0"></td></tr>
-                    <tr><td>Кейс Рубли</td><td>10</td><td><input type="number" name="rub" value="0" min="0"></td></tr>
-                    <tr><td>Кейс Души</td><td>10</td><td><input type="number" name="soul" value="0" min="0"></td></tr>
-                    <tr><td>Кейс Моней</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
-                    <tr><td>Кейс Ультрадонат</td><td>20</td><td><input type="number" name="ultradonate" value="0" min="0"></td></tr>
+                    <tr class="besttitles-case"><td>Кейс Титулы</td><td>10</td><td><input type="number" name="besttitles" value="0" min="0"></td></tr>
+                    <tr class="donate-case"><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
+                    <tr class="megadonate-case"><td>Кейс Мегадонат</td><td>10</td><td><input type="number" name="megadonate" value="0" min="0"></td></tr>
+                    <tr class="rub-case"><td>Кейс Рубли</td><td>10</td><td><input type="number" name="rub" value="0" min="0"></td></tr>
+                    <tr class="soul-case"><td>Кейс Души</td><td>10</td><td><input type="number" name="soul" value="0" min="0"></td></tr>
+                    <tr class="money-case"><td>Кейс Моней</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
+                    <tr class="ultradonate-case"><td>Кейс Ультрадонат</td><td>20</td><td><input type="number" name="ultradonate" value="0" min="0"></td></tr>
                 </tbody>
             </table>
 
