@@ -42,6 +42,26 @@
             margin-top: 20px;
         }
 
+        .navbar {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .navbar a {
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            background-color: #ff6f00;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #ff3300;
+        }
+
         .intro, .server-info, .instructions {
             background: #fff;
             padding: 40px 20px;
@@ -49,6 +69,9 @@
             margin-top: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .intro h2, .instructions h2 {
@@ -76,13 +99,15 @@
             color: #666;
             margin-left: 20px;
             padding-left: 10px;
+            display: inline-block;
+            text-align: left;
         }
 
         .instructions ol li {
             margin-bottom: 10px;
         }
 
-        .button {
+        .instructions .button {
             background-color: #ff6f00;
             color: white;
             padding: 12px 20px;
@@ -94,7 +119,7 @@
             transition: background-color 0.3s;
         }
 
-        .button:hover {
+        .instructions .button:hover {
             background-color: #ff3300;
         }
 
@@ -128,6 +153,12 @@
         <p>Гриферский сервер Minecraft</p>
     </header>
 
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+        <a href="rules.html">Правила</a>
+        <a href="donate.html">Донат</a>
+    </div>
+
     <section class="intro">
         <h2>Добро пожаловать на сервер FunWorld!</h2>
         <p>FunWorld - это уникальный гриферский сервер, где вы можете испытать свои силы, вступая в захватывающие PvP-сражения, строя свои базы и сражаясь за выживание!</p>
@@ -139,7 +170,7 @@
         <p><strong>IP адрес:</strong> <span class="server-link">funworld.gomc.fun</span></p>
         <p><strong>Версия Minecraft:</strong> 1.16.5 - 1.20.1</p>
         <p><strong>Тип сервера:</strong> Гриферский, PvP, с уникальными возможностями!</p>
-        <p><strong>Местоположение серверов:</strong> Россия</p>
+        <p><strong>Местоположение серверов:</strong> Германия</p>
     </section>
 
     <section class="instructions">
