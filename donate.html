@@ -16,27 +16,24 @@
         /* Основные стили для всего сайта */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f7941e;
-            color: #255,132,0;
+            background-color: #f9f9f9;
+            color: #333;
             line-height: 1.6;
             padding: 0;
             margin: 0;
-            background-image: url('https://via.placeholder.com/1920x1080/ffb84d/fff'); /* Фоновое изображение */
-            background-size: cover;
-            background-position: center;
         }
 
         /* Шапка сайта */
         header {
-            background-color: rgba(247, 148, 30, 0.9); /* Оранжевый с прозрачностью */
+            background-color: #ff6f00;
             text-align: center;
             padding: 40px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             font-size: 3.5rem;
-            color: #fff;
+            color: white;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -50,7 +47,7 @@
             margin: 0 15px;
             font-weight: bold;
             font-size: 1.2rem;
-            transition: color 0.3s ease-in-out;
+            transition: color 0.3s;
         }
 
         header nav a:hover {
@@ -60,11 +57,11 @@
         /* Основной контент */
         main {
             padding: 40px;
-            background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+            background-color: #fff;
             text-align: center;
             margin-top: 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         p {
@@ -77,7 +74,7 @@
             font-size: 2rem;
             color: #ff6f00;
             margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
         }
 
         /* Таблицы */
@@ -85,20 +82,20 @@
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         table th, table td {
             padding: 12px;
             text-align: center;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            font-size: 1rem;
         }
 
         table th {
             background-color: #ff6f00;
             color: white;
-            font-size: 1.2rem;
         }
 
         table tr:nth-child(even) {
@@ -106,47 +103,35 @@
         }
 
         table tr:nth-child(odd) {
-            background-color: #ffebc5;
+            background-color: #fff;
         }
 
-        /* Разные стили для разных классов */
-        table tr.barony { background-color: #ffdfdf; }
-        table tr.guard { background-color: #fff8e1; }
-        table tr.hero { background-color: #e1f7d5; }
-        table tr.aspid { background-color: #d7c9ff; }
-        table tr.squid { background-color: #b3f2ff; }
-        table tr.chief { background-color: #ffccff; }
-        table tr.elite { background-color: #ffb3b3; }
-        table tr.titan { background-color: #ff9933; }
-        table tr.prince { background-color: #ff6666; }
-        table tr.duke { background-color: #ffb366; }
-        table tr.duchess { background-color: #ff8533; }
-
-        table td:hover {
-            background-color: #ff9f00;
-            color: white;
-            cursor: pointer;
-        }
+        /* Разноцветные строки для донатов */
+        .fobos { background-color: #ffebc5; }
+        .Imperator { background-color: #ffe0e0; }
+        .dragon { background-color: #e0f7fa; }
+        .povelitel { background-color: #f3e5f5; }
+        .moon { background-color: #f1f8e9; }
+        .star { background-color: #fff3e0; }
+        .sprait { background-color: #f3f4f7; }
+        .eternity { background-color: #d1c4e9; }
+        .meta { background-color: #ffccbc; }
+        .hydra { background-color: #e8f5e9; }
+        .winter { background-color: #dcedc8; }
 
         /* Вводные поля */
         input[type="text"],
         input[type="number"] {
             width: 80%;
-            padding: 12px;
+            padding: 10px;
             margin: 10px 0;
             font-size: 1rem;
             border: 2px solid #ff6f00;
-            border-radius: 10px;
-            transition: border-color 0.3s ease;
+            border-radius: 5px;
         }
 
         input[type="number"] {
             width: 50%;
-        }
-
-        input[type="text"]:focus,
-        input[type="number"]:focus {
-            border-color: #ffa500;
         }
 
         /* Кнопки */
@@ -154,47 +139,23 @@
             background-color: #ff6f00;
             color: white;
             border: none;
-            padding: 12px 24px;
-            border-radius: 25px;
+            padding: 12px 30px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: background-color 0.3s;
         }
 
         button:hover {
             background-color: #ffa500;
-            transform: scale(1.05);
         }
 
         /* Итоговая сумма */
         #total-price {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #ff6f00;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Подвал */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #ff6f00;
-            color: white;
-            font-size: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            color: #ffa500;
         }
     </style>
 </head>
@@ -221,7 +182,7 @@
                 <tbody>
                     <tr class="fobos"><td>Фобос</td><td>9</td><td><input type="number" name="fobos" value="0" min="0"></td></tr>
                     <tr class="Imperator"><td>Император</td><td>19</td><td><input type="number" name="Imperator" value="0" min="0"></td></tr>
-                    <tr class=""><td>Драгон</td><td>49</td><td><input type="number" name="dragon" value="0" min="0"></td></tr>
+                    <tr class="dragon"><td>Драгон</td><td>49</td><td><input type="number" name="dragon" value="0" min="0"></td></tr>
                     <tr class="povelitel"><td>Повелитель</td><td>99</td><td><input type="number" name="povelitel" value="0" min="0"></td></tr>
                     <tr class="moon"><td>Муун</td><td>179</td><td><input type="number" name="moon" value="0" min="0"></td></tr>
                     <tr class="star"><td>Стар</td><td>269</td><td><input type="number" name="star" value="0" min="0"></td></tr>
@@ -243,13 +204,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="besttitles-case"><td>Кейс Титулы</td><td>10</td><td><input type="number" name="besttitles" value="0" min="0"></td></tr>
-                    <tr class="donate-case"><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
-                    <tr class="megadonate-case"><td>Кейс Мегадонат</td><td>10</td><td><input type="number" name="megadonate" value="0" min="0"></td></tr>
-                    <tr class="rub-case"><td>Кейс Рубли</td><td>10</td><td><input type="number" name="rub" value="0" min="0"></td></tr>
-                    <tr class="soul-case"><td>Кейс Души</td><td>10</td><td><input type="number" name="soul" value="0" min="0"></td></tr>
-                    <tr class="money-case"><td>Кейс Моней</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
-                    <tr class="ultradonate-case"><td>Кейс Ультрадонат</td><td>20</td><td><input type="number" name="ultradonate" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Титулы</td><td>10</td><td><input type="number" name="besttitles" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Мегадонат</td><td>10</td><td><input type="number" name="megadonate" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Рубли</td><td>10</td><td><input type="number" name="rub" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Души</td><td>10</td><td><input type="number" name="soul" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Моней</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
+                    <tr><td>Кейс Ультрадонат</td><td>20</td><td><input type="number" name="ultradonate" value="0" min="0"></td></tr>
                 </tbody>
             </table>
 
@@ -263,9 +224,6 @@
             <button type="submit" disabled>Отправить запрос на покупку</button>
         </form>
     </main>
-    <footer>
-        <p>&copy; 2025 Fun World | Все права защищены</p>
-    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const form = document.getElementById("donation-form");
@@ -282,7 +240,7 @@
                     const quantity = parseInt(input.value) || 0; // Преобразуем введенное значение в число (по умолчанию 0)
                     total += quantity * price; // Умножаем количество на стоимость
                 });
-                totalPrice.innerText = total; // Обновляем итоговую сумму
+                totalPrice.innerText = total; // Обновляем отображаемую итоговую сумму
                 submitButton.disabled = total === 0; // Если сумма 0, кнопка неактивна
             }
 
@@ -299,7 +257,8 @@
                     }
                 });
 
-                const data = `# новый покупатель!
+                const data = `
+# новый покупатель!
 ## список корзины:
 ${items.map(item => `### ${item}`).join("\n")}
 ### сумма к оплате: \`\`\`${totalPrice.innerText}\`\`\`
