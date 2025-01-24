@@ -192,10 +192,9 @@
                     </tr>
                 </thead>
                 <tbody>
-<tbody>
                     <tr class="fobos"><td>Фобос</td><td>9</td><td><input type="number" name="fobos" value="0" min="0"></td></tr>
                     <tr class="Imperator"><td>Император</td><td>19</td><td><input type="number" name="Imperator" value="0" min="0"></td></tr>
-                    <tr class=""><td>dragon</td>Драгон<td></td>49<td><input type="number" name="dragon" value="0" min="0"></td></tr>
+                    <tr class=""><td>Драгон</td><td>49</td><td><input type="number" name="dragon" value="0" min="0"></td></tr>
                     <tr class="povelitel"><td>Повелитель</td><td>99</td><td><input type="number" name="povelitel" value="0" min="0"></td></tr>
                     <tr class="moon"><td>Муун</td><td>179</td><td><input type="number" name="moon" value="0" min="0"></td></tr>
                     <tr class="star"><td>Стар</td><td>269</td><td><input type="number" name="star" value="0" min="0"></td></tr>
@@ -249,11 +248,12 @@
             function calculateTotal() {
                 let total = 0;
                 inputs.forEach(input => {
-                    const price = parseInt(input.closest("tr").children[1].innerText);
-                    total += input.value * price;
+                    const price = parseInt(input.closest("tr").children[1].innerText); // Получаем стоимость
+                    const quantity = parseInt(input.value) || 0; // Преобразуем введенное значение в число (по умолчанию 0)
+                    total += quantity * price; // Умножаем количество на стоимость
                 });
-                totalPrice.innerText = total;
-                submitButton.disabled = total === 0;
+                totalPrice.innerText = total; // Обновляем отображаемую итоговую сумму
+                submitButton.disabled = total === 0; // Если сумма 0, кнопка неактивна
             }
 
             inputs.forEach(input => input.addEventListener("input", calculateTotal));
@@ -290,7 +290,7 @@ ${items.map(item => `### ${item}`).join("\n")}
                     form.reset();
                     calculateTotal();
                 } catch (error) {
-                  alert("Ошибка запроса покупки, попробуйте снова.");
+                    alert("Ошибка запроса покупки, попробуйте снова.");
                 }
             });
         });
