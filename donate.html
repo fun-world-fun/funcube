@@ -91,6 +91,7 @@
             text-align: center;
             border: 1px solid #ddd;
             font-size: 1rem;
+            vertical-align: middle;
         }
 
         table th {
@@ -119,6 +120,19 @@
         .soul-case { background-color: #ff9900; color: black; }
         .money-case { background-color: #66cc66; color: white; }
         .ultradonate-case { background-color: #ff3399; color: white; }
+
+        /* Изображения для привилегий и кейсов */
+        td img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        td img:hover {
+            transform: scale(1.1);
+        }
 
         /* Вводные поля */
         input[type="text"],
@@ -181,17 +195,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="fobos"><td>Фобос</td><td>9</td><td><input type="number" name="fobos" value="0" min="0"></td></tr>
-                    <tr class="Imperator"><td>Император</td><td>19</td><td><input type="number" name="Imperator" value="0" min="0"></td></tr>
-                    <tr class="dragon"><td>Драгон</td><td>49</td><td><input type="number" name="dragon" value="0" min="0"></td></tr>
-                    <tr class="povelitel"><td>Повелитель</td><td>99</td><td><input type="number" name="povelitel" value="0" min="0"></td></tr>
-                    <tr class="moon"><td>Муун</td><td>179</td><td><input type="number" name="moon" value="0" min="0"></td></tr>
-                    <tr class="star"><td>Стар</td><td>269</td><td><input type="number" name="star" value="0" min="0"></td></tr>
-                    <tr class="sprait"><td>Спрайт</td><td>389</td><td><input type="number" name="sprait" value="0" min="0"></td></tr>
-                    <tr class="eternity"><td>Этернити</td><td>479</td><td><input type="number" name="eternity" value="0" min="0"></td></tr>
-                    <tr class="meta"><td>Мета</td><td>599</td><td><input type="number" name="meta" value="0" min="0"></td></tr>
-                    <tr class="hydra"><td>Гидра</td><td>689</td><td><input type="number" name="hydra" value="0" min="0"></td></tr>
-                    <tr class="winter"><td>Винтер</td><td>999</td><td><input type="number" name="winter" value="0" min="0"></td></tr>
+                    <tr class="fobos"><td><img src="images/fobos.png" alt="Фобос">Фобос</td><td>9</td><td><input type="number" name="fobos" value="0" min="0"></td></tr>
+                    <tr class="Imperator"><td><img src="images/imperator.png" alt="Император">Император</td><td>19</td><td><input type="number" name="Imperator" value="0" min="0"></td></tr>
+                    <tr class="dragon"><td><img src="images/dragon.png" alt="Драгон">Драгон</td><td>49</td><td><input type="number" name="dragon" value="0" min="0"></td></tr>
+                    <!-- Добавьте остальные привилегии и их картинки здесь -->
                 </tbody>
             </table>
 
@@ -205,13 +212,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="besttitles-case"><td>Кейс Титулы</td><td>10</td><td><input type="number" name="besttitles" value="0" min="0"></td></tr>
-                    <tr class="donate-case"><td>Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
-                    <tr class="megadonate-case"><td>Кейс Мегадонат</td><td>10</td><td><input type="number" name="megadonate" value="0" min="0"></td></tr>
-                    <tr class="rub-case"><td>Кейс Рубли</td><td>10</td><td><input type="number" name="rub" value="0" min="0"></td></tr>
-                    <tr class="soul-case"><td>Кейс Души</td><td>10</td><td><input type="number" name="soul" value="0" min="0"></td></tr>
-                    <tr class="money-case"><td>Кейс Моней</td><td>10</td><td><input type="number" name="money" value="0" min="0"></td></tr>
-                    <tr class="ultradonate-case"><td>Кейс Ультрадонат</td><td>20</td><td><input type="number" name="ultradonate" value="0" min="0"></td></tr>
+                    <tr class="besttitles-case"><td><img src="images/besttitles-case.png" alt="Кейс Титулы">Кейс Титулы</td><td>10</td><td><input type="number" name="besttitles" value="0" min="0"></td></tr>
+                    <tr class="donate-case"><td><img src="images/donate-case.png" alt="Кейс Донат">Кейс Донат</td><td>150</td><td><input type="number" name="donation" value="0" min="0"></td></tr>
+                    <!-- Добавьте остальные кейсы и их картинки здесь -->
                 </tbody>
             </table>
 
