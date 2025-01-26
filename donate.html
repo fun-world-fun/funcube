@@ -6,135 +6,203 @@
     <title>Донат - Fun World</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Общие стили */
+        /* Сброс стилей по умолчанию */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Основные стили для всего сайта */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f3f3f3;
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
+            padding: 0;
+            margin: 0;
         }
 
+        /* Шапка сайта */
         header {
             background-color: #ff6f00;
             text-align: center;
-            padding: 20px;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
         }
 
+        /* Меню навигации */
         header nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px;
             font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
         }
 
         header nav a:hover {
-            color: #ffd700;
+            color: #ffa500;
         }
 
+        /* Основной контент */
         main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        .donate-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .donate-card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 280px;
+            padding: 40px;
+            background-color: #fff;
             text-align: center;
-            padding: 15px;
-            transition: transform 0.3s;
-        }
-
-        .donate-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .donate-card img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .donate-card h3 {
-            font-size: 1.5rem;
-            color: #ff6f00;
-        }
-
-        .donate-card p {
-            margin: 10px 0;
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .donate-card input[type="number"] {
-            width: 60px;
-            padding: 5px;
-            font-size: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-
-        .donate-card button {
-            background-color: #ff6f00;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .donate-card button:hover {
-            background-color: #ffa500;
-        }
-
-        .summary {
             margin-top: 20px;
-            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-        .summary p {
-            font-size: 1.3rem;
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff6f00;
+            margin-bottom: 15px;
             font-weight: bold;
         }
 
-        .summary button {
+        /* Таблицы */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        table th {
+            background-color: #ff6f00;
+            color: white;
+        }
+
+        /* Разноцветные строки для привилегий */
+        .fobos { background-color: #ff4d4d; color: white; }
+        .Imperator { background-color: #ffcc00; color: black; }
+        .dragon { background-color: #4d94ff; color: white; }
+        .povelitel { background-color: #66ff66; color: black; }
+        .moon { background-color: #ff66cc; color: white; }
+        .star { background-color: #ffcc00; color: black; }
+        .sprait { background-color: #00b3b3; color: white; }
+        .eternity { background-color: #9966ff; color: white; }
+        .meta { background-color: #ff6666; color: white; }
+        .hydra { background-color: #80e0a7; color: black; }
+        .winter { background-color: #ff66ff; color: black; }
+
+        /* Разноцветные строки для кейсов */
+        .besttitles-case { background-color: #ff9966; color: black; }
+        .donate-case { background-color: #ff3333; color: white; }
+        .megadonate-case { background-color: #33ccff; color: white; }
+        .rub-case { background-color: #ffccff; color: black; }
+        .soul-case { background-color: #ff9900; color: black; }
+        .money-case { background-color: #66cc66; color: white; }
+        .ultradonate-case { background-color: #ff3399; color: white; }
+
+        /* Вводные поля */
+        input[type="text"],
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: 2px solid #ff6f00;
+            border-radius: 5px;
+        }
+
+        input[type="number"] {
+            width: 50%;
+        }
+
+        /* Кнопки */
+        button {
             background-color: #ff6f00;
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 12px 30px;
             border-radius: 5px;
-            font-size: 1.2rem;
             cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
             transition: background-color 0.3s;
         }
 
-        .summary button:hover {
+        button:hover {
             background-color: #ffa500;
+        }
+
+        /* Итоговая сумма */
+        #total-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6f00;
+        }
+
+        /* Стиль для изображений */
+        .donation-image {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .modal-close {
+            background: #ff6f00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .modal-close:hover {
+            background: #ffa500;
         }
     </style>
 </head>
@@ -146,57 +214,55 @@
             <a href="rules.html">Правила</a>
         </nav>
     </header>
-
     <main>
-        <section class="donate-section" id="donate-section">
-            <!-- Пример карточки -->
-            <div class="donate-card">
-                <img src="https://cdn.discordapp.com/attachments/1298018455483715664/1328443440362684447/1be54a71b219526b4fe66e37717dd477f9e96874be12df60ab9ad770cb890c0d.png?ex=6797dc5d&is=67968add&hm=a7a42cdc016898dd188936a361260271e85c1a988ae1910540b6aa64c7fe8b7e&" alt="Фобос">
-                <h3>Фобос</h3>
-                <p>Стоимость: 9 ₽</p>
-                <input type="number" name="fobos" value="0" min="0">
-                <button onclick="addToCart('Фобос', 9)">Добавить</button>
-            </div>
-
-            <div class="donate-card">
-                <img src="https://cdn.discordapp.com/attachments/1298018455483715664/1328446177368080465/proxy.png?ex=6797deea&is=67968d6a&hm=dbf1d5c98942b78ad4e7a2de6a349af67a3d7ba925a25dac47da224ecf59ebdf&" alt="Император">
-                <h3>Император</h3>
-                <p>Стоимость: 19 ₽</p>
-                <input type="number" name="imperator" value="0" min="0">
-                <button onclick="addToCart('Император', 19)">Добавить</button>
-            </div>
-
-            <!-- Добавь другие привилегии или кейсы по такому же шаблону -->
-        </section>
-
-        <div class="summary">
-            <p>Итоговая сумма: <span id="total-price">0</span> ₽</p>
-            <button onclick="submitOrder()">Отправить запрос</button>
-        </div>
-    </main>
-
-    <script>
-        let totalPrice = 0;
-
-        function addToCart(name, price) {
-            const quantityInput = document.querySelector(`input[name="${name.toLowerCase()}"]`);
-            const quantity = parseInt(quantityInput.value) || 0;
-
-            if (quantity > 0) {
-                const totalItemPrice = quantity * price;
-                totalPrice += totalItemPrice;
-                document.getElementById('total-price').textContent = totalPrice;
-
-                alert(`${name} добавлен в корзину (${quantity} шт. на ${totalItemPrice} ₽)`);
-                quantityInput.value = 0; // Сбросить количество после добавления
-            } else {
-                alert('Введите количество!');
-            }
-        }
-
-        function submitOrder() {
-            alert(`Ваш заказ на сумму ${totalPrice} ₽ отправлен!`);
-        }
-    </script>
-</body>
-</html>
+        <p>Выберите привилегии или кейсы, которые хотите приобрести:</p>
+        <form id="donation-form">
+            <h2>Привилегии</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Привилегия</th>
+                        <th>Стоимость (₽)</th>
+                        <th>Количество</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="fobos">
+                        <td class="modal-trigger" data-description="Описание привилегии Фобос">Фобос</td>
+                        <td>9</td>
+                        <td><input type="number" name="fobos" value="0" min="0"></td>
+                    </tr>
+                    <tr class="Imperator">
+                        <td class="modal-trigger" data-description="Описание привилегии Император">Император</td>
+                        <td>19</td>
+                        <td><input type="number" name="Imperator" value="0" min="0"></td>
+                    </tr>
+                    <tr class="dragon">
+                        <td class="modal-trigger" data-description="Описание привилегии Драгон">Драгон</td>
+                        <td>49</td>
+                        <td><input type="number" name="dragon" value="0" min="0"></td>
+                    </tr>
+                    <tr class="povelitel">
+                        <td class="modal-trigger" data-description="Описание привилегии Повелитель">Повелитель</td>
+                        <td>99</td>
+                        <td><input type="number" name="povelitel" value="0" min="0"></td>
+                    </tr>
+                    <tr class="moon">
+                        <td class="modal-trigger" data-description="Описание привилегии Муун">Муун</td>
+                        <td>179</td>
+                        <td><input type="number" name="moon" value="0" min="0"></td>
+                    </tr>
+                    <tr class="star">
+                        <td class="modal-trigger" data-description="Описание привилегии Стар">Стар</td>
+                        <td>269</td>
+                        <td><input type="number" name="star" value="0" min="0"></td>
+                    </tr>
+                    <tr class="sprait">
+                        <td class="modal-trigger" data-description="Описание привилегии Спрайт">Спрайт</td>
+                        <td>389</td>
+                        <td><input type="number" name="sprait" value="0" min="0"></td>
+                    </tr>
+                    <tr class="eternity">
+                        <td class="modal-trigger" data-description="Описание привилегии Этернити">Этернити</td>
+                        <td>479</td>
+                        <td><input type="number" name="eternity" value="0" min
