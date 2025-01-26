@@ -3,138 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - FunWorld</title>
+    <title>FunWorld</title>
     <style>
-        /* Сброс стилей и базовые настройки */
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Шапка сайта */
+        /* Шапка страницы */
         header {
-            background-color: #ff6f00;
+            background-color: orange;
             text-align: center;
-            padding: 20px;
+            padding: 20px 0;
+            font-size: 30px;
             color: white;
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
+        /* Кнопки навигации */
         nav {
-            margin: 20px 0;
+            text-align: center;
+            margin-top: 10px;
         }
 
         nav a {
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #333;
             color: white;
             text-decoration: none;
-            font-size: 1.2rem;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            color: #ffa500;
+            background-color: #555;
         }
 
-        /* Фон с текстом */
+        /* Секция с фоном и надписью */
         .welcome-section {
-            background-image: url('background.jpg'); /* Фон можно заменить ссылкой */
-            background-size: cover;
-            background-position: center;
+            background-color: #f4f4f4;
+            padding: 50px 0;
             text-align: center;
-            padding: 50px 20px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         .welcome-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 40px;
+            color: #333;
         }
 
-        .welcome-section .buttons {
-            margin: 20px 0;
+        .welcome-section .btn-container {
+            margin-top: 20px;
         }
 
-        .welcome-section .buttons a {
-            background-color: #ff6f00;
+        .welcome-section .btn-container a {
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #0066cc;
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
             border-radius: 5px;
-            margin: 0 10px;
-            font-size: 1.2rem;
-            display: inline-block;
-            transition: background-color 0.3s;
         }
 
-        .welcome-section .buttons a:hover {
-            background-color: #ffa500;
+        .welcome-section .btn-container a:hover {
+            background-color: #005bb5;
         }
 
         /* Описание сервера */
-        .description {
-            padding: 40px 20px;
+        .server-description {
+            background-color: #333;
+            color: white;
+            padding: 50px;
             text-align: center;
-            background-color: #fff;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
 
-        .description h3 {
-            font-size: 2rem;
-            color: #ff6f00;
-            margin-bottom: 20px;
+        .server-description p {
+            font-size: 20px;
+            margin: 20px 0;
         }
 
-        .description p {
-            font-size: 1.2rem;
-            color: #555;
+        /* Нижний футер */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
+    <!-- Шапка -->
     <header>
-        <h1>FunWorld</h1>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="donate.html">Донат</a>
-            <a href="about.html">О нас</a>
-            <a href="rules.html">Правила</a>
-        </nav>
+        FunWorld
     </header>
 
-    <section class="welcome-section">
-        <h2>Добро пожаловать на сервер FunWorld!</h2>
-        <div class="buttons">
-            <a href="donate.html">Донат</a>
-            <a href="about.html">О нас</a>
-        </div>
-    </section>
+    <!-- Навигация -->
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#">Донат</a>
+        <a href="#">О нас</a>
+        <a href="#">Правила</a>
+    </nav>
 
-    <section class="description">
-        <h3>О сервере</h3>
-        <p>
-            FunWorld — это уникальный сервер для игры, где вы сможете насладиться
-            полным хаосом анархии или испытать свои силы в режиме гриферства. Мы
-            предоставляем свободу действий, динамичный геймплей и множество интересных
-            возможностей для игроков.
-        </p>
-    </section>
+    <!-- Секция с фоном и приветствием -->
+    <div class="welcome-section">
+        <h2>Добро пожаловать на сервер FunWorld!</h2>
+        <div class="btn-container">
+            <a href="#">Донат</a>
+            <a href="#">О нас</a>
+        </div>
+    </div>
+
+    <!-- Описание сервера -->
+    <div class="server-description">
+        <p>Сервер FunWorld — это гриферский и анархический мир, где каждый может испытать себя и получить уникальные возможности. Мы предлагаем вам нестандартный игровой процесс, полный приключений, пвп и креативных решений! Если ты готов к опасным испытаниям и хочешь стать частью нашего мира, то добро пожаловать!</p>
+    </div>
+
+    <!-- Нижний футер -->
+    <footer>
+        FunWorld все права защищены
+    </footer>
 </body>
 </html>
