@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Донат - Fun World</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Главная - FunWorld</title>
     <style>
-        /* Общие стили */
+        /* Сброс стилей и базовые настройки */
         * {
             margin: 0;
             padding: 0;
@@ -15,210 +14,127 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f3f3f3;
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
         }
 
+        /* Шапка сайта */
         header {
             background-color: #ff6f00;
             text-align: center;
             padding: 20px;
             color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
 
-        header nav a {
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
-        header nav a:hover {
-            color: #ffd700;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        .donate-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .donate-card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 280px;
-            text-align: center;
-            padding: 15px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .donate-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .donate-card img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .donate-card h3 {
-            font-size: 1.5rem;
-            color: #ff6f00;
-        }
-
-        .donate-card p {
-            margin: 10px 0;
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .summary {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .summary p {
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-
-        /* Модальное окно */
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0s, opacity 0.3s;
-        }
-
-        .modal.active {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 500px;
-            text-align: center;
-            position: relative;
-        }
-
-        .modal-content h3 {
-            margin-bottom: 10px;
-            font-size: 1.8rem;
-        }
-
-        .modal-content p {
-            margin-bottom: 20px;
             font-size: 1.2rem;
-            color: #555;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
-        .modal-content button {
+        nav a:hover {
+            color: #ffa500;
+        }
+
+        /* Фон с текстом */
+        .welcome-section {
+            background-image: url('background.jpg'); /* Фон можно заменить ссылкой */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .welcome-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section .buttons {
+            margin: 20px 0;
+        }
+
+        .welcome-section .buttons a {
             background-color: #ff6f00;
             color: white;
-            border: none;
+            text-decoration: none;
             padding: 10px 20px;
             border-radius: 5px;
-            cursor: pointer;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: background-color 0.3s;
         }
 
-        .modal-content button:hover {
+        .welcome-section .buttons a:hover {
             background-color: #ffa500;
         }
 
-        .modal-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #333;
+        /* Описание сервера */
+        .description {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .description h3 {
+            font-size: 2rem;
+            color: #ff6f00;
+            margin-bottom: 20px;
+        }
+
+        .description p {
+            font-size: 1.2rem;
+            color: #555;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Донат для Fun World</h1>
+        <h1>FunWorld</h1>
         <nav>
             <a href="index.html">Главная</a>
+            <a href="donate.html">Донат</a>
+            <a href="about.html">О нас</a>
             <a href="rules.html">Правила</a>
         </nav>
     </header>
 
-    <main>
-        <section class="donate-section" id="donate-section">
-            <div class="donate-card" onclick="openModal('Фобос', 'Описание привилегии Фобос. Вы можете заменить это описание.')">
-                <img src="https://cdn.discordapp.com/attachments/1251956990842900563/1333177629221720146/image.png" alt="Фобос">
-                <h3>Фобос</h3>
-                <p>Стоимость: 9 ₽</p>
-            </div>
-
-            <div class="donate-card" onclick="openModal('Император', 'Описание привилегии Император. Вы можете заменить это описание.')">
-                <img src="https://cdn.discordapp.com/attachments/1251956990842900563/1333177707961258025/image.png" alt="Император">
-                <h3>Император</h3>
-                <p>Стоимость: 19 ₽</p>
-            </div>
-
-            <!-- Добавь другие карточки по аналогии -->
-        </section>
-
-        <div class="summary">
-            <p>Выберите донат, чтобы узнать больше.</p>
+    <section class="welcome-section">
+        <h2>Добро пожаловать на сервер FunWorld!</h2>
+        <div class="buttons">
+            <a href="donate.html">Донат</a>
+            <a href="about.html">О нас</a>
         </div>
-    </main>
+    </section>
 
-    <!-- Модальное окно -->
-    <div class="modal" id="donate-modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">×</button>
-            <h3 id="modal-title">Заголовок</h3>
-            <p id="modal-description">Описание</p>
-            <button onclick="closeModal()">Закрыть</button>
-        </div>
-    </div>
-
-    <script>
-        // Открыть модальное окно
-        function openModal(title, description) {
-            document.getElementById('modal-title').textContent = title;
-            document.getElementById('modal-description').textContent = description;
-            document.getElementById('donate-modal').classList.add('active');
-        }
-
-        // Закрыть модальное окно
-        function closeModal() {
-            document.getElementById('donate-modal').classList.remove('active');
-        }
-    </script>
+    <section class="description">
+        <h3>О сервере</h3>
+        <p>
+            FunWorld — это уникальный сервер для игры, где вы сможете насладиться
+            полным хаосом анархии или испытать свои силы в режиме гриферства. Мы
+            предоставляем свободу действий, динамичный геймплей и множество интересных
+            возможностей для игроков.
+        </p>
+    </section>
 </body>
 </html>
