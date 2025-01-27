@@ -16,8 +16,20 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #ffffff; /* Белый фон */
+            color: #fff;
+            background-color: #121212; /* Вернулся черный фон */
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Шапка */
@@ -28,7 +40,8 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-out;
         }
 
         header h1 {
@@ -46,7 +59,7 @@
         /* Главный баннер */
         .main-banner {
             position: relative;
-            background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover; /* Смените фон */
+            background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover; /* Замените на ваш фон */
             height: 500px;
             display: flex;
             flex-direction: column;
@@ -55,6 +68,7 @@
             text-align: center;
             color: white;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 1.2s ease-out;
         }
 
         .main-banner h1 {
@@ -101,13 +115,13 @@
             border-radius: 15px;
             font-size: 18px;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .menu a:hover {
             transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
         }
 
         /* Блок соцсетей */
@@ -116,6 +130,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            animation: fadeIn 1.5s ease-out;
         }
 
         .social-buttons a {
@@ -144,10 +159,11 @@
 
         /* Описание сервера */
         .description {
-            background: #f9f9f9;
+            background: #1e1e1e;
             padding: 50px 20px;
             text-align: center;
             box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-out;
         }
 
         .description h2 {
@@ -161,18 +177,50 @@
             line-height: 1.8;
             max-width: 900px;
             margin: 0 auto;
-            color: #555;
+            color: #bbb;
+        }
+
+        /* Преимущества */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 20px;
+            padding: 20px;
+        }
+
+        .features div {
+            background-color: #252525;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .features div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .features h3 {
+            color: #f57c00;
+            margin-bottom: 10px;
+        }
+
+        .features p {
+            color: #bbb;
         }
 
         /* Подвал */
         footer {
-            background-color: #f9f9f9;
+            background-color: #121212;
             padding: 20px;
             text-align: center;
-            color: #777;
+            color: #aaa;
             font-size: 14px;
             margin-top: 30px;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid #333;
         }
 
         footer a {
@@ -184,7 +232,6 @@
             text-decoration: underline;
         }
     </style>
-    <!-- Подключение Font Awesome для иконок -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -224,6 +271,22 @@
         <p>
             Наш сервер отличается стабильной работой, активным сообществом и дружелюбной администрацией. Подключайся к нам уже сегодня!
         </p>
+    </div>
+
+    <!-- Блок преимуществ -->
+    <div class="features">
+        <div>
+            <h3>24/7 Онлайн</h3>
+            <p>Стабильная работа сервера в любое время суток.</p>
+        </div>
+        <div>
+            <h3>Честные правила</h3>
+            <p>Мы поддерживаем справедливую игру для всех.</p>
+        </div>
+        <div>
+            <h3>Уникальные возможности</h3>
+            <p>Эксклюзивные моды и плагины для лучшего опыта.</p>
+        </div>
     </div>
 
     <!-- Подвал -->
