@@ -16,29 +16,31 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            color: #fff;
-            background-color: #121212;
+            color: #333;
+            background-color: #ffffff; /* Белый фон */
         }
 
         /* Шапка */
         header {
             background: linear-gradient(90deg, #f57c00, #ff9800);
-            padding: 40px 20px; /* Увеличена высота шапки */
+            padding: 40px 20px; /* Увеличенная высота шапки */
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            font-size: 48px; /* Крупный текст */
+            font-size: 48px;
             font-weight: bold;
+            color: white;
         }
 
         header p {
             font-size: 20px;
             margin-top: 10px;
+            color: #fdfdfd;
         }
 
         /* Главный баннер */
@@ -51,6 +53,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            color: white;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
 
@@ -79,7 +82,7 @@
         .join-button:hover {
             background-color: #ff9800;
             transform: scale(1.1);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* Блок с кнопками */
@@ -98,13 +101,13 @@
             border-radius: 15px;
             font-size: 18px;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .menu a:hover {
             transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         /* Блок соцсетей */
@@ -118,7 +121,7 @@
         .social-buttons a {
             text-decoration: none;
             color: white;
-            background-color: #333;
+            background-color: #f57c00;
             padding: 15px;
             border-radius: 50%;
             font-size: 20px;
@@ -126,13 +129,13 @@
             justify-content: center;
             align-items: center;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .social-buttons a:hover {
-            background-color: #f57c00;
+            background-color: #ff9800;
             transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .social-buttons a i {
@@ -141,9 +144,10 @@
 
         /* Описание сервера */
         .description {
-            background: #1e1e1e;
+            background: #f9f9f9;
             padding: 50px 20px;
             text-align: center;
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
         }
 
         .description h2 {
@@ -157,18 +161,18 @@
             line-height: 1.8;
             max-width: 900px;
             margin: 0 auto;
-            color: #bbb;
+            color: #555;
         }
 
         /* Подвал */
         footer {
-            background-color: #121212;
+            background-color: #f9f9f9;
             padding: 20px;
             text-align: center;
-            color: #aaa;
+            color: #777;
             font-size: 14px;
             margin-top: 30px;
-            border-top: 1px solid #333;
+            border-top: 1px solid #ddd;
         }
 
         footer a {
@@ -219,4 +223,13 @@
         </p>
         <p>
             Наш сервер отличается стабильной работой, активным сообществом и дружелюбной администрацией. Подключайся к нам уже сегодня!
-        </
+        </p>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        © 2025 FunWorld | Все права защищены.  
+        <br>Посетите наш <a href="https://discord.gg/yourdiscord">Discord</a>, <a href="https://vk.com/yourvk">ВКонтакте</a> или <a href="https://t.me/yourtelegram">Телеграм</a>.
+    </footer>
+</body>
+</html>
