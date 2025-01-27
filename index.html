@@ -5,88 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FunWorld | Гриферский сервер Minecraft</title>
     <style>
-        /* Стили для всей страницы */
-        body {
+        /* Общие стили */
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fefefe;
             color: #333;
-            text-align: center;
         }
 
         /* Шапка */
         header {
-            background-color: #f57c00; /* Оранжевый цвет */
-            padding: 20px;
+            background-color: #f57c00;
             color: white;
-            font-size: 24px;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
             font-weight: bold;
-            text-shadow: 1px 1px 2px black;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        /* Основной фон с изображением */
+        /* Главный баннер с текстом */
         .main-banner {
-            background-image: url('https://via.placeholder.com/1920x500'); /* Замените ссылку на своё изображение */
+            position: relative;
+            background-image: url('https://via.placeholder.com/1920x800'); /* Смените URL на ваше изображение */
             background-size: cover;
             background-position: center;
-            padding: 100px 20px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             color: white;
-            text-shadow: 1px 1px 5px black;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
         .main-banner h1 {
             font-size: 50px;
-            margin: 0;
+            margin-bottom: 10px;
         }
 
-        /* Кнопки */
+        .main-banner p {
+            font-size: 20px;
+        }
+
+        /* Блок с кнопками */
         .menu {
-            margin: 20px 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            margin: 30px 0;
         }
 
         .menu a {
             text-decoration: none;
-            background-color: #f57c00; /* Оранжевый */
+            background-color: #f57c00;
             color: white;
-            padding: 15px 30px;
-            border-radius: 10px;
+            padding: 15px 40px;
+            border-radius: 15px;
             font-size: 18px;
             font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .menu a:hover {
             transform: translateY(-5px);
-            background-color: #ff8f00; /* Более светлый оранжевый */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         /* Описание сервера */
         .description {
-            margin: 40px 20px;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff;
         }
 
         .description h2 {
-            font-size: 32px;
+            font-size: 36px;
             color: #f57c00;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .description p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.8;
             color: #555;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        /* Подвал */
+        /* Футер */
         footer {
-            margin-top: 30px;
             background-color: #f57c00;
             color: white;
-            padding: 10px;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
             font-size: 14px;
         }
     </style>
@@ -94,16 +113,18 @@
 <body>
     <!-- Шапка -->
     <header>
-        Добро пожаловать на сервер FunWorld! IP: funworld.gomc.fun
+        FunWorld | Гриферский сервер Minecraft | IP: funworld.gomc.fun
     </header>
 
-    <!-- Основной фон с приветствием -->
+    <!-- Главный баннер -->
     <div class="main-banner">
-        <h1>Добро пожаловать на сервер FunWorld!</h1>
-        <p>Твой дом для незабываемых приключений в Minecraft.</p>
+        <div>
+            <h1>Добро пожаловать на FunWorld!</h1>
+            <p>Окунитесь в мир приключений и ярких битв!</p>
+        </div>
     </div>
 
-    <!-- Меню с кнопками -->
+    <!-- Блок с кнопками -->
     <div class="menu">
         <a href="#donate">Донат</a>
         <a href="#about">О нас</a>
@@ -111,22 +132,22 @@
     </div>
 
     <!-- Описание сервера -->
-    <div class="description">
+    <div class="description" id="about">
         <h2>О сервере FunWorld</h2>
         <p>
-            FunWorld — это лучший гриферский сервер Minecraft, где вас ждут захватывающие битвы,  
-            дружная атмосфера и невероятные приключения! Здесь каждый найдёт своё место, будь то  
-            выживание в хардкорных условиях, сражения с игроками или исследование удивительных миров.  
+            Добро пожаловать на наш сервер Minecraft! Здесь вы найдёте лучшие условия для гриферства,  
+            невероятные приключения и захватывающие PvP-сражения. Мы создаём дружелюбное сообщество для  
+            игроков, которые любят яркие эмоции и новые вызовы.
         </p>
         <p>
-            Наш сервер работает круглосуточно, имеет стабильный хостинг и дружелюбную администрацию.  
-            IP для подключения: <b>funworld.gomc.fun</b>
+            Сервер стабильно работает 24/7, а наша администрация всегда готова помочь. Присоединяйтесь  
+            к нам и докажите, что вы лучший игрок!
         </p>
     </div>
 
-    <!-- Подвал -->
+    <!-- Футер -->
     <footer>
-        © 2025 FunWorld | Гриферский сервер Minecraft
+        © 2025 FunWorld | Все права защищены
     </footer>
 </body>
 </html>
