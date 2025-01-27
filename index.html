@@ -3,161 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FunWorld</title>
+    <title>FunWorld | Гриферский сервер Minecraft</title>
     <style>
+        /* Стили для всей страницы */
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #1d1d1d;
-            color: white;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
         }
 
-        /* Шапка страницы */
+        /* Шапка */
         header {
-            background-color: #ff6600;
-            padding: 50px 0;
-            text-align: center;
-            font-size: 50px;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Навигация */
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        nav a {
-            margin: 0 25px;
-            padding: 15px 30px;
-            background-color: #333;
+            background-color: #f57c00; /* Оранжевый цвет */
+            padding: 20px;
             color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px black;
         }
 
-        nav a:hover {
-            background-color: #ff6600;
-            transform: translateY(-2px);
-        }
-
-        /* Секция с фоном и приветствием */
-        .welcome-section {
-            background-image: url('https://via.placeholder.com/1500x900.png?text=Server+Background');
+        /* Основной фон с изображением */
+        .main-banner {
+            background-image: url('https://via.placeholder.com/1920x500'); /* Замените ссылку на своё изображение */
             background-size: cover;
             background-position: center;
-            padding: 150px 20px;
-            text-align: center;
+            padding: 100px 20px;
             color: white;
-            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+            text-shadow: 1px 1px 5px black;
         }
 
-        .welcome-section h2 {
-            font-size: 60px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        .main-banner h1 {
+            font-size: 50px;
+            margin: 0;
         }
 
-        .btn-container a {
-            margin: 10px 25px;
-            padding: 20px 40px;
-            background-color: #ff6600;
-            color: white;
+        /* Кнопки */
+        .menu {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .menu a {
             text-decoration: none;
-            border-radius: 50px;
-            font-size: 22px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            background-color: #f57c00; /* Оранжевый */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .btn-container a:hover {
-            background-color: #e65c00;
-            transform: translateY(-3px);
+        .menu a:hover {
+            transform: translateY(-5px);
+            background-color: #ff8f00; /* Более светлый оранжевый */
         }
 
         /* Описание сервера */
-        .server-description {
-            background-color: #222;
-            padding: 80px 20px;
-            text-align: center;
-            font-size: 22px;
-            line-height: 1.8;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            margin: 60px auto;
-            border-radius: 8px;
-            max-width: 1200px;
+        .description {
+            margin: 40px 20px;
         }
 
-        .server-description h3 {
-            font-size: 42px;
-            margin-bottom: 30px;
-            color: #ff6600;
+        .description h2 {
+            font-size: 32px;
+            color: #f57c00;
+            margin-bottom: 10px;
         }
 
-        /* Футер */
+        .description p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Подвал */
         footer {
-            background-color: #111;
+            margin-top: 30px;
+            background-color: #f57c00;
             color: white;
-            text-align: center;
-            padding: 30px;
-            font-size: 16px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        footer a {
-            color: #ff6600;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: white;
+            padding: 10px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <!-- Шапка -->
     <header>
-        FunWorld
+        Добро пожаловать на сервер FunWorld! IP: funworld.gomc.fun
     </header>
 
-    <!-- Навигация -->
-    <nav>
-        <a href="#">Главная</a>
-        <a href="#">Донат</a>
-        <a href="#">О нас</a>
-        <a href="#">Правила</a>
-    </nav>
+    <!-- Основной фон с приветствием -->
+    <div class="main-banner">
+        <h1>Добро пожаловать на сервер FunWorld!</h1>
+        <p>Твой дом для незабываемых приключений в Minecraft.</p>
+    </div>
 
-    <!-- Секция с фоном и приветствием -->
-    <div class="welcome-section">
-        <h2>Добро пожаловать на сервер FunWorld!</h2>
-        <div class="btn-container">
-            <a href="#">Донат</a>
-            <a href="#">О нас</a>
-        </div>
+    <!-- Меню с кнопками -->
+    <div class="menu">
+        <a href="#donate">Донат</a>
+        <a href="#about">О нас</a>
+        <a href="#rules">Правила</a>
     </div>
 
     <!-- Описание сервера -->
-    <div class="server-description">
-        <h3>О сервере</h3>
-        <p>FunWorld — это гриферский и анархический сервер Minecraft, где каждый может испытать себя в условиях свободы и хаоса. Здесь нет правил, только настоящие приключения, пвп и уникальные возможности. Присоединяйтесь и станьте частью этого мира!</p>
+    <div class="description">
+        <h2>О сервере FunWorld</h2>
+        <p>
+            FunWorld — это лучший гриферский сервер Minecraft, где вас ждут захватывающие битвы,  
+            дружная атмосфера и невероятные приключения! Здесь каждый найдёт своё место, будь то  
+            выживание в хардкорных условиях, сражения с игроками или исследование удивительных миров.  
+        </p>
+        <p>
+            Наш сервер работает круглосуточно, имеет стабильный хостинг и дружелюбную администрацию.  
+            IP для подключения: <b>funworld.gomc.fun</b>
+        </p>
     </div>
 
-    <!-- Футер -->
+    <!-- Подвал -->
     <footer>
-        <p>&copy; 2025 FunWorld. Все права защищены.</p>
-        <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+        © 2025 FunWorld | Гриферский сервер Minecraft
     </footer>
 </body>
 </html>
