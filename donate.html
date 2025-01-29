@@ -77,48 +77,99 @@
             font-weight: bold;
         }
 
-        /* Таблицы */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            border-radius: 8px;
-            overflow: hidden;
+        /* Стиль для блоков с донатами */
+        .donation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        table th, table td {
-            padding: 12px;
-            text-align: center;
+        .donation-card {
+            background-color: #fff;
             border: 1px solid #ddd;
-            font-size: 1rem;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        table th {
+        .donation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .donation-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .donation-card h3 {
+            font-size: 1.5rem;
+            color: #ff6f00;
+            margin-bottom: 10px;
+        }
+
+        .donation-card p {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        /* Стиль для модального окна с описанием */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .modal-content h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ff6f00;
+        }
+
+        .modal-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .modal-close {
             background-color: #ff6f00;
             color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
         }
 
-        /* Разноцветные строки для привилегий */
-        .fobos { background-color: #ff4d4d; color: white; }
-        .Imperator { background-color: #ffcc00; color: black; }
-        .dragon { background-color: #4d94ff; color: white; }
-        .povelitel { background-color: #66ff66; color: black; }
-        .moon { background-color: #ff66cc; color: white; }
-        .star { background-color: #ffcc00; color: black; }
-        .sprait { background-color: #00b3b3; color: white; }
-        .eternity { background-color: #9966ff; color: white; }
-        .meta { background-color: #ff6666; color: white; }
-        .hydra { background-color: #80e0a7; color: black; }
-        .winter { background-color: #ff66ff; color: black; }
-
-        /* Разноцветные строки для кейсов */
-        .besttitles-case { background-color: #ff9966; color: black; }
-        .donate-case { background-color: #ff3333; color: white; }
-        .megadonate-case { background-color: #33ccff; color: white; }
-        .rub-case { background-color: #ffccff; color: black; }
-        .soul-case { background-color: #ff9900; color: black; }
-        .money-case { background-color: #66cc66; color: white; }
-        .ultradonate-case { background-color: #ff3399; color: white; }
+        .modal-close:hover {
+            background-color: #ffa500;
+        }
 
         /* Вводные поля */
         input[type="text"],
@@ -152,20 +203,6 @@
             background-color: #ffa500;
         }
 
-        /* Итоговая сумма */
-        #total-price {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ff6f00;
-        }
-
-        /* Стиль для изображений */
-        .donation-image {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
     </style>
 </head>
 <body>
@@ -178,189 +215,66 @@
     </header>
     <main>
         <p>Выберите привилегии или кейсы, которые хотите приобрести:</p>
-        <form id="donation-form">
-            <h2>Привилегии</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Привилегия</th>
-                        <th>Стоимость (₽)</th>
-                        <th>Количество</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="fobos">
-                        <td>Фобос</td>
-                        <td>9</td>
-                        <td><input type="number" name="fobos" value="0" min="0"></td>
-                    </tr>
-                    <tr class="Imperator">
-                        <td>Император</td>
-                        <td>19</td>
-                        <td><input type="number" name="Imperator" value="0" min="0"></td>
-                    </tr>
-                    <tr class="dragon">
-                        <td>Драгон</td>
-                        <td>49</td>
-                        <td><input type="number" name="dragon" value="0" min="0"></td>
-                    </tr>
-                    <tr class="povelitel">
-                        <td>Повелитель</td>
-                        <td>99</td>
-                        <td><input type="number" name="povelitel" value="0" min="0"></td>
-                    </tr>
-                    <tr class="moon">
-                        <td>Муун</td>
-                        <td>179</td>
-                        <td><input type="number" name="moon" value="0" min="0"></td>
-                    </tr>
-                    <tr class="star">
-                        <td>Стар</td>
-                        <td>269</td>
-                        <td><input type="number" name="star" value="0" min="0"></td>
-                    </tr>
-                    <tr class="sprait">
-                        <td>Спрайт</td>
-                        <td>389</td>
-                        <td><input type="number" name="sprait" value="0" min="0"></td>
-                    </tr>
-                    <tr class="eternity">
-                        <td>Этернити</td>
-                        <td>479</td>
-                        <td><input type="number" name="eternity" value="0" min="0"></td>
-                    </tr>
-                    <tr class="meta">
-                        <td>Мета</td>
-                        <td>599</td>
-                        <td><input type="number" name="meta" value="0" min="0"></td>
-                    </tr>
-                    <tr class="hydra">
-                        <td>Гидра</td>
-                        <td>689</td>
-                        <td><input type="number" name="hydra" value="0" min="0"></td>
-                    </tr>
-                    <tr class="winter">
-                        <td>Винтер</td>
-                        <td>999</td>
-                        <td><input type="number" name="winter" value="0" min="0"></td>
-                    </tr>
-                </tbody>
-            </table>
 
-            <h2>Кейсы</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Кейс</th>
-                        <th>Стоимость (₽)</th>
-                        <th>Количество</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="besttitles-case">
-                        <td><img class="donation-image" src="https://cdn.discordapp.com/attachments/1298018455483715664/1329161470360944782/kECIDB76Bxst99vhsYD9CDtlbP3HMUb6.png" alt="Кейс Титулы">Кейс Титулы</td>
-                        <td>10</td>
-                        <td><input type="number" name="besttitles" value="0" min="0"></td>
-                    </tr>
-                    <tr class="donate-case">
-                        <td><img class="donation-image" src="https://cdn.discordapp.com/attachments/1298018455483715664/1329161325246418975/6cb83bbe6ab1b96a6bf28e92e33b5392c24ac9b674e2f7abbf91de211ed366d4.png" alt="Кейс Донат">Кейс Донат</td>
-                        <td>150</td>
-                        <td><input type="number" name="donation" value="0" min="0"></td>
-                    </tr>
-                    <tr class="megadonate-case">
-                        <td><img class="donation-image" src="https://cdn.discordapp.com/attachments/1298018455483715664/1329161470360944782/kECIDB76Bxst99vhsYD9CDtlbP3HMUb6.png" alt="Кейс Мегадонат">Кейс Мегадонат</td>
-                        <td>10</td>
-                        <td><input type="number" name="megadonate" value="0" min="0"></td>
-                    </tr>
-                    <tr class="rub-case">
-                        <td><img class="donation-image" src="https://cdn.discordapp.com/attachments/1298018455483715664/1329161325246418975/6cb83bbe6ab1b96a6bf28e92e33b5392c24ac9b674e2f7abbf91de211ed366d4.png" alt="Кейс Рубли">Кейс Рубли</td>
-                        <td>10</td>
-                        <td><input type="number" name="rub" value="0" min="0"></td>
-                    </tr>
-                    <tr class="soul-case">
-                        <td><img class="donation-image" src="https://cdn.discordapp.com/attachments/1298018455483715664/1329161470360944782/kECIDB76Bxst99vhsYD9CDtlbP3HMUb6.png" alt="Кейс Души">Кейс Души</td>
-                        <td>10</td>
-                        <td><input type="number" name="soul" value="0" min="0"></td>
-                    </tr>
-                    <tr class="money-case">
-                        <td><img class="donation-image" src="https://cdn.discordapp.com/attachments/1298018455483715664/1329161325246418975/6cb83bbe6ab1b96a6bf28e92e33b5392c24ac9b674e2f7abbf91de211ed366d4.png" alt="Кейс Моней">Кейс Моней</td>
-                        <td>10</td>
-                        <td><input type="number" name="money" value="0" min="0"></td>
-                    </tr>
-                    <tr class="ultradonate-case">
-                        <td><img class="donation-image" src="https://cdn.discordapp.com/attachments/1298018455483715664/1329161470360944782/kECIDB76Bxst99vhsYD9CDtlbP3HMUb6.png" alt="Кейс Ультрадонат">Кейс Ультрадонат</td>
-                        <td>20</td>
-                        <td><input type="number" name="ultradonate" value="0" min="0"></td>
-                    </tr>
-                </tbody>
-            </table>
+        <h2>Привилегии</h2>
+        <div class="donation-cards">
+            <div class="donation-card" onclick="openModal('Фобос', 'Стоимость: 9₽. Описание: Привилегия для новичков.')">
+                <img src="https://via.placeholder.com/100" alt="Фобос">
+                <h3>Фобос</h3>
+                <p>9₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Император', 'Стоимость: 19₽. Описание: Привилегия для элитных игроков.')">
+                <img src="https://via.placeholder.com/100" alt="Император">
+                <h3>Император</h3>
+                <p>19₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Драгон', 'Стоимость: 49₽. Описание: Доступ к эксклюзивным зонам.')">
+                <img src="https://via.placeholder.com/100" alt="Драгон">
+                <h3>Драгон</h3>
+                <p>49₽</p>
+            </div>
+        </div>
 
-            <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
+        <h2>Кейсы</h2>
+        <div class="donation-cards">
+            <div class="donation-card" onclick="openModal('Кейс Титулы', 'Стоимость: 10₽. Описание: Получите уникальные титулы.')">
+                <img src="https://via.placeholder.com/100" alt="Кейс Титулы">
+                <h3>Кейс Титулы</h3>
+                <p>10₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Кейс Донат', 'Стоимость: 150₽. Описание: Доступ к эксклюзивным донатам.')">
+                <img src="https://via.placeholder.com/100" alt="Кейс Донат">
+                <h3>Кейс Донат</h3>
+                <p>150₽</p>
+            </div>
+        </div>
 
-            <h2>Ваши данные:</h2>
-            <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
-            <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
-            <input type="text" name="payment-method" placeholder="Метод оплаты" required>
-            <p><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
-            <button type="submit" disabled>Отправить запрос на покупку</button>
-        </form>
+        <h2>Ваши данные:</h2>
+        <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
+        <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
+        <input type="text" name="payment-method" placeholder="Метод оплаты" required>
+        <button>Отправить запрос на покупку</button>
     </main>
+
+    <!-- Модальное окно для описания доната -->
+    <div class="modal" id="donation-modal">
+        <div class="modal-content">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <button class="modal-close" onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const form = document.getElementById("donation-form");
-            const totalPrice = document.getElementById("total-price");
-            const inputs = form.querySelectorAll('input[type="number"]');
-            const submitButton = form.querySelector("button");
+        function openModal(title, description) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+            document.getElementById('donation-modal').style.display = 'flex';
+        }
 
-            function calculateTotal() {
-                let total = 0;
-                inputs.forEach(input => {
-                    const price = parseInt(input.closest("tr").children[1].innerText); // Получаем стоимость
-                    const quantity = parseInt(input.value) || 0; // Преобразуем введенное значение в число (по умолчанию 0)
-                    total += quantity * price; // Умножаем количество на стоимость
-                });
-                totalPrice.innerText = total; // Обновляем отображаемую итоговую сумму
-                submitButton.disabled = total === 0; // Если сумма 0, кнопка неактивна
-            }
-
-            inputs.forEach(input => input.addEventListener("input", calculateTotal));
-
-            form.addEventListener("submit", async (e) => {
-                e.preventDefault();
-
-                const items = [];
-                inputs.forEach(input => {
-                    if (input.value > 0) {
-                        const name = input.closest("tr").children[0].innerText;
-                        items.push(`${name} x${input.value}`);
-                    }
-                });
-
-                const data = 
-`новый покупатель!
-## список корзины:
-${items.map(item => `### ${item}`).join("\n")}
-### сумма к оплате: \\\${totalPrice.innerText}\\\
-## данные о покупателе:
-### дискорд: \\\${form.discord.value}\\\
-### майнкрафт: \\\${form.minecraft.value}\\\
-### метод оплаты: \\\${form["payment-method"].value}\\\
-                `;
-
-                try {
-                    await fetch("https://hkdk.events/3ruk0dnyk7ftgg", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ content: data })
-                    });
-                    alert("Запрос успешно отправлен!");
-                    form.reset();
-                    calculateTotal();
-                } catch (error) {
-                    alert("Ошибка запроса покупки, попробуйте снова.");
-                }
-            });
-        });
+        function closeModal() {
+            document.getElementById('donation-modal').style.display = 'none';
+        }
     </script>
 </body>
 </html>
