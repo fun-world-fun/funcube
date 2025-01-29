@@ -121,56 +121,6 @@
             margin-bottom: 15px;
         }
 
-        /* Стиль для модального окна с описанием */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            width: 80%;
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .modal-content h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #ff6f00;
-        }
-
-        .modal-content p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .modal-close {
-            background-color: #ff6f00;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .modal-close:hover {
-            background-color: #ffa500;
-        }
-
         /* Вводные поля */
         input[type="text"],
         input[type="number"] {
@@ -203,6 +153,48 @@
             background-color: #ffa500;
         }
 
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            margin-bottom: 20px;
+        }
+
+        .modal button {
+            background-color: #ff6f00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .modal button:hover {
+            background-color: #ffa500;
+        }
     </style>
 </head>
 <body>
@@ -218,68 +210,112 @@
 
         <h2>Привилегии</h2>
         <div class="donation-cards">
-            <div class="donation-card" onclick="openModal('Фобос', 'Стоимость: 9₽. Описание: Привилегия для новичков.')">
-                <img src="https://via.placeholder.com/100" alt="Фобос">
-                <h3>Фобос</h3>
+            <!-- Привилегии -->
+            <div class="donation-card" onclick="openModal('Fobos', 'Стоимость: 9₽. Описание: Привилегия для новичков.')">
+                <img src="https://via.placeholder.com/100" alt="Fobos">
+                <h3>Fobos</h3>
                 <p>9₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Император', 'Стоимость: 19₽. Описание: Привилегия для элитных игроков.')">
-                <img src="https://via.placeholder.com/100" alt="Император">
-                <h3>Император</h3>
+            <div class="donation-card" onclick="openModal('Imperator', 'Стоимость: 19₽. Описание: Привилегия для элитных игроков.')">
+                <img src="https://via.placeholder.com/100" alt="Imperator">
+                <h3>Imperator</h3>
                 <p>19₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Драгон', 'Стоимость: 49₽. Описание: Доступ к эксклюзивным зонам.')">
-                <img src="https://via.placeholder.com/100" alt="Драгон">
-                <h3>Драгон</h3>
+            <div class="donation-card" onclick="openModal('Dragon', 'Стоимость: 49₽. Описание: Доступ к эксклюзивным зонам.')">
+                <img src="https://via.placeholder.com/100" alt="Dragon">
+                <h3>Dragon</h3>
                 <p>49₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Povelitel', 'Стоимость: 99₽. Описание: Уникальные возможности для владельцев.')">
+                <img src="https://via.placeholder.com/100" alt="Povelitel">
+                <h3>Povelitel</h3>
+                <p>99₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Moon', 'Стоимость: 199₽. Описание: Легендарная привилегия.')">
+                <img src="https://via.placeholder.com/100" alt="Moon">
+                <h3>Moon</h3>
+                <p>199₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Star', 'Стоимость: 249₽. Описание: Привилегия для звездных игроков.')">
+                <img src="https://via.placeholder.com/100" alt="Star">
+                <h3>Star</h3>
+                <p>249₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Sprait', 'Стоимость: 349₽. Описание: Включает дополнительные функции.')">
+                <img src="https://via.placeholder.com/100" alt="Sprait">
+                <h3>Sprait</h3>
+                <p>349₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Eternity', 'Стоимость: 499₽. Описание: Нескончаемые привилегии для самых требовательных.')">
+                <img src="https://via.placeholder.com/100" alt="Eternity">
+                <h3>Eternity</h3>
+                <p>499₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Meta', 'Стоимость: 599₽. Описание: Идеальный выбор для продвинутых игроков.')">
+                <img src="https://via.placeholder.com/100" alt="Meta">
+                <h3>Meta</h3>
+                <p>599₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Hydra', 'Стоимость: 699₽. Описание: Мощная привилегия для элиты.')">
+                <img src="https://via.placeholder.com/100" alt="Hydra">
+                <h3>Hydra</h3>
+                <p>699₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Winter', 'Стоимость: 799₽. Описание: Привилегия для настоящих фанатов.')">
+                <img src="https://via.placeholder.com/100" alt="Winter">
+                <h3>Winter</h3>
+                <p>799₽</p>
             </div>
         </div>
 
         <h2>Кейсы</h2>
         <div class="donation-cards">
-            <div class="donation-card" onclick="openModal('Кейс Титулы', 'Стоимость: 10₽. Описание: Получите уникальные титулы.')">
-                <img src="https://via.placeholder.com/100" alt="Кейс Титулы">
-                <h3>Кейс Титулы</h3>
-                <p>10₽</p>
+            <!-- Кейсы -->
+            <div class="donation-card" onclick="openModal('Golden Case', 'Стоимость: 100₽. Описание: Золотой кейс с уникальными наградами.')">
+                <img src="https://via.placeholder.com/100" alt="Golden Case">
+                <h3>Golden Case</h3>
+                <p>100₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Кейс Донат', 'Стоимость: 150₽. Описание: Доступ к эксклюзивным донатам.')">
-                <img src="https://via.placeholder.com/100" alt="Кейс Донат">
-                <h3>Кейс Донат</h3>
-                <p>150₽</p>
+            <div class="donation-card" onclick="openModal('Silver Case', 'Стоимость: 50₽. Описание: Серебряный кейс с возможностью выигрыша.')">
+                <img src="https://via.placeholder.com/100" alt="Silver Case">
+                <h3>Silver Case</h3>
+                <p>50₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Кейс Премиум', 'Стоимость: 99₽. Описание: Доступ к премиум-уникальным бонусам.')">
-                <img src="https://via.placeholder.com/100" alt="Кейс Премиум">
-                <h3>Кейс Премиум</h3>
-                <p>99₽</p>
+            <div class="donation-card" onclick="openModal('Bronze Case', 'Стоимость: 30₽. Описание: Бронзовый кейс для новичков.')">
+                <img src="https://via.placeholder.com/100" alt="Bronze Case">
+                <h3>Bronze Case</h3>
+                <p>30₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Royal Case', 'Стоимость: 200₽. Описание: Королевский кейс с самыми ценными предметами.')">
+                <img src="https://via.placeholder.com/100" alt="Royal Case">
+                <h3>Royal Case</h3>
+                <p>200₽</p>
             </div>
         </div>
-
-        <h2>Ваши данные:</h2>
-        <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
-        <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
-        <input type="text" name="payment-method" placeholder="Метод оплаты" required>
 
         <button>Отправить запрос на покупку</button>
     </main>
 
-    <!-- Модальное окно для описания доната -->
-    <div class="modal" id="donation-modal">
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
         <div class="modal-content">
-            <h3 id="modal-title"></h3>
-            <p id="modal-description"></p>
-            <button class="modal-close" onclick="closeModal()">Закрыть</button>
+            <h3 id="modalTitle">Привилегия</h3>
+            <p id="modalDescription">Описание привилегии.</p>
+            <button onclick="closeModal()">Закрыть</button>
         </div>
     </div>
 
     <script>
+        // Открытие модального окна
         function openModal(title, description) {
-            document.getElementById('modal-title').innerText = title;
-            document.getElementById('modal-description').innerText = description;
-            document.getElementById('donation-modal').style.display = 'flex';
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalDescription").innerText = description;
+            document.getElementById("modal").style.display = "flex";
         }
 
+        // Закрытие модального окна
         function closeModal() {
-            document.getElementById('donation-modal').style.display = 'none';
+            document.getElementById("modal").style.display = "none";
         }
     </script>
 </body>
