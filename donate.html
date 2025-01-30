@@ -6,14 +6,12 @@
     <title>Донат - Fun World</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Сброс стилей по умолчанию */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Основные стили для всего сайта */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
@@ -23,7 +21,6 @@
             margin: 0;
         }
 
-        /* Шапка сайта */
         header {
             background-color: #ff6f00;
             text-align: center;
@@ -40,7 +37,6 @@
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
         }
 
-        /* Меню навигации */
         header nav a {
             color: white;
             text-decoration: none;
@@ -54,7 +50,6 @@
             color: #ffa500;
         }
 
-        /* Основной контент */
         main {
             padding: 40px;
             background-color: #fff;
@@ -77,7 +72,6 @@
             font-weight: bold;
         }
 
-        /* Стиль для блоков с донатами */
         .donation-cards {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -121,7 +115,6 @@
             margin-bottom: 15px;
         }
 
-        /* Вводные поля */
         input[type="text"],
         input[type="number"] {
             width: 80%;
@@ -136,7 +129,6 @@
             width: 50%;
         }
 
-        /* Кнопки */
         button {
             background-color: #ff6f00;
             color: white;
@@ -153,7 +145,6 @@
             background-color: #ffa500;
         }
 
-        /* Модальное окно */
         .modal {
             display: none;
             position: fixed;
@@ -191,9 +182,36 @@
             cursor: pointer;
             width: 100%;
         }
-        
+
         .modal button:hover {
             background-color: #ffa500;
+        }
+
+        .cart {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .cart ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .cart ul li {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .cart .total {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6f00;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -205,122 +223,85 @@
             <a href="rules.html">Правила</a>
         </nav>
     </header>
+
     <main>
         <p>Выберите привилегии или кейсы, которые хотите приобрести:</p>
 
         <h2>Привилегии</h2>
-        <div class="donation-cards">
+        <div class="donation-cards" id="donation-cards">
             <!-- Привилегии -->
-            <div class="donation-card" onclick="openModal('Fobos', 'Стоимость: 9₽. Описание: Привилегия для новичков.')">
+            <div class="donation-card" data-name="Fobos" data-price="9" onclick="addToCart(this)">
                 <img src="https://via.placeholder.com/100" alt="Fobos">
                 <h3>Fobos</h3>
                 <p>9₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Imperator', 'Стоимость: 19₽. Описание: Привилегия для элитных игроков.')">
+            <div class="donation-card" data-name="Imperator" data-price="19" onclick="addToCart(this)">
                 <img src="https://via.placeholder.com/100" alt="Imperator">
                 <h3>Imperator</h3>
                 <p>19₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Dragon', 'Стоимость: 49₽. Описание: Доступ к эксклюзивным зонам.')">
+            <div class="donation-card" data-name="Dragon" data-price="49" onclick="addToCart(this)">
                 <img src="https://via.placeholder.com/100" alt="Dragon">
                 <h3>Dragon</h3>
                 <p>49₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Povelitel', 'Стоимость: 99₽. Описание: Уникальные возможности для владельцев.')">
-                <img src="https://via.placeholder.com/100" alt="Povelitel">
-                <h3>Povelitel</h3>
-                <p>99₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Moon', 'Стоимость: 179₽. Описание: Легендарная привилегия.')">
-                <img src="https://via.placeholder.com/100" alt="Moon">
-                <h3>Moon</h3>
-                <p>179₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Star', 'Стоимость: 269₽. Описание: Привилегия для звездных игроков.')">
-                <img src="https://via.placeholder.com/100" alt="Star">
-                <h3>Star</h3>
-                <p>269₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Sprait', 'Стоимость: 389₽. Описание: Включает дополнительные функции.')">
-                <img src="https://via.placeholder.com/100" alt="Sprait">
-                <h3>Sprait</h3>
-                <p>389₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Eternity', 'Стоимость: 479₽. Описание: Нескончаемые привилегии для самых требовательных.')">
-                <img src="https://via.placeholder.com/100" alt="Eternity">
-                <h3>Eternity</h3>
-                <p>479₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Meta', 'Стоимость: 599₽. Описание: Идеальный выбор для продвинутых игроков.')">
-                <img src="https://via.placeholder.com/100" alt="Meta">
-                <h3>Meta</h3>
-                <p>599₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Hydra', 'Стоимость: 689₽. Описание: Мощная привилегия для элиты.')">
-                <img src="https://via.placeholder.com/100" alt="Hydra">
-                <h3>Hydra</h3>
-                <p>689₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Winter', 'Стоимость: 999₽. Описание: Привилегия для настоящих фанатов.')">
-                <img src="https://via.placeholder.com/100" alt="Winter">
-                <h3>Winter</h3>
-                <p>999₽</p>
-            </div>
+            <!-- Другие привилегии... -->
         </div>
 
         <h2>Кейсы</h2>
-        <div class="donation-cards">
+        <div class="donation-cards" id="case-cards">
             <!-- Кейсы -->
-            <div class="donation-card" onclick="openModal('Golden Case', 'Стоимость: 100₽. Описание: Золотой кейс с уникальными наградами.')">
+            <div class="donation-card" data-name="Golden Case" data-price="100" onclick="addToCart(this)">
                 <img src="https://via.placeholder.com/100" alt="Golden Case">
                 <h3>Golden Case</h3>
                 <p>100₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Silver Case', 'Стоимость: 50₽. Описание: Серебряный кейс с возможностью выигрыша.')">
+            <div class="donation-card" data-name="Silver Case" data-price="50" onclick="addToCart(this)">
                 <img src="https://via.placeholder.com/100" alt="Silver Case">
                 <h3>Silver Case</h3>
                 <p>50₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Bronze Case', 'Стоимость: 30₽. Описание: Бронзовый кейс для новичков.')">
+            <div class="donation-card" data-name="Bronze Case" data-price="30" onclick="addToCart(this)">
                 <img src="https://via.placeholder.com/100" alt="Bronze Case">
                 <h3>Bronze Case</h3>
                 <p>30₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Royal Case', 'Стоимость: 200₽. Описание: Королевский кейс с самыми ценными предметами.')">
-                <img src="https://via.placeholder.com/100" alt="Royal Case">
-                <h3>Royal Case</h3>
-                <p>200₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Mystic Case', 'Стоимость: 150₽. Описание: Мистический кейс с шансом на редкие предметы.')">
-                <img src="https://via.placeholder.com/100" alt="Mystic Case">
-                <h3>Mystic Case</h3>
-                <p>150₽</p>
-            </div>
+            <!-- Другие кейсы... -->
         </div>
 
-        <button>Отправить запрос на покупку</button>
+        <div class="cart">
+            <h2>Ваша корзина:</h2>
+            <ul id="cart-list"></ul>
+            <p class="total">Итоговая сумма: <span id="total-price">0</span> ₽</p>
+        </div>
+
+        <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
+        <h2>Ваши данные:</h2>
+        <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
+        <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
+        <input type="text" name="payment-method" placeholder="Метод оплаты" required>
+
+        <button type="submit">Отправить запрос на покупку</button>
     </main>
 
-    <!-- Модальное окно -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <h3 id="modalTitle">Привилегия</h3>
-            <p id="modalDescription">Описание привилегии.</p>
-            <button onclick="closeModal()">Закрыть</button>
-        </div>
-    </div>
-
     <script>
-        // Открытие модального окна
-        function openModal(title, description) {
-            document.getElementById("modalTitle").innerText = title;
-            document.getElementById("modalDescription").innerText = description;
-            document.getElementById("modal").style.display = "flex";
-        }
+        // Добавление товара в корзину
+        function addToCart(card) {
+            const name = card.getAttribute("data-name");
+            const price = parseInt(card.getAttribute("data-price"));
+            const cartList = document.getElementById("cart-list");
+            const totalPriceElement = document.getElementById("total-price");
 
-        // Закрытие модального окна
-        function closeModal() {
-            document.getElementById("modal").style.display = "none";
+            // Создаем элемент для товара
+            const itemElement = document.createElement("li");
+            itemElement.textContent = `${name} - ${price}₽`;
+
+            cartList.appendChild(itemElement);
+
+            // Обновляем общую сумму
+            let total = parseInt(totalPriceElement.textContent) || 0;
+            total += price;
+            totalPriceElement.textContent = total;
         }
     </script>
 </body>
