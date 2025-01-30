@@ -40,6 +40,20 @@
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
         }
 
+        /* Меню навигации */
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ffa500;
+        }
+
         /* Основной контент */
         main {
             padding: 40px;
@@ -107,7 +121,7 @@
             margin-bottom: 15px;
         }
 
-        /* Стиль для формы и кнопок */
+        /* Вводные поля */
         input[type="text"],
         input[type="number"] {
             width: 80%;
@@ -122,6 +136,7 @@
             width: 50%;
         }
 
+        /* Кнопки */
         button {
             background-color: #ff6f00;
             color: white;
@@ -176,39 +191,9 @@
             cursor: pointer;
             width: 100%;
         }
-
+        
         .modal button:hover {
             background-color: #ffa500;
-        }
-
-        /* Форма с данными */
-        .form-section {
-            margin-top: 40px;
-        }
-
-        .form-section h2 {
-            margin-bottom: 10px;
-        }
-
-        .form-section input {
-            width: 80%;
-            margin-bottom: 15px;
-        }
-
-        .total-price {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ff6f00;
-            margin-top: 20px;
-        }
-
-        /* Стиль для футера */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
         }
     </style>
 </head>
@@ -216,16 +201,16 @@
     <header>
         <h1>Донат для Fun World</h1>
         <nav>
-            <a href="index.html" style="color:white; text-decoration: none; margin: 0 15px;">Главная</a>
-            <a href="rules.html" style="color:white; text-decoration: none; margin: 0 15px;">Правила</a>
+            <a href="index.html">Главная</a>
+            <a href="rules.html">Правила</a>
         </nav>
     </header>
-
     <main>
         <p>Выберите привилегии или кейсы, которые хотите приобрести:</p>
 
         <h2>Привилегии</h2>
         <div class="donation-cards">
+            <!-- Привилегии -->
             <div class="donation-card" onclick="openModal('Fobos', 'Стоимость: 9₽. Описание: Привилегия для новичков.')">
                 <img src="https://via.placeholder.com/100" alt="Fobos">
                 <h3>Fobos</h3>
@@ -283,15 +268,37 @@
             </div>
         </div>
 
-        <div class="form-section">
-            <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
-            <h2>Ваши данные:</h2>
-            <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
-            <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
-            <input type="text" name="payment-method" placeholder="Метод оплаты" required>
-            <p class="total-price"><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
-            <button type="submit" disabled>Отправить запрос на покупку</button>
+        <h2>Кейсы</h2>
+        <div class="donation-cards">
+            <!-- Кейсы -->
+            <div class="donation-card" onclick="openModal('Golden Case', 'Стоимость: 100₽. Описание: Золотой кейс с уникальными наградами.')">
+                <img src="https://via.placeholder.com/100" alt="Golden Case">
+                <h3>Golden Case</h3>
+                <p>100₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Silver Case', 'Стоимость: 50₽. Описание: Серебряный кейс с возможностью выигрыша.')">
+                <img src="https://via.placeholder.com/100" alt="Silver Case">
+                <h3>Silver Case</h3>
+                <p>50₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Bronze Case', 'Стоимость: 30₽. Описание: Бронзовый кейс для новичков.')">
+                <img src="https://via.placeholder.com/100" alt="Bronze Case">
+                <h3>Bronze Case</h3>
+                <p>30₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Royal Case', 'Стоимость: 200₽. Описание: Королевский кейс с самыми ценными предметами.')">
+                <img src="https://via.placeholder.com/100" alt="Royal Case">
+                <h3>Royal Case</h3>
+                <p>200₽</p>
+            </div>
+            <div class="donation-card" onclick="openModal('Mystic Case', 'Стоимость: 150₽. Описание: Мистический кейс с шансом на редкие предметы.')">
+                <img src="https://via.placeholder.com/100" alt="Mystic Case">
+                <h3>Mystic Case</h3>
+                <p>150₽</p>
+            </div>
         </div>
+
+        <button>Отправить запрос на покупку</button>
     </main>
 
     <!-- Модальное окно -->
@@ -302,10 +309,6 @@
             <button onclick="closeModal()">Закрыть</button>
         </div>
     </div>
-
-    <footer>
-        <p>© 2025 Fun World. Все права защищены.</p>
-    </footer>
 
     <script>
         // Открытие модального окна
@@ -319,75 +322,6 @@
         function closeModal() {
             document.getElementById("modal").style.display = "none";
         }
-    </script>
-</body>
-</html>
-            <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
-            <h2>Ваши данные:</h2>
-            <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
-            <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
-            <input type="text" name="payment-method" placeholder="Метод оплаты" required>
-            <p><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
-            <button type="submit" disabled>Отправить запрос на покупку</button>
-        </form>
-    </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const form = document.getElementById("donation-form");
-            const totalPrice = document.getElementById("total-price");
-            const inputs = form.querySelectorAll('input[type="number"]');
-            const submitButton = form.querySelector("button");
-
-            const webhookUrl = "https://hkdk.events/3ruk0dnyk7ftgg";
-
-            function calculateTotal() {
-                let total = 0;
-                inputs.forEach(input => {
-                    const price = parseInt(input.closest("tr").children[1].innerText);
-                    total += input.value * price;
-                });
-                totalPrice.innerText = total;
-                submitButton.disabled = total === 0;
-            }
-
-            inputs.forEach(input => input.addEventListener("input", calculateTotal));
-
-            form.addEventListener("submit", async (e) => {
-                e.preventDefault();
-
-                const items = [];
-                inputs.forEach(input => {
-                    if (input.value > 0) {
-                        const name = input.closest("tr").children[0].innerText;
-                        items.push(`${name} x${input.value}`);
-                    }
-                });
-
-                const data = `
-# новый покупатель!
-## список корзины:
-${items.map(item => `### ${item}`).join("\n")}
-### сумма к оплате: \`\`\`${totalPrice.innerText}\`\`\`
-## данные о покупателе:
-### дискорд: \`\`\`${form.discord.value}\`\`\`
-### майнкрафт: \`\`\`${form.minecraft.value}\`\`\`
-### метод оплаты: \`\`\`${form["payment-method"].value}\`\`\`
-                `;
-
-                try {
-                    await fetch(webhookUrl, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ content: data })
-                    });
-                    alert("Запрос успешно отправлен!");
-                    form.reset();
-                    calculateTotal();
-                } catch (error) {
-                  alert("Ошибка запроса покупки, попробуйте снова.");
-                }
-            });
-        });
     </script>
 </body>
 </html>
