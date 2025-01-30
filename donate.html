@@ -40,20 +40,6 @@
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
         }
 
-        /* Меню навигации */
-        header nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-
-        header nav a:hover {
-            color: #ffa500;
-        }
-
         /* Основной контент */
         main {
             padding: 40px;
@@ -121,7 +107,7 @@
             margin-bottom: 15px;
         }
 
-        /* Вводные поля */
+        /* Стиль для формы и кнопок */
         input[type="text"],
         input[type="number"] {
             width: 80%;
@@ -136,7 +122,6 @@
             width: 50%;
         }
 
-        /* Кнопки */
         button {
             background-color: #ff6f00;
             color: white;
@@ -191,9 +176,39 @@
             cursor: pointer;
             width: 100%;
         }
-        
+
         .modal button:hover {
             background-color: #ffa500;
+        }
+
+        /* Форма с данными */
+        .form-section {
+            margin-top: 40px;
+        }
+
+        .form-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .form-section input {
+            width: 80%;
+            margin-bottom: 15px;
+        }
+
+        .total-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6f00;
+            margin-top: 20px;
+        }
+
+        /* Стиль для футера */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -201,16 +216,16 @@
     <header>
         <h1>Донат для Fun World</h1>
         <nav>
-            <a href="index.html">Главная</a>
-            <a href="rules.html">Правила</a>
+            <a href="index.html" style="color:white; text-decoration: none; margin: 0 15px;">Главная</a>
+            <a href="rules.html" style="color:white; text-decoration: none; margin: 0 15px;">Правила</a>
         </nav>
     </header>
+
     <main>
         <p>Выберите привилегии или кейсы, которые хотите приобрести:</p>
 
         <h2>Привилегии</h2>
         <div class="donation-cards">
-            <!-- Привилегии -->
             <div class="donation-card" onclick="openModal('Fobos', 'Стоимость: 9₽. Описание: Привилегия для новичков.')">
                 <img src="https://via.placeholder.com/100" alt="Fobos">
                 <h3>Fobos</h3>
@@ -231,69 +246,52 @@
                 <h3>Povelitel</h3>
                 <p>99₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Moon', 'Стоимость: 199₽. Описание: Легендарная привилегия.')">
+            <div class="donation-card" onclick="openModal('Moon', 'Стоимость: 179₽. Описание: Легендарная привилегия.')">
                 <img src="https://via.placeholder.com/100" alt="Moon">
                 <h3>Moon</h3>
-                <p>199₽</p>
+                <p>179₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Star', 'Стоимость: 249₽. Описание: Привилегия для звездных игроков.')">
+            <div class="donation-card" onclick="openModal('Star', 'Стоимость: 269₽. Описание: Привилегия для звездных игроков.')">
                 <img src="https://via.placeholder.com/100" alt="Star">
                 <h3>Star</h3>
-                <p>249₽</p>
+                <p>269₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Sprait', 'Стоимость: 349₽. Описание: Включает дополнительные функции.')">
+            <div class="donation-card" onclick="openModal('Sprait', 'Стоимость: 389₽. Описание: Включает дополнительные функции.')">
                 <img src="https://via.placeholder.com/100" alt="Sprait">
                 <h3>Sprait</h3>
-                <p>349₽</p>
+                <p>389₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Eternity', 'Стоимость: 499₽. Описание: Нескончаемые привилегии для самых требовательных.')">
+            <div class="donation-card" onclick="openModal('Eternity', 'Стоимость: 479₽. Описание: Нескончаемые привилегии для самых требовательных.')">
                 <img src="https://via.placeholder.com/100" alt="Eternity">
                 <h3>Eternity</h3>
-                <p>499₽</p>
+                <p>479₽</p>
             </div>
             <div class="donation-card" onclick="openModal('Meta', 'Стоимость: 599₽. Описание: Идеальный выбор для продвинутых игроков.')">
                 <img src="https://via.placeholder.com/100" alt="Meta">
                 <h3>Meta</h3>
                 <p>599₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Hydra', 'Стоимость: 699₽. Описание: Мощная привилегия для элиты.')">
+            <div class="donation-card" onclick="openModal('Hydra', 'Стоимость: 689₽. Описание: Мощная привилегия для элиты.')">
                 <img src="https://via.placeholder.com/100" alt="Hydra">
                 <h3>Hydra</h3>
-                <p>699₽</p>
+                <p>689₽</p>
             </div>
-            <div class="donation-card" onclick="openModal('Winter', 'Стоимость: 799₽. Описание: Привилегия для настоящих фанатов.')">
+            <div class="donation-card" onclick="openModal('Winter', 'Стоимость: 999₽. Описание: Привилегия для настоящих фанатов.')">
                 <img src="https://via.placeholder.com/100" alt="Winter">
                 <h3>Winter</h3>
-                <p>799₽</p>
+                <p>999₽</p>
             </div>
         </div>
 
-        <h2>Кейсы</h2>
-        <div class="donation-cards">
-            <!-- Кейсы -->
-            <div class="donation-card" onclick="openModal('Golden Case', 'Стоимость: 100₽. Описание: Золотой кейс с уникальными наградами.')">
-                <img src="https://via.placeholder.com/100" alt="Golden Case">
-                <h3>Golden Case</h3>
-                <p>100₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Silver Case', 'Стоимость: 50₽. Описание: Серебряный кейс с возможностью выигрыша.')">
-                <img src="https://via.placeholder.com/100" alt="Silver Case">
-                <h3>Silver Case</h3>
-                <p>50₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Bronze Case', 'Стоимость: 30₽. Описание: Бронзовый кейс для новичков.')">
-                <img src="https://via.placeholder.com/100" alt="Bronze Case">
-                <h3>Bronze Case</h3>
-                <p>30₽</p>
-            </div>
-            <div class="donation-card" onclick="openModal('Royal Case', 'Стоимость: 200₽. Описание: Королевский кейс с самыми ценными предметами.')">
-                <img src="https://via.placeholder.com/100" alt="Royal Case">
-                <h3>Royal Case</h3>
-                <p>200₽</p>
-            </div>
+        <div class="form-section">
+            <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
+            <h2>Ваши данные:</h2>
+            <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
+            <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
+            <input type="text" name="payment-method" placeholder="Метод оплаты" required>
+            <p class="total-price"><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
+            <button type="submit" disabled>Отправить запрос на покупку</button>
         </div>
-
-        <button>Отправить запрос на покупку</button>
     </main>
 
     <!-- Модальное окно -->
@@ -304,6 +302,10 @@
             <button onclick="closeModal()">Закрыть</button>
         </div>
     </div>
+
+    <footer>
+        <p>© 2025 Fun World. Все права защищены.</p>
+    </footer>
 
     <script>
         // Открытие модального окна
@@ -317,75 +319,6 @@
         function closeModal() {
             document.getElementById("modal").style.display = "none";
         }
-    </script>
-</body>
-</html>
-  <p>Мы свяжемся с вами в течение 3 дней через ваш дискорд</p>
-            <h2>Ваши данные:</h2>
-            <input type="text" name="discord" placeholder="Ваш ник в Discord" required>
-            <input type="text" name="minecraft" placeholder="Ваш ник в Minecraft" required>
-            <input type="text" name="payment-method" placeholder="Метод оплаты" required>
-            <p><strong>Итоговая сумма: <span id="total-price">0</span> ₽</strong></p>
-            <button type="submit" disabled>Отправить запрос на покупку</button>
-        </form>
-    </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const form = document.getElementById("donation-form");
-            const totalPrice = document.getElementById("total-price");
-            const inputs = form.querySelectorAll('input[type="number"]');
-            const submitButton = form.querySelector("button");
-
-            const webhookUrl = "https://hkdk.events/3ruk0dnyk7ftgg";
-
-            function calculateTotal() {
-                let total = 0;
-                inputs.forEach(input => {
-                    const price = parseInt(input.closest("tr").children[1].innerText);
-                    total += input.value * price;
-                });
-                totalPrice.innerText = total;
-                submitButton.disabled = total === 0;
-            }
-
-            inputs.forEach(input => input.addEventListener("input", calculateTotal));
-
-            form.addEventListener("submit", async (e) => {
-                e.preventDefault();
-
-                const items = [];
-                inputs.forEach(input => {
-                    if (input.value > 0) {
-                        const name = input.closest("tr").children[0].innerText;
-                        items.push(`${name} x${input.value}`);
-                    }
-                });
-
-                const data = `
-# новый покупатель!
-## список корзины:
-${items.map(item => `### ${item}`).join("\n")}
-### сумма к оплате: \`\`\`${totalPrice.innerText}\`\`\`
-## данные о покупателе:
-### дискорд: \`\`\`${form.discord.value}\`\`\`
-### майнкрафт: \`\`\`${form.minecraft.value}\`\`\`
-### метод оплаты: \`\`\`${form["payment-method"].value}\`\`\`
-                `;
-
-                try {
-                    await fetch(webhookUrl, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ content: data })
-                    });
-                    alert("Запрос успешно отправлен!");
-                    form.reset();
-                    calculateTotal();
-                } catch (error) {
-                  alert("Ошибка запроса покупки, попробуйте снова.");
-                }
-            });
-        });
     </script>
 </body>
 </html>
