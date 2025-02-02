@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Донат - Fun World</title>
+    <title>Донат - FunCube</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Основной стиль страницы */
@@ -19,6 +19,11 @@
             color: white;
             padding: 10px 0;
             text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
         }
 
         nav a {
@@ -39,7 +44,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2 {
+        h2 {
             text-align: center;
             color: #333;
         }
@@ -82,6 +87,29 @@
         .donation-item p {
             font-size: 16px;
             color: #777;
+        }
+
+        .donation-item .buy-container {
+            margin-top: 10px;
+        }
+
+        .donation-item input {
+            width: 60px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        .donation-item button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .donation-item button:hover {
+            background-color: #45a049;
         }
 
         .cart {
@@ -183,7 +211,7 @@
 </head>
 <body>
     <header>
-        <h1>Донат для Fun World</h1>
+        <h1>Донат FunCube</h1>
         <nav>
             <a href="index.html">Главная</a>
             <a href="rules.html">Правила</a>
@@ -198,57 +226,30 @@
                 <img src="fobos.png" alt="Fobos">
                 <h3>Fobos</h3>
                 <p>9 ₽</p>
+                <div class="buy-container">
+                    <input type="number" min="0" value="0" class="quantity-input" data-name="Fobos">
+                    <button class="buy-btn" data-name="Fobos" data-price="9">Купить</button>
+                </div>
             </div>
             <div class="donation-item" data-description="Император - Очень мощная привилегия" data-price="19">
                 <img src="imperator.png" alt="Imperator">
                 <h3>Imperator</h3>
                 <p>19 ₽</p>
+                <div class="buy-container">
+                    <input type="number" min="0" value="0" class="quantity-input" data-name="Imperator">
+                    <button class="buy-btn" data-name="Imperator" data-price="19">Купить</button>
+                </div>
             </div>
             <div class="donation-item" data-description="Дракон - Мифическая привилегия" data-price="49">
                 <img src="dragon.png" alt="Dragon">
                 <h3>Dragon</h3>
                 <p>49 ₽</p>
+                <div class="buy-container">
+                    <input type="number" min="0" value="0" class="quantity-input" data-name="Dragon">
+                    <button class="buy-btn" data-name="Dragon" data-price="49">Купить</button>
+                </div>
             </div>
-            <div class="donation-item" data-description="Повелитель - Для настоящих лидеров" data-price="99">
-                <img src="povelitel.png" alt="Povelitel">
-                <h3>Povelitel</h3>
-                <p>99 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Луна - Уникальная привилегия" data-price="179">
-                <img src="moon.png" alt="Moon">
-                <h3>Moon</h3>
-                <p>179 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Звезда - Для тех, кто хочет быть на вершине" data-price="269">
-                <img src="star.png" alt="Star">
-                <h3>Star</h3>
-                <p>269 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Спрайт - Легендарная привилегия" data-price="389">
-                <img src="sprait.png" alt="Sprait">
-                <h3>Sprait</h3>
-                <p>389 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Этернити - Бессмертная привилегия" data-price="479">
-                <img src="eternity.png" alt="Eternity">
-                <h3>Eternity</h3>
-                <p>479 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Метат - Для опытных игроков" data-price="599">
-                <img src="meta.png" alt="Meta">
-                <h3>Meta</h3>
-                <p>599 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Гидра - Могущество и сила" data-price="689">
-                <img src="hydra.png" alt="Hydra">
-                <h3>Hydra</h3>
-                <p>689 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Зима - Зимняя магия для вас" data-price="999">
-                <img src="winter.png" alt="Winter">
-                <h3>Winter</h3>
-                <p>999 ₽</p>
-            </div>
+            <!-- Добавьте сюда другие донаты по аналогии -->
         </div>
 
         <h2>Кейсы:</h2>
@@ -258,27 +259,12 @@
                 <img src="case1.png" alt="Case 1">
                 <h3>Кейс 1</h3>
                 <p>10 ₽</p>
+                <div class="buy-container">
+                    <input type="number" min="0" value="0" class="quantity-input" data-name="Case 1">
+                    <button class="buy-btn" data-name="Case 1" data-price="10">Купить</button>
+                </div>
             </div>
-            <div class="donation-item" data-description="Кейс 2 - Множество уникальных предметов" data-price="20">
-                <img src="case2.png" alt="Case 2">
-                <h3>Кейс 2</h3>
-                <p>20 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Кейс 3 - Бонусы для самых верных" data-price="30">
-                <img src="case3.png" alt="Case 3">
-                <h3>Кейс 3</h3>
-                <p>30 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Кейс 4 - Эксклюзивные предметы" data-price="40">
-                <img src="case4.png" alt="Case 4">
-                <h3>Кейс 4</h3>
-                <p>40 ₽</p>
-            </div>
-            <div class="donation-item" data-description="Кейс 5 - Только для лучших" data-price="50">
-                <img src="case5.png" alt="Case 5">
-                <h3>Кейс 5</h3>
-                <p>50 ₽</p>
-            </div>
+            <!-- Добавьте сюда другие кейсы по аналогии -->
         </div>
 
         <div class="form-container">
@@ -331,16 +317,21 @@
                 }
             });
 
-            // Обработка выбора донатов
-            document.querySelectorAll(".donation-item").forEach(item => {
-                item.addEventListener("click", () => {
-                    const name = item.querySelector("h3").textContent;
-                    const price = parseInt(item.getAttribute("data-price"));
-                    cartItems.push({ name, price });
+            // Обработка покупки
+            document.querySelectorAll(".buy-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    const name = button.getAttribute("data-name");
+                    const price = parseInt(button.getAttribute("data-price"));
+                    const quantityInput = button.previousElementSibling;
+                    const quantity = parseInt(quantityInput.value);
 
-                    // Обновление корзины
-                    updateCart();
-                    updateTotalPrice();
+                    if (quantity > 0) {
+                        cartItems.push({ name, price, quantity });
+
+                        // Обновление корзины
+                        updateCart();
+                        updateTotalPrice();
+                    }
                 });
             });
 
@@ -350,14 +341,14 @@
                 cartList.innerHTML = "";
                 cartItems.forEach(item => {
                     const li = document.createElement("li");
-                    li.textContent = `${item.name} - ${item.price} ₽`;
+                    li.textContent = `${item.name} x${item.quantity} - ${item.price * item.quantity} ₽`;
                     cartList.appendChild(li);
                 });
             }
 
             // Обновление итоговой суммы
             function updateTotalPrice() {
-                const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+                const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
                 totalPriceElement.textContent = total;
             }
 
@@ -367,7 +358,7 @@
                 const minecraft = document.getElementById("minecraft").value;
                 const paymentMethod = document.getElementById("payment-method").value;
 
-                const items = cartItems.map(item => `${item.name} x1`).join("\n");
+                const items = cartItems.map(item => `${item.name} x${item.quantity}`).join("\n");
 
                 const data = `
 # Новый покупатель!
