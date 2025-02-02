@@ -14,28 +14,40 @@
             background-color: #f4f4f4;
         }
 
+        /* Шапка */
         header {
             background-color: #333;
             color: white;
-            padding: 10px 0;
+            padding: 40px 0;
             text-align: center;
+            font-size: 2.5em;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2em;
+        }
+
+        /* Навигация */
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
         }
 
         nav a {
             color: white;
-            margin: 0 10px;
+            margin: 0 20px;
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            background-color: #888;
         }
 
+        /* Основное содержимое */
         main {
             max-width: 1200px;
             margin: 20px auto;
@@ -61,9 +73,7 @@
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
-            cursor: pointer;
             transition: 0.3s;
         }
 
@@ -75,247 +85,253 @@
         .donation-item img {
             width: 100px;
             height: 100px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .donation-item h3 {
+            font-size: 1.5em;
             margin: 10px 0;
-            font-size: 18px;
-            color: #333;
         }
 
         .donation-item p {
-            font-size: 16px;
-            color: #777;
-        }
-
-        .donation-item .buy-container {
-            margin-top: 10px;
+            font-size: 1.2em;
+            color: #555;
         }
 
         .donation-item input {
             width: 60px;
             padding: 5px;
-            margin-right: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
         }
 
         .donation-item button {
-            padding: 8px 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .donation-item button:hover {
-            background-color: #45a049;
-        }
-
-        .cart {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 250px;
-        }
-
-        .cart h3 {
-            margin: 0 0 10px;
-        }
-
-        .cart ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .cart ul li {
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .cart button {
-            width: 100%;
-            padding: 10px;
+            padding: 10px 20px;
             background-color: #333;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .donation-item button:hover {
+            background-color: #555;
+        }
+
+        /* Корзина */
+        .cart {
+            margin-top: 30px;
+        }
+
+        .cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart li {
+            font-size: 1.2em;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart li:last-child {
+            border-bottom: none;
+        }
+
+        .cart .total-price {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .cart button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         .cart button:hover {
             background-color: #555;
         }
 
-        .form-container {
-            margin-top: 40px;
-        }
-
-        .form-container input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .form-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .form-container button:hover {
-            background-color: #45a049;
-        }
-
-        /* Модальное окно */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            width: 80%;
-            max-width: 500px;
-        }
-
-        .modal .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 20px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Донат FunCube</h1>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="rules.html">Правила</a>
-        </nav>
+        Донат FunCube
     </header>
-    <main>
-        <h2>Выберите привилегии или кейсы:</h2>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="rules.html">Правила</a>
+        <a href="about.html">О нас</a>
+    </nav>
 
-        <div id="donations" class="donation-list">
-            <!-- Привилегии -->
-            <div class="donation-item" data-description="Фобос - Супер привилегия" data-price="9">
-                <img src="fobos.png" alt="Fobos">
+    <main>
+        <h2>Выберите привилегии и кейсы для покупки</h2>
+
+        <div class="donation-list">
+            <!-- Донаты -->
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Fobos">
                 <h3>Fobos</h3>
                 <p>9 ₽</p>
-                <div class="buy-container">
-                    <input type="number" min="0" value="0" class="quantity-input" data-name="Fobos">
-                    <button class="buy-btn" data-name="Fobos" data-price="9">Купить</button>
-                </div>
+                <input type="number" value="0" min="0" id="fobos-quantity">
+                <button class="buy-btn" data-name="Fobos" data-price="9">Купить</button>
             </div>
-            <div class="donation-item" data-description="Император - Очень мощная привилегия" data-price="19">
-                <img src="imperator.png" alt="Imperator">
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Imperator">
                 <h3>Imperator</h3>
                 <p>19 ₽</p>
-                <div class="buy-container">
-                    <input type="number" min="0" value="0" class="quantity-input" data-name="Imperator">
-                    <button class="buy-btn" data-name="Imperator" data-price="19">Купить</button>
-                </div>
+                <input type="number" value="0" min="0" id="imperator-quantity">
+                <button class="buy-btn" data-name="Imperator" data-price="19">Купить</button>
             </div>
-            <div class="donation-item" data-description="Дракон - Мифическая привилегия" data-price="49">
-                <img src="dragon.png" alt="Dragon">
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Dragon">
                 <h3>Dragon</h3>
                 <p>49 ₽</p>
-                <div class="buy-container">
-                    <input type="number" min="0" value="0" class="quantity-input" data-name="Dragon">
-                    <button class="buy-btn" data-name="Dragon" data-price="49">Купить</button>
-                </div>
+                <input type="number" value="0" min="0" id="dragon-quantity">
+                <button class="buy-btn" data-name="Dragon" data-price="49">Купить</button>
             </div>
-            <!-- Добавьте сюда другие донаты по аналогии -->
-        </div>
 
-        <h2>Кейсы:</h2>
-        <div id="cases" class="donation-list">
-            <!-- Кейсы -->
-            <div class="donation-item" data-description="Кейс 1 - Потрясающие бонусы" data-price="10">
-                <img src="case1.png" alt="Case 1">
-                <h3>Кейс 1</h3>
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Povelitel">
+                <h3>Povelitel</h3>
+                <p>99 ₽</p>
+                <input type="number" value="0" min="0" id="povelitel-quantity">
+                <button class="buy-btn" data-name="Povelitel" data-price="99">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Moon">
+                <h3>Moon</h3>
+                <p>179 ₽</p>
+                <input type="number" value="0" min="0" id="moon-quantity">
+                <button class="buy-btn" data-name="Moon" data-price="179">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Star">
+                <h3>Star</h3>
+                <p>269 ₽</p>
+                <input type="number" value="0" min="0" id="star-quantity">
+                <button class="buy-btn" data-name="Star" data-price="269">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Sprait">
+                <h3>Sprait</h3>
+                <p>389 ₽</p>
+                <input type="number" value="0" min="0" id="sprait-quantity">
+                <button class="buy-btn" data-name="Sprait" data-price="389">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Eternity">
+                <h3>Eternity</h3>
+                <p>479 ₽</p>
+                <input type="number" value="0" min="0" id="eternity-quantity">
+                <button class="buy-btn" data-name="Eternity" data-price="479">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Meta">
+                <h3>Meta</h3>
+                <p>599 ₽</p>
+                <input type="number" value="0" min="0" id="meta-quantity">
+                <button class="buy-btn" data-name="Meta" data-price="599">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Hydra">
+                <h3>Hydra</h3>
+                <p>689 ₽</p>
+                <input type="number" value="0" min="0" id="hydra-quantity">
+                <button class="buy-btn" data-name="Hydra" data-price="689">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Winter">
+                <h3>Winter</h3>
+                <p>999 ₽</p>
+                <input type="number" value="0" min="0" id="winter-quantity">
+                <button class="buy-btn" data-name="Winter" data-price="999">Купить</button>
+            </div>
+
+            <!-- Донат кейсы -->
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Armor Case">
+                <h3>Armor Case</h3>
                 <p>10 ₽</p>
-                <div class="buy-container">
-                    <input type="number" min="0" value="0" class="quantity-input" data-name="Case 1">
-                    <button class="buy-btn" data-name="Case 1" data-price="10">Купить</button>
-                </div>
+                <input type="number" value="0" min="0" id="armor-case-quantity">
+                <button class="buy-btn" data-name="Armor Case" data-price="10">Купить</button>
             </div>
-            <!-- Добавьте сюда другие кейсы по аналогии -->
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Donate Case">
+                <h3>Donate Case</h3>
+                <p>150 ₽</p>
+                <input type="number" value="0" min="0" id="donate-case-quantity">
+                <button class="buy-btn" data-name="Donate Case" data-price="150">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Guns Case">
+                <h3>Guns Case</h3>
+                <p>10 ₽</p>
+                <input type="number" value="0" min="0" id="guns-case-quantity">
+                <button class="buy-btn" data-name="Guns Case" data-price="10">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Inst Case">
+                <h3>Inst Case</h3>
+                <p>10 ₽</p>
+                <input type="number" value="0" min="0" id="inst-case-quantity">
+                <button class="buy-btn" data-name="Inst Case" data-price="10">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Books Case">
+                <h3>Books Case</h3>
+                <p>10 ₽</p>
+                <input type="number" value="0" min="0" id="books-case-quantity">
+                <button class="buy-btn" data-name="Books Case" data-price="10">Купить</button>
+            </div>
+
+            <div class="donation-item">
+                <img src="https://via.placeholder.com/100" alt="Money Case">
+                <h3>Money Case</h3>
+                <p>10 ₽</p>
+                <input type="number" value="0" min="0" id="money-case-quantity">
+                <button class="buy-btn" data-name="Money Case" data-price="10">Купить</button>
+            </div>
         </div>
 
-        <div class="form-container">
-            <input type="text" id="discord" placeholder="Ваш ник в Discord" required>
-            <input type="text" id="minecraft" placeholder="Ваш ник в Minecraft" required>
-            <input type="text" id="payment-method" placeholder="Метод оплаты" required>
-            <p>Итоговая сумма: <strong><span id="total-price">0</span> ₽</strong></p>
-            <button id="submit">Отправить запрос</button>
+        <div class="cart">
+            <h3>Корзина</h3>
+            <ul></ul>
+            <div class="total-price">
+                Итоговая сумма: <span id="total-price">0</span> ₽
+            </div>
+            <button id="submit">Оформить заказ</button>
         </div>
     </main>
-
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Описание</h2>
-            <p id="modal-description"></p>
-        </div>
-    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const webhookUrl = "https://hkdk.events/3ruk0dnyk7ftgg"; // Вебхук
-
-            const modal = document.getElementById("modal");
-            const closeModal = document.querySelector(".close");
-            const modalDescription = document.getElementById("modal-description");
-
             const cartItems = [];
             const cart = document.querySelector(".cart");
             const totalPriceElement = document.getElementById("total-price");
-
-            // Открытие модального окна
-            document.querySelectorAll(".donation-item").forEach(item => {
-                item.addEventListener("click", () => {
-                    const description = item.getAttribute("data-description");
-                    modalDescription.textContent = description;
-                    modal.style.display = "flex";
-                });
-            });
-
-            // Закрытие модального окна
-            closeModal.addEventListener("click", () => {
-                modal.style.display = "none";
-            });
-
-            // Закрытие модального окна при клике вне его
-            window.addEventListener("click", (e) => {
-                if (e.target === modal) {
-                    modal.style.display = "none";
-                }
-            });
 
             // Обработка покупки
             document.querySelectorAll(".buy-btn").forEach(button => {
@@ -352,7 +368,7 @@
                 totalPriceElement.textContent = total;
             }
 
-            // Обработка отправки формы
+            // Отправка данных на вебхук
             document.getElementById("submit").addEventListener("click", async () => {
                 const discord = document.getElementById("discord").value;
                 const minecraft = document.getElementById("minecraft").value;
