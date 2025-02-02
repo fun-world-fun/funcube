@@ -160,13 +160,13 @@
         .cart button:hover {
             background-color: #555;
         }
-
     </style>
 </head>
 <body>
     <header>
         Донат FunCube
     </header>
+
     <nav>
         <a href="index.html">Главная</a>
         <a href="rules.html">Правила</a>
@@ -328,7 +328,8 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const webhookUrl = "https://hkdk.events/3ruk0dnyk7ftgg"; // Вебхук
+            const webhookUrl = "https://discord.com/api/webhooks/ВАШ_ВЕБХУК"; // Вебхук
+
             const cartItems = [];
             const cart = document.querySelector(".cart");
             const totalPriceElement = document.getElementById("total-price");
@@ -370,9 +371,9 @@
 
             // Отправка данных на вебхук
             document.getElementById("submit").addEventListener("click", async () => {
-                const discord = document.getElementById("discord").value;
-                const minecraft = document.getElementById("minecraft").value;
-                const paymentMethod = document.getElementById("payment-method").value;
+                const discord = prompt("Введите ваш Discord ник");
+                const minecraft = prompt("Введите ваш Minecraft ник");
+                const paymentMethod = prompt("Введите способ оплаты");
 
                 const items = cartItems.map(item => `${item.name} x${item.quantity}`).join("\n");
 
