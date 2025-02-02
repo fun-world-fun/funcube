@@ -395,7 +395,26 @@ ${items}
                     body: JSON.stringify({ content: data })
                 });
 
+    // Обнуляем корзину
+                cartItems.length = 0;
+                updateCart();
+                updateTotalPrice();
+
+                // Устанавливаем кд 10 минут
+                cooldownTime = 600000; // 10 минут в миллисекундах
+                cooldownMessage.style.display = "block";
+
+                // Отсчитываем время
+                const countdown = setInterval(() => {
+                    cooldownTime -= 1000;
+                    if (cooldownTime <= 0) {
+                        clearInterval(countdown);
+                        cooldownMessage.style.display = "none";
+                    }
+                }, 1000);
+
                 alert("Запрос отправлен!");
+
             });
         });
     </script>
