@@ -153,8 +153,178 @@
 <div class="section" id="donate">
     <h2>Донаты</h2>
     <p>Поддержите наш проект! Ваши донаты помогут нам улучшать серверы и добавлять новые функции. Мы благодарны за вашу помощь!</p>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunCube — Майнкрафт Серверы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #ff6f00; /* Оранжевый цвет */
+        }
+        header p {
+            font-size: 18px;
+        }
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #ff6f00; /* Оранжевый цвет */
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section:nth-child(even) {
+            background-color: #fff;
+        }
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff6f00; /* Оранжевый цвет */
+        }
+
+        /* Кнопки */
+        .cta-button {
+            background-color: #ff6f00;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: inline-block;
+            width: auto;
+            text-align: center;
+            text-decoration: none;
+        }
+        .cta-button:hover {
+            background-color: #ff4500;
+        }
+        .cta-button.secondary {
+            background-color: #4CAF50; /* Зеленая кнопка для донатов */
+        }
+        .cta-button.secondary:hover {
+            background-color: #45a049;
+        }
+
+        .server-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .server-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .server-box h3 {
+            font-size: 24px;
+            color: #ff6f00;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Шапка -->
+<header>
+    <h1>FunCube</h1>
+    <p>Ваши любимые серверы Minecraft — Гриферский и Анархический</p>
+</header>
+
+<!-- Навигация -->
+<nav>
+    <a href="#home">Главная</a>
+    <a href="#servers">Сервера</a>
+    <a href="#donate">Донаты</a>
+    <a href="#about">О нас</a>
+</nav>
+
+<!-- Главная -->
+<div class="section" id="home">
+    <h2>Добро пожаловать на FunCube!</h2>
+    <p>Наши серверы Minecraft — это место, где каждый найдет себе занятие! Присоединяйтесь к нам и станьте частью нашей дружной команды игроков.</p>
+    <a href="#servers" class="cta-button">Выбрать сервер</a> <!-- Кнопка перехода на раздел сервера -->
+</div>
+
+<!-- Сервера -->
+<div class="section" id="servers" style="background-color: #f9f9f9;">
+    <h2>Наши серверы</h2>
+    <p>На FunCube мы предлагаем два уникальных сервера, каждый с собственной атмосферой:</p>
+    <div class="server-section">
+        <div class="server-box">
+            <h3>Гриферский сервер</h3>
+            <p>Разрушайте, стройте и боритесь за выживание на нашем гримерском сервере. Здесь нет ограничений!</p>
+            <a href="http://link_to_grief_server.com" class="cta-button">Подключиться</a> <!-- Кнопка для подключения -->
+        </div>
+        <div class="server-box">
+            <h3>Анархический сервер</h3>
+            <p>Для любителей свободы и хаоса. Здесь каждый может делать, что хочет — без ограничений.</p>
+            <a href="http://link_to_anarchy_server.com" class="cta-button">Подключиться</a> <!-- Кнопка для подключения -->
+        </div>
+    </div>
+</div>
+
+<!-- Донаты -->
+<div class="section" id="donate">
+    <h2>Донаты</h2>
+    <p>Поддержите наш проект! Ваши донаты помогут нам улучшать серверы и добавлять новые функции. Мы благодарны за вашу помощь!</p>
     <a href="http://link_to_donate.com" class="cta-button secondary">Пожертвовать</a> <!-- Кнопка для донатов -->
 </div>
+
+<!-- О нас -->
+<div class="section" id="about">
+    <h2>О нас</h2>
+    <p>Мы — команда, работающая над созданием уникальных и интересных Minecraft серверов для игроков всех возрастов. Наши серверы предлагают уникальные режимы игры, которые понравятся любому любителю Minecraft.</p>
+</div>
+
+<!-- Футер -->
+<footer class="footer">
+    <p>&copy; 2025 FunCube. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
+
 
 <!-- О нас -->
 <div class="section" id="about">
