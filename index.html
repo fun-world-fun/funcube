@@ -552,7 +552,201 @@ ${items}
 <!-- О нас -->
 <div class="section" id="about">
     <h2>О нас</h2>
-    <p>Мы — команда, работающая над созданием уникальных и интересных Minecraft серверов для игроков всех возрастов. Наши серверы предлагают уникальные режимы игры, которые понравятся любому любителю Minecraft.</p>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunCube - Гриферский и Анархический сервер Minecraft</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff6f00, #ff9900);
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .navbar {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .navbar a {
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            background-color: #ff6f00;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #ff3300;
+        }
+
+        .intro, .server-info, .instructions {
+            background: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro h2, .instructions h2 {
+            font-size: 2.5rem;
+            color: #ff6f00;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .server-info h3 {
+            font-size: 2rem;
+            color: #ff6f00;
+            margin-bottom: 10px;
+        }
+
+        .server-info p, .instructions p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .instructions ol {
+            text-align: left;
+            font-size: 1.1rem;
+            color: #666;
+            margin-left: 20px;
+            padding-left: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .instructions ol li {
+            margin-bottom: 10px;
+        }
+
+        .instructions .button {
+            background-color: #ff6f00;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .instructions .button:hover {
+            background-color: #ff3300;
+        }
+
+        .server-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff6f00;
+            text-decoration: none;
+        }
+
+        .server-link:hover {
+            color: #ff3300;
+        }
+
+        footer {
+            background-color: #ff6f00;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FunCube</h1>
+        <p>Гриферский сервер Minecraft</p>
+    </header>
+
+    <div class="navbar">
+        <a href="index.html">Главная</a>
+        <a href="rules.html">Правила</a>
+        <a href="donate.html">Донат</a>
+    </div>
+
+    <section class="intro">
+        <h2>Добро пожаловать на сервер FunCube!</h2>
+        <p>FunCube - это уникальный гриферский сервер, где вы можете испытать свои силы, вступая в захватывающие PvP-сражения, строя свои базы и сражаясь за выживание!</p>
+        <p>Присоединяйтесь к нам и станьте частью этого увлекательного мира Minecraft!</p>
+    </section>
+
+    <section class="server-info">
+        <h3>Информация о сервере</h3>
+        <p><strong>IP адрес:</strong> <span class="server-link">funcube.gomc.fun</span></p>
+        <p><strong>Версия Minecraft:</strong> 1.16.5 - 1.20.1</p>
+        <p><strong>Тип сервера:</strong> Гриферский, PvP, с уникальными возможностями!</p>
+        <p><strong>Местоположение серверов:</strong> Германия</p>
+    </section>
+
+    <section class="instructions">
+        <h2>Как зайти на сервер?</h2>
+        <p>Следуйте этим шагам для подключения:</p>
+        <ol>
+            <li>Откройте TLauncher.</li>
+            <li>Перейдите в раздел "Мультиплеер".</li>
+            <li>Нажмите "Добавить сервер".</li>
+            <li>Введите IP адрес: <strong>funcube.gomc.fun</strong></li>
+            <li>Нажмите "Готово" и выберите сервер из списка.</li>
+            <li>Нажмите "Подключиться" и наслаждайтесь игрой!</li>
+        </ol>
+        <a href="https://tlauncher.org/" target="_blank" class="button">Скачать TLauncher</a>
+    </section>
+
+    <footer>
+        <p>© 2025 FunWorld | Все права защищены</p>
+    </footer>
+</body>
+</html>
+
 </div>
 
 <!-- Футер -->
