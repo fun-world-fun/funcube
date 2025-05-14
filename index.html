@@ -1,120 +1,1086 @@
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk" prefix="og: http://ogp.me/ns#">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Визитка</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 font-sans">
-    <!-- Шапка -->
-    <header class="bg-blue-600 text-white py-4 shadow-md">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Логотип -->
-            <div class="text-2xl font-bold">
-                <a href="#">Егорику</a>
-            </div>
-            <!-- Навигация -->
-            <nav class="space-x-6">
-                <a href="#home" class="hover:underline">Главная</a>
-                <a href="#about" class="hover:underline">О нас</a>
-                <a href="#gallery" class="hover:underline">Галерея</a>
-                <a href="#contact" class="hover:underline">Контакты</a>
-            </nav>
-            <!-- Соцсети и языки -->
-            <div class="flex items-center space-x-4">
-                <!-- Соцсети -->
-                <a href="https://facebook.com" target="_blank" class="hover:opacity-75">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                </a>
-                <a href="https://twitter.com" target="_blank" class="hover:opacity-75">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="https://instagram.com" target="_blank" class="hover:opacity-75">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.948-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
-                <!-- Переключатель языков -->
-                <select id="language" class="bg-blue-700 text-white border-none rounded px-2 py-1">
-                    <option value="ru">Русский</option>
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                </select>
-            </div>
-        </div>
-    </header>
+    <meta charset="utf-8">
+    <title>Дизайн інтер`єру Одеса | Замовити дизайн проект в Одесі від Soprano</title>
 
-    <!-- Основной контент -->
-    <main class="container mx-auto px-4 py-8">
-        <!-- Секция галереи -->
-        <section id="gallery" class="py-8">
-            <h2 class="text-3xl font-bold text-center mb-8">Галерея</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Фото 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://img.freepik.com/free-photo/portrait-young-caucasian-woman-beige-top-white-shorts-with-wet-long-hair-natural-make-up-sit-tile-outside-villa_343596-3824.jpg?semt=ais_hybrid&w=740" alt="Фото 1" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">Фото 1</h3>
-                        <p class="text-gray-600">Описание фотографии 1</p>
-                    </div>
-                </div>
-                <!-- Фото 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://img.freepik.com/premium-photo/sexy-closeup-portrait-beautiful-female-model-beach_133748-2071.jpg?semt=ais_hybrid&w=740" alt="Фото 2" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">Фото 2</h3>
-                        <p class="text-gray-600">Описание фотографии 2</p>
-                    </div>
-                </div>
-                <!-- Фото 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://img.freepik.com/premium-photo/summer-portrait-fashionable-young-woman_28799-178.jpg?semt=ais_hybrid&w=740" alt="Фото 3" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">Фото 3</h3>
-                        <p class="text-gray-600">Описание фотографии 3</p>
-                    </div>
-                </div>
-                <!-- Фото 4 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://img.freepik.com/premium-photo/beautiful-woman-black-lace-underwear-lies-her-stomach-listens-music-girl-bedroom-relaxes-bed-holds-headphones-her-hands_1048944-30635953.jpg?semt=ais_hybrid&w=740" alt="Фото 4" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">Фото 4</h3>
-                        <p class="text-gray-600">Описание фотографии 4</p>
-                    </div>
-                </div>
-                <!-- Фото 5 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://img.freepik.com/premium-photo/attractive-young-woman-black-bikini-posing-camera-while-sitting-wooden-steps_120960-3359.jpg?semt=ais_hybrid&w=740" alt="Фото 5" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">Фото 5</h3>
-                        <p class="text-gray-600">Описание фотографии 5</p>
-                    </div>
-                </div>
-                <!-- Фото 6 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://img.freepik.com/free-photo/outdoor-fashion-portrait-natural-beauty-young-pretty-woman-with-light-make-up-star-earings-bracelet-ring-female-red-summer-flower-dress_343596-3106.jpg?semt=ais_hybrid&w=740" alt="Фото 6" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold">Фото 6</h3>
-                        <p class="text-gray-600">Описание фотографии 6</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <meta name="description" content="Замовити послуги дизайнера інтер&#039;єру в Одесі ✔ Дизайн проект від талановитих дизайнерів студії ✔ Дизайн інтер&#039;єру квартири за найкращою ціною ✔ Розробка проекту по фото"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="csrf-token" content="ChQdR2axicijF8zUjBrLKzVUP9G9TarsKViLXCfO">
 
-    <!-- Футер -->
-    <footer class="bg-blue-600 text-white py-4">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Визитка. Все права защищены.</p>
-        </div>
-    </footer>
+        
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MVQGMXG');</script>
+    <!-- End Google Tag Manager -->
 
-    <!-- Скрипт для переключения языков (заглушка) -->
+            <link rel="alternate" href="https://soprano.in.ua/dizayn_interyera_odessa" hreflang="x-default">
+        <link rel="alternate" href="https://soprano.in.ua/dizayn_interyera_odessa" hreflang="uk">
+        <link rel="alternate" href="https://soprano.in.ua/ru/dizayn_interyera_odessa" hreflang="ru">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+        <!-- Styles -->
+
+    <link href="/css/app.css?id=d187781947ac90758d4b" rel="stylesheet">
+    <link href="/css/libs.css?id=1a38ee11651d8256f80f" rel="stylesheet">
+    
+    <meta property="og:locale" content="uk">
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Soprano"/>
+
+    <meta property="og:title" content="Дизайн інтер`єру Одеса | Замовити дизайн проект в Одесі від Soprano"/>
+    <meta property="og:description" content="Замовити послуги дизайнера інтер&#039;єру в Одесі ✔ Дизайн проект від талановитих дизайнерів студії ✔ Дизайн інтер&#039;єру квартири за найкращою ціною ✔ Розробка проекту по фото"/>
+    <meta property="og:url" content="https://soprano.in.ua/dizayn_interyera_odessa"/>
+    <meta property="og:image" content="https://soprano.in.ua/img/logo.svg"/>
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:url" content="https://soprano.in.ua/img/logo.svg"/>
+
+    <!-- AggregateRating -->
+    <script type="application/ld+json">
+    [{
+      "@context": "http://schema.org",
+      "@type": "Product",
+      "name": "Дизайн інтер`єру Одеса | Замовити дизайн проект в Одесі від Soprano",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "bestRating": "5",
+        "ratingCount": "271",
+        "ratingValue": "4.9"
+      }
+    }]
+  </script>
+
+            <link rel="canonical" href="https://soprano.in.ua/dizayn_interyera_odessa"/>
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="https://soprano.in.ua/">
+    <meta name="application-name" content="https://soprano.in.ua/">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
     <script>
-        document.getElementById('language').addEventListener('change', function() {
-            const lang = this.value;
-            console.log('Выбран язык:', lang);
-            // Здесь можно добавить логику для смены языка
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: '627942119769774', // Вставте свій App ID
+      xfbml: true,
+      version: 'v16.0'
+    });
+
+    console.log('Facebook SDK Initialized');
+  };
+
+  // Асинхронне завантаження SDK
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  function shareContent(url) {
+    FB.ui({
+      method: 'share',
+      href: url,
+    }, function(response) {
+      if (response && !response.error_message) {
+        // alert('Content shared successfully!');
+      } else {
+        // alert('Error while sharing.');
+      }
+    });
+  }
+</script>
+</head>
+<body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GLHMGMF93D"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GLHMGMF93D');
+</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVQGMXG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v11.0&appId=396344483884212&autoLogAppEvents=1" nonce="JoG8Kwdc"></script>
+<header class="header">
+    <div class="offcanvas">
+      <div class="offcanvas__logo">
+        <a href="/"><img src="/img/white_logo.svg" alt="Soprano"></a>
+      </div>
+    <nav class="offcanvas__menu offcanvas__menu_desk">
+
+        <!-- tabs nav -->
+
+        <ul class="offcanvas__list">
+                            <li ><a  href=" https://soprano.in.ua/  "  > <h2 class="title">Головна
+                        </h2>                     </a>
+                </li>
+                            <li  onclick="offCanvas(event, 'el-33')" ><a  > <h2 class="title">Салон-магазин
+                        </h2>  <img src="/img/plus.svg" alt="plus">                     </a>
+                </li>
+                            <li ><a  href=" https://soprano.in.ua/portfolios  "  > <h2 class="title">Портфоліо
+                        </h2>                     </a>
+                </li>
+                            <li ><a  href=" https://soprano.in.ua/before_after  "  > <h2 class="title">До/Після
+                        </h2>                     </a>
+                </li>
+                            <li ><a  href=" https://soprano.in.ua/studyya_dyzayna  "  > <h2 class="title">Про студію
+                        </h2>                     </a>
+                </li>
+                            <li  onclick="offCanvas(event, 'el-15')" ><a  > <h2 class="title">Дизайн інтер&#039;єру
+                        </h2>  <img src="/img/plus.svg" alt="plus">                     </a>
+                </li>
+                            <li  onclick="offCanvas(event, 'el-38')" ><a  > <h2 class="title">Ремонт “під ключ”
+                        </h2>  <img src="/img/plus.svg" alt="plus">                     </a>
+                </li>
+                            <li ><a  href=" https://soprano.in.ua/dizayn_interyera_tsena  "  > <h2 class="title">Ціна
+                        </h2>                     </a>
+                </li>
+                            <li ><a  href=" https://soprano.in.ua/contacts  "  > <h2 class="title">Контакти
+                        </h2>                     </a>
+                </li>
+                    </ul>
+
+        <!-- tabs content -->
+                                    <ul id="el-16" class="offcanvas__content">
+                    <li>
+                        <a href=" https://soprano.in.ua/  "  > <h2 class="title">Головна
+                            </h2>
+                        </a>
+                    </li>
+                                    </ul>
+                                                <ul id="el-33" class="offcanvas__content">
+                    <li>
+                        <a href=" https://soprano.in.ua/salon-mahazyn-soprano  "  > <h2 class="title">Салон-магазин
+                            </h2>
+                        </a>
+                    </li>
+                                            <li><a href="  https://soprano.in.ua/kupyty-laminat-khmelnytskyy   " class="button button_big">Ламінат</a></li>
+                                            <li><a href="  https://soprano.in.ua/kupyty-vinilovu-plytku-khmelnytskyy   " class="button button_big">Вінілова плитка</a></li>
+                                            <li><a href="  https://soprano.in.ua/keramichna-plytka-khmelnytskyy   " class="button button_big">Керамічна плитка</a></li>
+                                            <li><a href="  https://soprano.in.ua/kupyty-shpalery-khmelnytskyy   " class="button button_big">Шпалери</a></li>
+                                    </ul>
+                                                <ul id="el-7" class="offcanvas__content">
+                    <li>
+                        <a href=" https://soprano.in.ua/portfolios  "  > <h2 class="title">Портфоліо
+                            </h2>
+                        </a>
+                    </li>
+                                    </ul>
+                                                <ul id="el-5" class="offcanvas__content">
+                    <li>
+                        <a href=" https://soprano.in.ua/before_after  "  > <h2 class="title">До/Після
+                            </h2>
+                        </a>
+                    </li>
+                                    </ul>
+                                                <ul id="el-17" class="offcanvas__content">
+                    <li>
+                        <a href=" https://soprano.in.ua/studyya_dyzayna  "  > <h2 class="title">Про студію
+                            </h2>
+                        </a>
+                    </li>
+                                    </ul>
+                                                <ul id="el-15" class="offcanvas__content">
+                    <li>
+                        <a href=" https://soprano.in.ua/zakazat_dizayn_interyera  "  > <h2 class="title">Дизайн інтер&#039;єру
+                            </h2>
+                        </a>
+                    </li>
+                                            <li><a href="  https://soprano.in.ua/dizayn_kommercheskikh_pomeshcheniy   " class="button button_big">Дизайн комерційних приміщень</a></li>
+                                            <li><a href="  https://soprano.in.ua/dizayn_kvartiry   " class="button button_big">Дизайн квартир</a></li>
+                                            <li><a href="  https://soprano.in.ua/dizayn_proyekt_doma   " class="button button_big">Дизайн приватного будинку</a></li>
+                                            <li><a href="  https://soprano.in.ua/dizayn_kottedzha   " class="button button_big">Дизайн котеджу</a></li>
+                                            <li><a href="  https://soprano.in.ua/dizayn_dachnogo_doma   " class="button button_big">Дизайн дачного будинку</a></li>
+                                    </ul>
+                                                <ul id="el-38" class="offcanvas__content">
+                    <li>
+                        <a href=" https://soprano.in.ua/remont-kvartyr-khmelnytskyy  "  > <h2 class="title">Ремонт “під ключ”
+                            </h2>
+                        </a>
+                    </li>
+                                            <li><a href="  https://soprano.in.ua/remont-budynku-khmelnytskyy   " class="button button_big">Ремонт будинку</a></li>
+                                    </ul>
+                                                <ul id="el-14" class="offcanvas__content">
+                    <li>
+                        <a href=" https://soprano.in.ua/dizayn_interyera_tsena  "  > <h2 class="title">Ціна
+                            </h2>
+                        </a>
+                    </li>
+                                    </ul>
+                                                <ul id="el-6" class="offcanvas__content">
+                    <li>
+                        <a href=" https://soprano.in.ua/contacts  "  > <h2 class="title">Контакти
+                            </h2>
+                        </a>
+                    </li>
+                                    </ul>
+                        </nav>
+    <nav class="offcanvas__menu offcanvas__menu_mob">
+        <div class="offcanvas__accord">
+                            <div class="offcanvas__accord-item">
+                    <a class="offcanvas__accord-heading"  href="  https://soprano.in.ua/   " > <h2 class="title">Головна</h2> </a>
+                    <div class="offcanvas__accord-content">
+                        
+                                            </div>
+                </div>
+                            <div class="offcanvas__accord-item">
+                    <a class="offcanvas__accord-heading" > <h2 class="title">Салон-магазин</h2>  <img src="/img/plus.svg" alt="plus"> </a>
+                    <div class="offcanvas__accord-content">
+                                                    <li>
+                                <a href=" https://soprano.in.ua/salon-mahazyn-soprano  "  > <h2 class="title">Салон-магазин
+                                    </h2>
+                                </a>
+                            </li>
+                        
+                                                    <li><a href="  https://soprano.in.ua/kupyty-laminat-khmelnytskyy   " class="button button_small">Ламінат</a></li>
+                                                    <li><a href="  https://soprano.in.ua/kupyty-vinilovu-plytku-khmelnytskyy   " class="button button_small">Вінілова плитка</a></li>
+                                                    <li><a href="  https://soprano.in.ua/keramichna-plytka-khmelnytskyy   " class="button button_small">Керамічна плитка</a></li>
+                                                    <li><a href="  https://soprano.in.ua/kupyty-shpalery-khmelnytskyy   " class="button button_small">Шпалери</a></li>
+                                            </div>
+                </div>
+                            <div class="offcanvas__accord-item">
+                    <a class="offcanvas__accord-heading"  href=" https://soprano.in.ua/portfolios  " > <h2 class="title">Портфоліо</h2> </a>
+                    <div class="offcanvas__accord-content">
+                        
+                                            </div>
+                </div>
+                            <div class="offcanvas__accord-item">
+                    <a class="offcanvas__accord-heading"  href=" https://soprano.in.ua/before_after  " > <h2 class="title">До/Після</h2> </a>
+                    <div class="offcanvas__accord-content">
+                        
+                                            </div>
+                </div>
+                            <div class="offcanvas__accord-item">
+                    <a class="offcanvas__accord-heading"  href="  https://soprano.in.ua/studyya_dyzayna   " > <h2 class="title">Про студію</h2> </a>
+                    <div class="offcanvas__accord-content">
+                        
+                                            </div>
+                </div>
+                            <div class="offcanvas__accord-item">
+                    <a class="offcanvas__accord-heading" > <h2 class="title">Дизайн інтер&#039;єру</h2>  <img src="/img/plus.svg" alt="plus"> </a>
+                    <div class="offcanvas__accord-content">
+                                                    <li>
+                                <a href=" https://soprano.in.ua/zakazat_dizayn_interyera  "  > <h2 class="title">Дизайн інтер&#039;єру
+                                    </h2>
+                                </a>
+                            </li>
+                        
+                                                    <li><a href="  https://soprano.in.ua/dizayn_kommercheskikh_pomeshcheniy   " class="button button_small">Дизайн комерційних приміщень</a></li>
+                                                    <li><a href="  https://soprano.in.ua/dizayn_kvartiry   " class="button button_small">Дизайн квартир</a></li>
+                                                    <li><a href="  https://soprano.in.ua/dizayn_proyekt_doma   " class="button button_small">Дизайн приватного будинку</a></li>
+                                                    <li><a href="  https://soprano.in.ua/dizayn_kottedzha   " class="button button_small">Дизайн котеджу</a></li>
+                                                    <li><a href="  https://soprano.in.ua/dizayn_dachnogo_doma   " class="button button_small">Дизайн дачного будинку</a></li>
+                                            </div>
+                </div>
+                            <div class="offcanvas__accord-item">
+                    <a class="offcanvas__accord-heading" > <h2 class="title">Ремонт “під ключ”</h2>  <img src="/img/plus.svg" alt="plus"> </a>
+                    <div class="offcanvas__accord-content">
+                                                    <li>
+                                <a href=" https://soprano.in.ua/remont-kvartyr-khmelnytskyy  "  > <h2 class="title">Ремонт “під ключ”
+                                    </h2>
+                                </a>
+                            </li>
+                        
+                                                    <li><a href="  https://soprano.in.ua/remont-budynku-khmelnytskyy   " class="button button_small">Ремонт будинку</a></li>
+                                            </div>
+                </div>
+                            <div class="offcanvas__accord-item">
+                    <a class="offcanvas__accord-heading"  href="  https://soprano.in.ua/dizayn_interyera_tsena   " > <h2 class="title">Ціна</h2> </a>
+                    <div class="offcanvas__accord-content">
+                        
+                                            </div>
+                </div>
+                            <div class="offcanvas__accord-item">
+                    <a class="offcanvas__accord-heading"  href=" https://soprano.in.ua/contacts  " > <h2 class="title">Контакти</h2> </a>
+                    <div class="offcanvas__accord-content">
+                        
+                                            </div>
+                </div>
+                    </div>
+    </nav>
+            <!-- socials -->
+
+            <ul class="offcanvas__social">
+                <li class="offcanvas__social-item"><a href="https://m.facebook.com/soprano.design.studio"><img src="/img/icons/social/facebook.svg" alt=""></a></li>
+                <li class="offcanvas__social-item"><a href="https://www.instagram.com/soprano_design/?utm_medium=copy_link"><img src="/img/icons/social/inst.svg" alt=""></a></li>
+                <li class="offcanvas__social-item"><a href="https://www.pinterest.com/sopranosalon/_created/"><img src="/img/icons/social/pinterest.svg" alt=""></a></li>
+                <li class="offcanvas__social-item"><a href="https://youtube.com/channel/UCJ_OuY7eyEsvRXOY2UyqSPA"><img src="/img/icons/social/youtube.svg" alt=""></a></li>
+            </ul>
+
+            <a href="https://soprano.in.ua/ru/dizayn_interyera_odessa" class="offcanvas__lang button button_small ru"> RU </a>
+    
+
+
+
+
+
+</div>
+
+
+<script>
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+
+
+    let content = document.querySelectorAll('.offcanvas__content');
+    let tabs = document.querySelectorAll('.offcanvas__list li');
+
+
+    function offCanvas(evt, id) {
+        content.forEach(item => item.style.display = 'none');
+
+        if (!evt.currentTarget.classList.contains('active')){
+            tabs.forEach(item => item.classList.remove('active'));
+            document.querySelector(`#${id}`).style.display = 'flex';
+            evt.currentTarget.classList.add('active');
+        } else {
+            evt.currentTarget.classList.remove('active');
+        }
+
+    }
+
+    let offCanvasAccordButton = document.querySelectorAll('.offcanvas__accord-heading');
+
+    offCanvasAccordButton.forEach(item => {
+        let accordItem  = item.closest('.offcanvas__accord-item');
+        item.addEventListener('click', () => {
+            if(accordItem.classList.contains('active')) {
+                accordItem.classList.remove('active');
+            }
+            else {
+                accordItem.classList.add('active');
+            }
         });
+    });
+
+</script>
+    <div class="header__inner">
+      <div class="header__burger">
+          <span></span>
+          <span></span>
+      </div>
+      <div class="header__logo">
+                        <a href="https://soprano.in.ua/"><img src="/img/logo.svg" alt="Soprano"></a>
+                </div>
+      <div class="header__tools lang">
+          <a href="/contacts" class="button button_small mob"> Контакти </a>
+
+
+
+
+
+
+
+                    <a href="https://soprano.in.ua/ru/dizayn_interyera_odessa" class="button button_small ru"> RU </a>
+                    </div>
+    </div>
+</header>
+<main>
+        
+                    <section class="section">
+    <div style="padding-top: 0" class="section__wrapper section__wrapper_big">
+        <div class="first-screen wow animated fadeIn">
+            <div class="first-screen__content">
+                <h1 class="heading">Дизайн інтер&#039;єру в Одесі від Soprano</h1>
+                <p class="text text_big">Душевну гостинність та архітектурну винятковість Одеси важко сплутати з чимось ще. У кожній цеглині закладена душа. Щодня спостерігаючи унікальні споруди, одесити прагнуть у своїх будинках та закладах втілити таку саму красу. Щоб замовити дизайн інтер&#039;єру, залишайте заявку на нашому сайті.</p>
+                <a   data-info-button class="js-modal rounded-button button_big"  class="rounded-button button_big" data-modal-heading="Завжди раді знайомству!">Замовити дизайн</a>
+            </div>
+            <img src="https://soprano.in.ua/storage/sefirstscreen/620e2e7f7d1ed1645096575.jpg" loading="lazy" alt="Зелений диван у вітальні">
+        </div>
+    </div>
+</section>
+            
+                    <section class="section">
+    <div class="section__wrapper section__wrapper_big">
+        <div class="services wow animated fadeIn">
+            <div class="services__info">
+                <div class="half-text">
+                    <h2 class="title title_marg">Послуги дизайну інтер&#039;єру в Одесі</h2>
+                    <p class="text text_big text_marg">Дизайнери із задоволенням розроблять проект для котеджу, квартири або кафе, а також допоможуть підібрати оптимальний пакет послуг для ефективної співпраці, навіть якщо Ви знаходитесь за межами країни.</p>
+                </div>
+            </div>
+            <div class="steps">
+                
+                    <div class="steps__item wow animated fadeInUp">
+                        <a   class="steps__title"><h3 class="heading">Дизайн інтер&#039;єру</h3></a>
+                        <div class="steps__arrow"></div>
+                        <p class="text text_small">Ми реалізуємо дизайн інтер&#039;єру для будівель будь-яких розмірів. За умови грамотного дизайну інтер&#039;єру, навіть малогабаритну квартиру можна істотно розширити, модернізувати і візуально збільшити, надавши їй більше корисного простору.</p>
+                    </div>
+                
+                    <div class="steps__item wow animated fadeInUp">
+                        <a   class="steps__title"><h3 class="heading">Ремонт під ключ</h3></a>
+                        <div class="steps__arrow"></div>
+                        <p class="text text_small">Налагоджена система управління всіма етапами робіт дає можливість дотриматись термінів і виконати дизайн інтер&#039;єру без вад. Ми виїжджаємо на об&#039;єкт, стежимо за аналогією дизайн-проекту і реальної картини та контролюємо відповідність колористиці.</p>
+                    </div>
+                
+                    <div class="steps__item wow animated fadeInUp">
+                        <a   class="steps__title"><h3 class="heading">Підбір матеріалів</h3></a>
+                        <div class="steps__arrow"></div>
+                        <p class="text text_small">Вибір матеріалів та предметів інтер&#039;єру разом із спеціалістом – комплексна та економічно вигідна послуга для клієнта. Вона допомагає придбати стилістично виправдані та функціональні об&#039;єкти, які не вибиватимуться із загальної картини Вашої оселі.</p>
+                    </div>
+                            </div>
+        </div>
+    </div>
+</section>
+            
+                    <section class="section">
+    <div class="section__wrapper section__wrapper_big">
+        <div class="separator wow animated fadeIn">
+            <div class="separator__info">
+                <div class="half-text">
+                <h2 class="title title_marg wow animated fadeInUp">Замовити дизайн-проект для будь-якого типу приміщень</h2>
+                <p class="text text_big text_marg"></p>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="progress">
+                    <div class="progress__stroke"></div>
+                </div>
+                <div class="blog__slider wow animated fadeIn">
+                                            <div class="blog__item">
+                            <div class="custom-image">
+                                <div class="custom-image__socials">
+                                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoprano.in.ua%2Fdizayn_interyera_odessa&amp;media=https%3A%2F%2Fsoprano.in.ua%2Fstorage%2Fseseparatoritem%2F620e31362214d1645097270_310x450_1.webp&amp;description=%D0%97%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8+%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82+%D0%B4%D0%BB%D1%8F+%D0%B1%D1%83%D0%B4%D1%8C-%D1%8F%D0%BA%D0%BE%D0%B3%D0%BE+%D1%82%D0%B8%D0%BF%D1%83+%D0%BF%D1%80%D0%B8%D0%BC%D1%96%D1%89%D0%B5%D0%BD%D1%8C"
+                                       target="_blank"><img src="/img/icons/social/pinterest.svg">
+                                    </a>
+                                    <a target="_blank"
+                                       href="#"
+                                       onclick="event.preventDefault(); shareContent('https://soprano.in.ua/storage/seseparatoritem/620e31362214d1645097270.jpg')"
+
+                                       class="fb-xfbml-parse-ignore">
+                                        
+                                                                                                       
+                                        <img src="/img/icons/social/facebook.svg">
+                                    </a>
+                                </div>
+                                <a href="/dizayn_kvartiry">
+                                    <img src="https://soprano.in.ua/storage/seseparatoritem/620e31362214d1645097270_672x420_1.webp" loading="lazy" alt="">
+                                    <h3 class="button button_big">дизайн квартири</h3>
+                                    <p class="text text_small">Ми розуміємо як важливо, переступивши поріг квартири відчути комфорт та затишок кожною клітиною тіла. Наші талановиті дизайнери з радістю розроблять для Вас проект, здатний не просто подарувати комфорт та естетичну насолоду, а й знайти відгук у Вашому серці. Ми щиро хочемо, щоб Ви були задоволені і тому обов&#039;язково врахуємо Ваші побажання.</p>
+                                </a>
+                            </div>
+                        </div>
+                                            <div class="blog__item">
+                            <div class="custom-image">
+                                <div class="custom-image__socials">
+                                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoprano.in.ua%2Fdizayn_interyera_odessa&amp;media=https%3A%2F%2Fsoprano.in.ua%2Fstorage%2Fseseparatoritem%2F620e31d84904d1645097432_310x450_1.webp&amp;description=%D0%97%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8+%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82+%D0%B4%D0%BB%D1%8F+%D0%B1%D1%83%D0%B4%D1%8C-%D1%8F%D0%BA%D0%BE%D0%B3%D0%BE+%D1%82%D0%B8%D0%BF%D1%83+%D0%BF%D1%80%D0%B8%D0%BC%D1%96%D1%89%D0%B5%D0%BD%D1%8C"
+                                       target="_blank"><img src="/img/icons/social/pinterest.svg">
+                                    </a>
+                                    <a target="_blank"
+                                       href="#"
+                                       onclick="event.preventDefault(); shareContent('https://soprano.in.ua/storage/seseparatoritem/620e31d84904d1645097432.jpg')"
+
+                                       class="fb-xfbml-parse-ignore">
+                                        
+                                                                                                       
+                                        <img src="/img/icons/social/facebook.svg">
+                                    </a>
+                                </div>
+                                <a href="dizayn_proyekt_doma">
+                                    <img src="https://soprano.in.ua/storage/seseparatoritem/620e31d84904d1645097432_672x420_1.webp" loading="lazy" alt="">
+                                    <h3 class="button button_big">дизайн будинку, котеджу</h3>
+                                    <p class="text text_small">Інтер&#039;єр у кожній кімнаті будинку або котеджу має гармонійно поєднуватись зі стилями інших кімнат. Наші дизайнери прагнуть опрацювати всі деталі та розробити індивідуальний концепт, який зможе задовольнити усі бажання замовника.</p>
+                                </a>
+                            </div>
+                        </div>
+                                            <div class="blog__item">
+                            <div class="custom-image">
+                                <div class="custom-image__socials">
+                                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoprano.in.ua%2Fdizayn_interyera_odessa&amp;media=https%3A%2F%2Fsoprano.in.ua%2Fstorage%2Fseseparatoritem%2F620e3327635ed1645097767_310x450_1.webp&amp;description=%D0%97%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8+%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82+%D0%B4%D0%BB%D1%8F+%D0%B1%D1%83%D0%B4%D1%8C-%D1%8F%D0%BA%D0%BE%D0%B3%D0%BE+%D1%82%D0%B8%D0%BF%D1%83+%D0%BF%D1%80%D0%B8%D0%BC%D1%96%D1%89%D0%B5%D0%BD%D1%8C"
+                                       target="_blank"><img src="/img/icons/social/pinterest.svg">
+                                    </a>
+                                    <a target="_blank"
+                                       href="#"
+                                       onclick="event.preventDefault(); shareContent('https://soprano.in.ua/storage/seseparatoritem/620e3327635ed1645097767.jpg')"
+
+                                       class="fb-xfbml-parse-ignore">
+                                        
+                                                                                                       
+                                        <img src="/img/icons/social/facebook.svg">
+                                    </a>
+                                </div>
+                                <a href="/dyzayn_ofysa">
+                                    <img src="https://soprano.in.ua/storage/seseparatoritem/620e3327635ed1645097767_672x420_1.webp" loading="lazy" alt="">
+                                    <h3 class="button button_big">дизайн офісу</h3>
+                                    <p class="text text_small">Офісна атмосфера - це не тільки про ефективність співробітників, а й про імідж компанії в цілому. Наші фахівці допоможуть створити кабінети, переговорні, зони відпочинку, кухню, та багато іншого для Вашої компанії.</p>
+                                </a>
+                            </div>
+                        </div>
+                                            <div class="blog__item">
+                            <div class="custom-image">
+                                <div class="custom-image__socials">
+                                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoprano.in.ua%2Fdizayn_interyera_odessa&amp;media=https%3A%2F%2Fsoprano.in.ua%2Fstorage%2Fseseparatoritem%2F620e34161a18a1645098006_310x450_1.webp&amp;description=%D0%97%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8+%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82+%D0%B4%D0%BB%D1%8F+%D0%B1%D1%83%D0%B4%D1%8C-%D1%8F%D0%BA%D0%BE%D0%B3%D0%BE+%D1%82%D0%B8%D0%BF%D1%83+%D0%BF%D1%80%D0%B8%D0%BC%D1%96%D1%89%D0%B5%D0%BD%D1%8C"
+                                       target="_blank"><img src="/img/icons/social/pinterest.svg">
+                                    </a>
+                                    <a target="_blank"
+                                       href="#"
+                                       onclick="event.preventDefault(); shareContent('https://soprano.in.ua/storage/seseparatoritem/620e34161a18a1645098006.jpg')"
+
+                                       class="fb-xfbml-parse-ignore">
+                                        
+                                                                                                       
+                                        <img src="/img/icons/social/facebook.svg">
+                                    </a>
+                                </div>
+                                <a href="/dyzayn_ofysa">
+                                    <img src="https://soprano.in.ua/storage/seseparatoritem/620e34161a18a1645098006_672x420_1.webp" loading="lazy" alt="">
+                                    <h3 class="button button_big">Дизайн кафе, ресторану</h3>
+                                    <p class="text text_small">Творчий підхід до розробки дизайну інтер&#039;єру від студії Soprano допоможе створити неповторну атмосферу у ресторані або кафе. Ми розуміємо як важливо організувати простір, в якому гармонійно поєднуватимуться і естетика, і функціональність. Оригінальний інтер&#039;єр від професіоналів допоможе залучити до Вас клієнтів та стати закладом, про який говорить усе місто.</p>
+                                </a>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+            
+                    <section class="section">
+    <div class="section__wrapper section__wrapper_big">
+        <div class="about-us">
+            <div class="custom-image custom-image_full-width  wow animated fadeIn">
+
+                <div class="custom-image__socials">
+                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoprano.in.ua%2Fdizayn_interyera_odessa&amp;media=https%3A%2F%2Fsoprano.in.ua%2Fstorage%2Fseaboutstudio%2F620e398a67b501645099402_310x450_1.webp&amp;description=%D0%A6%D1%96%D0%BD%D0%B8+%D0%BD%D0%B0+%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD+%D1%96%D0%BD%D1%82%D0%B5%D1%80%27%D1%94%D1%80%D1%83+%D0%B2+%D0%9E%D0%B4%D0%B5%D1%81%D1%96+%D0%B2%D1%96%D0%B4+Soprano"
+                       target="_blank"><img src="/img/icons/social/pinterest.svg">
+                    </a>
+                    <a target="_blank" href="#"
+                       onclick="event.preventDefault(); shareContent('https://soprano.in.ua/storage/seaboutstudio/620e398a67b501645099402.jpg')"
+
+
+                       class="fb-xfbml-parse-ignore">
+                        
+                        
+                        <img src="/img/icons/social/facebook.svg">
+                    </a>
+                </div>
+                <a href="#"><img src="https://soprano.in.ua/storage/seaboutstudio/620e398a67b501645099402_1000x1000_1.webp" loading="lazy" alt=""></a>
+            </div>
+            <div class="about-us__info">
+                <h2 class="heading heading_marg">Ціни на дизайн інтер&#039;єру в Одесі від Soprano</h2>
+
+                <div class="about-us__info-desc">
+                    <p>Для своїх клієнтів Soprano пропонує 3 пакети послуг, серед яких: повний проект; повний проект + авторський супровід; повний проект + реалізація інтер&#39;єру без участі замовника (ремонт під ключ). Вартість реалізації проекту залежить від обраного пакету послуг, а також площі об&#39;єкта нерухомості.</p>
+
+<p>Остаточну вартість розробки проекту дизайну квартири, котеджу або комерційного приміщення можна дізнатись у наших менеджерів. Вони також із задоволенням розкажуть Вам про умови співпраці зі студією, узгодять усі нюанси роботи над створенням затишного простору та зроблять усе для того, щоб Ваше спілкування з дизайнерами вибудовувалося у максимально комфортному для Вас ключі, навіть якщо Ви в цей час перебуваєте за межами країни. Для нас важливо, щоб Ви залишилися задоволені отриманим результатом та з теплою згадували наше спілкування.</p>
+                </div>
+
+
+                <a  href="/dizayn_interyera_tsena"  class="button button_big" data-modal-heading="">Дізнатись ціни</a>
+            </div>
+        </div>
+    </div>
+</section>
+            
+                    <section class="section">
+    <div class="section__wrapper section__wrapper_big">
+        <div class="projects">
+            <div class="projects__info">
+                <h2 class="title title_marg">Наші проекти</h2>
+                <p class="text text_big">Надихаючись книгами зі своєї студійної бібліотеки, наші талановиті дизайнери знаходять неймовірні рішення для оформлення простору різного типу. Деякі приклади їхньої роботи можна побачити тут.</p>
+            </div>
+            <div class="projects__blocks">
+                                    <div class="projects__block">
+                            <div class="custom-image">
+                                <div class="custom-image__socials">
+                                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoprano.in.ua%2Fdizayn_interyera_odessa&amp;media=https%3A%2F%2Fsoprano.in.ua%2Fstorage%2Fseourprojectitem%2F620e4248284c71645101640_310x450_1.webp&amp;description=%D0%9D%D0%B0%D1%88%D1%96+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8" target="_blank">
+                                        <img src="/img/icons/social/pinterest.svg">
+                                    </a>
+                                    <a target="_blank"
+                                       href="#"
+                                       onclick="event.preventDefault(); shareContent('https://soprano.in.ua/storage/seourprojectitem/620e4248284c71645101640.jpg')"
+
+                                       class="fb-xfbml-parse-ignore">
+                                        <img src="/img/icons/social/facebook.svg">
+                                    </a>
+                                </div>
+                                <a href="/portfolios/piano">
+                                <img src="https://soprano.in.ua/storage/seourprojectitem/620e4248284c71645101640_612x420_1.webp" loading="lazy" alt="">
+                                </a>
+                            </div>
+                            <p class="button button_big">Дизайн-проект Piano</p>
+                    </div>
+                                    <div class="projects__block">
+                            <div class="custom-image">
+                                <div class="custom-image__socials">
+                                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoprano.in.ua%2Fdizayn_interyera_odessa&amp;media=https%3A%2F%2Fsoprano.in.ua%2Fstorage%2Fseourprojectitem%2F620e4393e165c1645101971_310x450_1.webp&amp;description=%D0%9D%D0%B0%D1%88%D1%96+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8" target="_blank">
+                                        <img src="/img/icons/social/pinterest.svg">
+                                    </a>
+                                    <a target="_blank"
+                                       href="#"
+                                       onclick="event.preventDefault(); shareContent('https://soprano.in.ua/storage/seourprojectitem/620e4393e165c1645101971.jpg')"
+
+                                       class="fb-xfbml-parse-ignore">
+                                        <img src="/img/icons/social/facebook.svg">
+                                    </a>
+                                </div>
+                                <a href="/portfolios/estro">
+                                <img src="https://soprano.in.ua/storage/seourprojectitem/620e4393e165c1645101971_612x420_1.webp" loading="lazy" alt="">
+                                </a>
+                            </div>
+                            <p class="button button_big">Дизайн-проект Estro</p>
+                    </div>
+                                    <div class="projects__block">
+                            <div class="custom-image">
+                                <div class="custom-image__socials">
+                                    <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoprano.in.ua%2Fdizayn_interyera_odessa&amp;media=https%3A%2F%2Fsoprano.in.ua%2Fstorage%2Fseourprojectitem%2F620e44f245a741645102322_310x450_1.webp&amp;description=%D0%9D%D0%B0%D1%88%D1%96+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8" target="_blank">
+                                        <img src="/img/icons/social/pinterest.svg">
+                                    </a>
+                                    <a target="_blank"
+                                       href="#"
+                                       onclick="event.preventDefault(); shareContent('https://soprano.in.ua/storage/seourprojectitem/620e44f245a741645102322.jpg')"
+
+                                       class="fb-xfbml-parse-ignore">
+                                        <img src="/img/icons/social/facebook.svg">
+                                    </a>
+                                </div>
+                                <a href="/portfolios/portamento">
+                                <img src="https://soprano.in.ua/storage/seourprojectitem/620e44f245a741645102322_612x420_1.webp" loading="lazy" alt="">
+                                </a>
+                            </div>
+                            <p class="button button_big">Дизайн-проект Portamento</p>
+                    </div>
+                            </div>
+        </div>
+    </div>
+</section>
+            
+                    <section class="section">
+    <div class="section__wrapper section__wrapper_big">
+        <div class="banner wow animated fadeIn">
+            <div class="banner__content">
+                <h2 class="heading">Замовити дизайн-проект квартири в Одесі</h2>
+                <p class="text text_big">Замовити дизайн інтер&#039;єру для вітальні, величезного котеджу або кафе можна в Soprano. Щоб замовити розробку проекту, у наших дизайнерів залишайте заявку на сайті. Ми створимо навколо Вас чарівну атмосферу, що дарує естетичну насолоду.</p>
+                <a  data-info-button class="js-modal rounded-button button_big"  class="rounded-button button_big" data-modal-heading="Завжди раді знайомству!">Замовити дизайн</a>
+            </div>
+            <img src="https://soprano.in.ua/images/no-image_1328x414_1.webp" loading="lazy" alt="">
+        </div>
+    </div>
+</section>
+            
+                    <section class="section">
+    <div class="section__wrapper section__wrapper_big">
+        <div class="faq wow animated fadeIn">
+            <div class="faq__description">
+                <h2 class="title title_marg">Поширені запитання</h2>
+                <a                        href="https://soprano.in.ua/"
+                                      class="button button_big desktop"
+                   data-modal-heading=""></a>
+            </div>
+            <div class="accord">
+                                    <div class="accord__item">
+                        <div class="accord__heading">
+                            <p class="title button_big">Чи виїжджають спеціалісти студії на об&#039;єкт?</p>
+                            <img class="accord__triangle" src="/img/constructor/icons/triangle.svg">
+                        </div>
+                        <div class="accord__content">
+                            <p class="text text_small">Так, наші фахівці виїжджають на об&#039;єкт для зняття замірів та виявлення всіх архітектурних особливостей приміщення. Крім того, що це дозволяє мати більш чітке уявлення про будинок, квартиру або ресторан, дизайнери також можуть більш тонко відчути замовника та визначити його бажання. Для нас важливо, щоб інтер&#039;єр не просто відповідав модним трендам, а був комфортним та затишним насамперед для Вас. Спілкування наживо дозволяє створити максимально хороші умови для цього. Також слід зазначити, що для замовників перший виїзд на об&#039;єкт абсолютно безкоштовний.</p>
+                        </div>
+                    </div>
+                                    <div class="accord__item">
+                        <div class="accord__heading">
+                            <p class="title button_big">Чи можна вносити корективи при розробці дизайн-проекту? Якщо так, то яка вартість коригування?</p>
+                            <img class="accord__triangle" src="/img/constructor/icons/triangle.svg">
+                        </div>
+                        <div class="accord__content">
+                            <p class="text text_small">Дизайнери студії Soprano вносять 3 варіанти правок, при цьому ціна залишається незмінною для замовника. Коригування в процесі роботи - абсолютно нормальне явище, оскільки розробка дизайну є творчим процесом. Для нас важливо, щоб розроблений дизайн будинку, кафе чи офісного приміщення не лише гармонійно поєднував функціональність та естетику, але й щоб замовник залишився задоволеним роботою загалом. Простір, в якому людині належить проживати або працювати, має великий вплив на його настрій, тому краще довіряти розробку дизайн проекту справжнім професіоналам, які зможуть врахувати всі нюанси приміщення (його площа, ступінь освітлення, призначення та багато іншого).</p>
+                        </div>
+                    </div>
+                                    <div class="accord__item">
+                        <div class="accord__heading">
+                            <p class="title button_big">Можна зробити дизайн лише для кількох кімнат чи частини комерційного приміщення в Одесі?</p>
+                            <img class="accord__triangle" src="/img/constructor/icons/triangle.svg">
+                        </div>
+                        <div class="accord__content">
+                            <p class="text text_small">Так, якщо Ви робите ремонт лише в декількох кімнатах, або самостійно вирішили спроектувати інші приміщення, то дизайнери Soprano із задоволенням допоможуть впоратися з даним завданням і підготують для Вас дизайн інтер&#039;єру приміщень. Також якщо Вам потрібно розробити концепт лише для спортивної зали чи переговорної, то ми з радістю допоможемо Вам.</p>
+                        </div>
+                    </div>
+                            </div>
+            <a  href=""  class="button button_big mobile"
+               data-modal-heading=""></a>
+        </div>
+    </div>
+    <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                               {
+              "@type": "Question",
+              "name": "Чи виїжджають спеціалісти студії на об&#039;єкт?",
+                        "acceptedAnswer": {
+                          "@type": "Answer",
+                          "text": "Так, наші фахівці виїжджають на об'єкт для зняття замірів та виявлення всіх архітектурних особливостей приміщення. Крім того, що це дозволяє мати більш чітке уявлення про будинок, квартиру або ресторан, дизайнери також можуть більш тонко відчути замовника та визначити його бажання. Для нас важливо, щоб інтер'єр не просто відповідав модним трендам, а був комфортним та затишним насамперед для Вас. Спілкування наживо дозволяє створити максимально хороші умови для цього. Також слід зазначити, що для замовників перший виїзд на об'єкт абсолютно безкоштовний."
+                        }
+                      }
+                                              ,
+                                        {
+              "@type": "Question",
+              "name": "Чи можна вносити корективи при розробці дизайн-проекту? Якщо так, то яка вартість коригування?",
+                        "acceptedAnswer": {
+                          "@type": "Answer",
+                          "text": "Дизайнери студії Soprano вносять 3 варіанти правок, при цьому ціна залишається незмінною для замовника. Коригування в процесі роботи - абсолютно нормальне явище, оскільки розробка дизайну є творчим процесом. Для нас важливо, щоб розроблений дизайн будинку, кафе чи офісного приміщення не лише гармонійно поєднував функціональність та естетику, але й щоб замовник залишився задоволеним роботою загалом. Простір, в якому людині належить проживати або працювати, має великий вплив на його настрій, тому краще довіряти розробку дизайн проекту справжнім професіоналам, які зможуть врахувати всі нюанси приміщення (його площа, ступінь освітлення, призначення та багато іншого)."
+                        }
+                      }
+                                              ,
+                                        {
+              "@type": "Question",
+              "name": "Можна зробити дизайн лише для кількох кімнат чи частини комерційного приміщення в Одесі?",
+                        "acceptedAnswer": {
+                          "@type": "Answer",
+                          "text": "Так, якщо Ви робите ремонт лише в декількох кімнатах, або самостійно вирішили спроектувати інші приміщення, то дизайнери Soprano із задоволенням допоможуть впоратися з даним завданням і підготують для Вас дизайн інтер'єру приміщень. Також якщо Вам потрібно розробити концепт лише для спортивної зали чи переговорної, то ми з радістю допоможемо Вам."
+                        }
+                      }
+                                      ]
+      }
     </script>
+</section>
+                <button class="feedback js-modal">
+    <p data-info-button style="color: #ffffff;" class="text_big">Замовити безкоштовну консультацію</p>
+</button>
+</main>
+<footer class="footer">
+  <div class="footer__logo">
+    <a href="/"><img style="margin-left: -2.5px;" src="/img/logo.svg" alt="Soprano"></a>
+    <p class="text text_big">Завжди раді знайомству</p>
+  </div>
+    <div class="footer__inner">
+        <div class="footer__info">
+            <a href="#" class="footer__address text text_big"> <p>м. Хмельницький, Зарічанська 3/1</p> </a>
+            <a href="#" class="footer__address text text_big"> <p>м. Київ, Мечникова 2 (БЦ &quot;Парус&quot;)
+</p> </a>
+            <div class="footer__info-items">
+                <div class="footer__info-item">
+                    <p class="text text_big">Дизайн - студія</p>
+                    <a href="tel:+380983008084" class="link link_big">+380983008084</a>
+                </div>
+                <div class="footer__info-item">
+                    <p class="text text_big">Магазин</p>
+                    <a href="tel:+380675551002" class="link link_big">+380675551002</a>
+                </div>
+                <div class="footer__info-item">
+                    <p class="text text_big">Email</p>
+                    <a href="mailto:sopranopm@gmail.com" class="link link_big">sopranopm@gmail.com</a>
+                </div>
+            </div>
+            <ul class="footer__social">
+                <li class="footer__social-item"><a href="https://m.facebook.com/soprano.design.studio"><img src="/img/icons/social/black/facebook.svg" alt=""></a></li>
+                <li class="footer__social-item"><a href="https://www.instagram.com/soprano_design/?utm_medium=copy_link"><img src="/img/icons/social/black/inst.svg" alt=""></a></li>
+                <li class="footer__social-item"><a href="https://www.pinterest.com/sopranosalon/_created/"><img src="/img/icons/social/black/pinterest.svg" alt=""></a></li>
+                <li class="footer__social-item"><a href="https://youtube.com/channel/UCJ_OuY7eyEsvRXOY2UyqSPA"><img src="/img/icons/social/black/youtube.svg" alt=""></a></li>
+            </ul>
+        </div>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "image": "https://soprano.in.ua/img/logo.svg",
+      "url": "https://soprano.in.ua",
+      "logo": "https://soprano.in.ua/img/logo.svg",
+      "name": "Soprano",
+      "description": "Soprano",
+      "email": "sopranopm@gmail.com",
+      "telephone": "+380983008084",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "м. Хмельницький, Зарічанська 3/1",
+        "addressLocality": "Khmelnytskiy",
+        "addressCountry": "UA",
+        "addressRegion": "Khmelnytskiy",
+        "postalCode": "29001"
+      },
+      "sameAs": [
+                "https://m.facebook.com/soprano.design.studio",
+                "https://www.instagram.com/soprano_design/?utm_medium=copy_link",
+                "https://www.pinterest.com/sopranosalon/_created/",
+                "https://youtube.com/channel/UCJ_OuY7eyEsvRXOY2UyqSPA"
+            ]
+        }
+</script>
+        <div class="footer__contact">
+            <div class="footer__contact-points">
+                
+                    <a href="  https://soprano.in.ua/dizayn_koridora   " class="button button_small">Дизайн передпокою</a>
+                
+                    <a href="  https://soprano.in.ua/dizayn_vannoy_komnaty   " class="button button_small">Дизайн ванної кімнати</a>
+                
+                    <a href="  https://soprano.in.ua/dizayn_spalni   " class="button button_small">Дизайн спальні</a>
+                
+                    <a href="  https://soprano.in.ua/dizayn_detskoy_komnaty   " class="button button_small">Дизайн дитячої кімнати</a>
+                
+                    <a href="  https://soprano.in.ua/dizayn_gostinoy   " class="button button_small">Дизайн вітальні</a>
+                
+                    <a href="  https://soprano.in.ua/dizayn_kukhni   " class="button button_small">Дизайн кухні</a>
+                            </div>
+          <form class="form" id="callback-form" action="/send" method="post">
+            <div class="form__inputs">
+                <div class="form__input">
+                    <input type="text" id="name" name="name" placeholder="Введіть ваше ім&#039;я" value="" required >
+                    <label for="name">Ваше ім&#039;я</label>
+                    <p class="form__prompt"></p>
+                </div>
+                <div class="form__input">
+                    <input type="text" id="tel" name="phone" placeholder="Введіть ваш номер телефону" value="" required >
+                    <label for="tel">Номер телефону</label>
+                    <p class="form__prompt"></p>
+                </div>
+                <input type="hidden" name="status" value="0">
+                <input type="hidden" name="location" value="">
+                <input type="hidden" name="call_button" value="">
+            </div>
+            <button type="submit" class="button button_big">Відправити</button>
+          </form>
+    </div>
+
+  </div>
+    <div class="footer__bottom">
+        <p class="text text_small">© 2012-2021 Сопрано. Усі права захищені.</p>
+
+        <div class="footer__cities">
+                            <a href="  https://soprano.in.ua/dizayn-interyera-dnepr   "  class="button button_small">Дніпро</a>
+                            <a href="  https://soprano.in.ua/dizayn-interyera-kharkov   "  class="button button_small">Харків</a>
+                            <a href="  https://soprano.in.ua/dizayn-interyera-khmelnitskiy   "  class="button button_small">Хмельницький</a>
+                            <a href="  https://soprano.in.ua/dizayn-interyera-kiyev   "  class="button button_small">Київ</a>
+                            <a href="  https://soprano.in.ua/dizayn_interyera_vinnitsa   "  class="button button_small">Вінниця</a>
+                            <a href="  https://soprano.in.ua/dizayn_interyera_lvov   "  class="button button_small">Львів</a>
+                            <a href="  https://soprano.in.ua/dizayn_interyera_ivano_frankovsk   "  class="button button_small">Івано-Франківськ</a>
+                            <a href="  https://soprano.in.ua/dizayn_interyera_ternopol   "  class="button button_small">Тернопіль</a>
+                            <a href="  https://soprano.in.ua/dizayn_interyera_odessa   "  class="button button_small">Одеса</a>
+                            <a href="  https://soprano.in.ua/dizayn_interyera_chernovtsy   "  class="button button_small">Чернівці</a>
+                            <a href="  https://soprano.in.ua/dyzayn-interyeru-lutsk   "  class="button button_small">Луцьк</a>
+                            <a href="  https://soprano.in.ua/dyzayn-interyeru-rivne   "  class="button button_small">Рівне</a>
+                    </div>
+    </div>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#callback-form').submit(function(){ //id forms
+            event.preventDefault();
+            $.ajax({
+                type:"POST",
+                url:"/send",
+                headers:{
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: $("#callback-form").serialize(),
+                success: function(data){
+                    console.log('success callback');
+                    $('.modal').removeClass('open');
+                    $('#thank__modal').addClass('open');
+
+                    const callButtonInput = document.querySelector('input[name="call_button"]');
+
+                    // Відправка event в Google Analytics 4
+                    gtag('event', 'form_submitted', {
+                        'event_category': 'Form',
+                        'event_label': 'Form Submitted',
+                        'page_location': window.location.href,
+                        'call_button': callButtonInput ? callButtonInput.value : ''
+                    });
+                },
+                error: function (data) {
+                    console.log('fail');
+                }
+            });
+        })
+
+    });
+</script>
+<div class="modal" id="thank__modal" aria-hidden="true">
+    <div class="modal__overlay">
+        <div class="modal__wrapper">
+            <a href="#" class="modal__close">
+                <div></div>
+                <div></div>
+            </a>
+            <img style="width: 30px; margin-left: auto; margin-right: auto" class="small-marg" src="/img/icons/tick.svg" alt="Tick">
+            <h2 class="title small-marg">дякуємо за ваш запит!</h2>
+            <p class="text text_big">Найближчим часом наші спеціалісти зв&#039;яжуться з вами</p>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="feedback__modal" aria-hidden="true">
+    <div class="modal__overlay">
+        <div class="modal__wrapper">
+            <a href="#" class="modal__close">
+                <div></div>
+                <div></div>
+            </a>
+            <div class="modal__logo">
+                <a href="/"><img style="margin-left: -2.5px;" src="/img/logo.svg" alt="Soprano"></a>
+                <p style="text-align: left;" class="text text_big">Завжди раді знайомству</p>
+            </div>
+            <form class="form" id="callback-forms"  action="/send" method="post">
+                <div class="form__inputs">
+                    <div class="form__input">
+                        <input type="text" id="name" name="name" placeholder="Введіть ваше ім&#039;я" value="" required >
+                        <label for="name">Ваше ім&#039;я</label>
+                        <p class="form__prompt"></p>
+                    </div>
+                    <div class="form__input">
+                        <input type="text" id="tel" name="phone" placeholder="Введіть ваш номер телефону" value="">
+                        <label for="tel">Номер телефону</label>
+                        <p class="form__prompt"></p>
+                    </div>
+                    <div class="form__input">
+                        <input type="text" id="email" name="email" placeholder="Введіть ваш Email" value="" >
+                        <label for="email">Email</label>
+                        <p class="form__prompt"></p>
+                    </div>
+                    <input type="hidden" name="status" value="0">
+                    <input type="hidden" name="location" value="">
+                    <input type="hidden" name="call_button" value="">
+                </div>
+                <button type="submit" class="button button_big">Відправити</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    const form = $('#callback-forms');
+    const phoneInput = form.find('#tel');
+    const emailInput = form.find('#email');
+    const submitButton = form.find('.button_big');
+
+    function validateEmail(email) {
+      const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      return filter.test(email);
+    }
+
+    function validatePhone(phone) {
+      const filter = /^[0-9\s\-\+\(\)]+$/;
+      return filter.test(phone);
+    }
+
+    function isInjectionAttempt(value) {
+      const blackList = ['select', 'union', 'sleep', '--', ';', 'drop', 'insert', 'update', 'delete', 'or 1=1', 'waitfor', 'pg_sleep'];
+      return blackList.some(bad => value.toLowerCase().includes(bad));
+    }
+
+    function toggleBorder(element, valid) {
+      element.parent().css('border-bottom', valid ? '1px solid rgba(30, 30, 30, 0.1)' : '1px solid red');
+    }
+
+    function toggleButton(disable) {
+      if (disable) {
+        submitButton.attr('disabled', true);
+      } else {
+        submitButton.removeAttr('disabled');
+      }
+    }
+
+    emailInput.on("keyup", function () {
+      const value = $(this).val().trim();
+      if (value.length > 0) {
+        phoneInput.removeAttr('required');
+        emailInput.attr('required', true);
+
+        const valid = validateEmail(value) && !isInjectionAttempt(value);
+        toggleBorder($(this), valid);
+        toggleButton(!valid);
+      } else {
+        toggleBorder($(this), true);
+        toggleButton(false);
+      }
+    });
+
+    phoneInput.on("keyup", function () {
+      const value = $(this).val().trim();
+      if (value.length > 0) {
+        emailInput.removeAttr('required');
+        phoneInput.attr('required', true);
+
+        const valid = validatePhone(value) && !isInjectionAttempt(value);
+        toggleBorder($(this), valid);
+        toggleButton(!valid);
+      } else {
+        toggleBorder($(this), true);
+        toggleButton(false);
+      }
+    });
+
+    form.submit(function (event) {
+      event.preventDefault();
+
+      // Фінальна перевірка перед надсиланням
+      const phone = phoneInput.val().trim();
+      const email = emailInput.val().trim();
+
+      if (isInjectionAttempt(phone) || isInjectionAttempt(email)) {
+        alert("Недопустимі символи у полі!");
+        return;
+      }
+
+      $.ajax({
+        type: "POST",
+        url: "/send",
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: form.serialize(),
+        success: function (data) {
+          console.log('success callback');
+          $('.modal').removeClass('open');
+          $('#thank__modal').addClass('open');
+
+          const callButtonInput = document.querySelector('input[name="call_button"]');
+
+          gtag('event', 'form_submitted', {
+            'event_category': 'Form',
+            'event_label': 'Form Submitted',
+            'page_location': window.location.href,
+            'call_button': callButtonInput ? callButtonInput.value : ''
+          });
+        },
+        error: function (data) {
+          console.log('fail');
+          alert("Сталася помилка при надсиланні. Спробуйте ще раз.");
+        }
+      });
+    });
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../js/global-scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script  src="/js/constructor.js"></script>
 </body>
 </html>
