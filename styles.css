@@ -1,9 +1,9 @@
 .dark-mode {
-  background: #1f2937;
+  background: linear-gradient(to bottom, #1f2937, #111827);
   color: #f3f4f6;
 }
 .dark-mode header {
-  background: #1e3a8a;
+  background: linear-gradient(to right, #1e3a8a, #3730a3);
 }
 .dark-mode footer {
   background: #111827;
@@ -12,17 +12,18 @@
 .dark-mode .search-card,
 .dark-mode .form-card {
   background: #374151;
+  border-color: #4b5563;
 }
 .server-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .server-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 @keyframes slideIn {
   from { transform: translateY(20px); opacity: 0; }
@@ -40,8 +41,16 @@
 .error-text {
   color: #ef4444;
   font-size: 0.875rem;
+  margin-top: 0.25rem;
 }
 #search:focus {
   outline: none;
   border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+input, textarea {
+  transition: all 0.2s ease;
+}
+button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
