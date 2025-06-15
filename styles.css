@@ -1,0 +1,47 @@
+.dark-mode {
+  background: #1f2937;
+  color: #f3f4f6;
+}
+.dark-mode header {
+  background: #1e3a8a;
+}
+.dark-mode footer {
+  background: #111827;
+}
+.dark-mode .server-card,
+.dark-mode .search-card,
+.dark-mode .form-card {
+  background: #374151;
+}
+.server-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.server-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.slide-in {
+  animation: slideIn 0.5s ease-in-out;
+}
+.error {
+  border-color: #ef4444;
+}
+.error-text {
+  color: #ef4444;
+  font-size: 0.875rem;
+}
+#search:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
