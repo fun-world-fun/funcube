@@ -6,16 +6,7 @@
   <title>Добавить сервер</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-      .dark-mode { background: #1f2937; color: #f3f4f6; }
-      .dark-mode header { background: #1e3a8a; }
-      .dark-mode footer { background: #111827; }
-      .dark-mode .form-card { background: #374151; }
-      @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-      .slide-in { animation: slideIn 0.5s ease-in-out; }
-      .error { border-color: #ef4444; }
-      .error-text { color: #ef4444; font-size: 0.875rem; }
-    </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen bg-gray-100 font-sans flex flex-col transition-colors duration-300">
   <header class="bg-blue-600 text-white p-4 sticky top-0 z-10 shadow-lg">
@@ -48,6 +39,12 @@
           <label for="server-ip" class="block text-sm font-medium text-gray-700 dark:text-gray-300">IP-адрес</label>
           <input type="text" id="server-ip" required class="mt-1 p-3 w-full border rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Например, 192.168.1.1">
           <p id="ip-error" class="error-text hidden">Введите корректный IP-адрес</p>
+        </div>
+        <div class="mb-4">
+          <label for="server-icon" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Иконка сервера</label>
+          <input type="file" id="server-icon" accept="image/png,image/jpeg" class="mt-1 p-3 w-full border rounded-lg">
+          <p id="icon-error" class="error-text hidden">Файл должен быть изображением (PNG/JPEG) и не больше 1 МБ</p>
+          <img id="icon-preview" class="mt-2 w-16 h-16 object-cover rounded hidden" alt="Предпросмотр иконки">
         </div>
         <div class="mb-6">
           <label for="server-desc" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Описание</label>
