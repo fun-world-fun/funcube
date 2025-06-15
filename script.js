@@ -39,28 +39,28 @@ document.addEventListener('DOMContentLoaded', () => {
         server.ip.toLowerCase().includes(filter.toLowerCase())
       );
       if (filteredServers.length === 0) {
-        serverList.innerHTML = '<p class="text-center text-gray-500 col-span-full">Сервера не найдены</p>';
+        serverList.innerHTML = '<p class="text-center text-gray-500 dark:text-gray-400 col-span-full text-lg">Сервера не найдены</p>';
         return;
       }
       filteredServers.forEach((server, index) => {
         const status = checkServerStatus();
         const serverCard = document.createElement('div');
-        serverCard.className = 'server-card bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between fade-in';
+        serverCard.className = 'server-card bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-xl flex flex-col justify-between transform transition-all duration-300 hover:scale-105';
         serverCard.innerHTML = `
           <div class="flex items-start gap-4">
-            <img src="${server.icon || ''}" class="w-12 h-12 object-cover rounded ${server.icon ? '' : 'hidden'}" alt="Иконка сервера" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
-            <i class="fas fa-server w-12 h-12 text-gray-400 flex items-center justify-center ${server.icon ? 'hidden' : ''}"></i>
+            <img src="${server.icon || ''}" class="w-16 h-16 object-cover rounded-lg border border-gray-200 dark:border-gray-600 ${server.icon ? '' : 'hidden'}" alt="Иконка сервера" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+            <i class="fas fa-server w-16 h-16 text-gray-400 dark:text-gray-500 flex items-center justify-center text-3xl ${server.icon ? 'hidden' : ''}"></i>
             <div class="flex-1">
-              <h3 class="text-xl font-semibold">${server.name}</h3>
-              <p class="text-gray-600 mt-1">IP: ${server.ip}</p>
-              <p class="text-gray-600 mt-1">${server.description || 'Нет описания'}</p>
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">${server.name}</h3>
+              <p class="text-gray-600 dark:text-gray-300 mt-1">IP: ${server.ip}</p>
+              <p class="text-gray-600 dark:text-gray-300 mt-1">${server.description || 'Нет описания'}</p>
               <p class="mt-2 flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full ${status === 'online' ? 'bg-green-500' : 'bg-red-500'}"></span>
-                ${status === 'online' ? 'Онлайн' : 'Оффлайн'}
+                <span class="w-3 h-3 rounded-full ${status === 'online' ? 'bg-green-500' : 'bg-red-500'} animate-pulse"></span>
+                <span class="text-gray-700 dark:text-gray-200">${status === 'online' ? 'Онлайн' : 'Оффлайн'}</span>
               </p>
             </div>
           </div>
-          <button class="delete-btn mt-4 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors flex items-center gap-2" data-index="${index}">
+          <button class="delete-btn mt-4 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center gap-2 transform hover:scale-105" data-index="${index}">
             <i class="fas fa-trash"></i> Удалить
           </button>
         `;
