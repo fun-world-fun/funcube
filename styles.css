@@ -1,56 +1,29 @@
 .dark-mode {
-  background: linear-gradient(to bottom, #1f2937, #111827);
-  color: #f3f4f6;
+  background: linear-gradient(to bottom, #1f2937, #374151);
 }
-.dark-mode header {
-  background: linear-gradient(to right, #1e3a8a, #3730a3);
-}
-.dark-mode footer {
-  background: #111827;
-}
-.dark-mode .server-card,
-.dark-mode .search-card,
-.dark-mode .form-card {
-  background: #374151;
-  border-color: #4b5563;
-}
-.server-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.server-card:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes slideIn {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-.slide-in {
-  animation: slideIn 0.5s ease-in-out;
-}
-.error {
-  border-color: #ef4444;
-}
+
 .error-text {
   color: #ef4444;
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
-#search:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+
+.error {
+  border-color: #ef4444 !important;
 }
-input, textarea {
-  transition: all 0.2s ease;
+
+/* Стили для модального окна */
+#server-modal .modal-content {
+  animation: slide-in 0.3s ease-out;
 }
-button:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+@keyframes slide-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
