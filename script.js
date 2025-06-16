@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search');
   const toggleThemeBtn = document.getElementById('toggleTheme');
 
-  // Переключение темы
+  // Переключение тем
   if (toggleThemeBtn) {
     toggleThemeBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
